@@ -61,17 +61,19 @@ export default {
             services : undefined,
             typeName : undefined,
             activeCardIndex : undefined,
-            defaultIFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92181.08820607656!2d11.170927917511499!3d43.77993676468868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56a680d2d6ad%3A0x93d57917efc72a03!2sFirenze%20FI!5e0!3m2!1sit!2sit!4v1654259593216!5m2!1sit!2sit"
+            defaultIFrame : undefined
         }
     },
     async asyncData({ route, $axios }) {
         const { id } = route.params
         const { data } = await $axios.get('/api/services/' + id)
         const typeName = await $axios.get('/api/servicesType/' + id)
-    return {
-        services : data,
-        typeName : typeName.data.type_name
-    }
+        return {
+            services : data,
+            typeName : typeName.data.type_name,
+            defaultIFrame:"https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d9620.824184419678!2d11.247427881111369!3d43.7725484936604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s" + typeName.data.type_name + "%20florence%20center!5e0!3m2!1sit!2sit!4v1654529521437!5m2!1sit!2sit"
+        }
+        
   },
   methods : {
       clickedCard(e) {

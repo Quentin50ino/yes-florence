@@ -41,6 +41,7 @@
           </div>
         </div>
         <h3 class="d-flex justify-content-center title">MAP</h3>
+        <info-box></info-box>
         <div class="d-flex justify-content-center title">
             <iframe :src="`${this.activeCardIndex!==undefined?pointOfInterests[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -71,14 +72,15 @@
 import Card from '../../components/Card.vue'
 import CardNoButton from '../../components/CardNoButton.vue'
 import Carousel from '../../components/Carousel.vue'
+import InfoBox from '../../components/info-box.vue'
 export default {
-  components: { Carousel, Card, CardNoButton },
+  components: { Carousel, Card, CardNoButton, InfoBox },
     data() {
         return {
             pointOfInterests : undefined,
             itinerary : undefined,
             activeCardIndex : undefined,
-            defaultIFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92181.08820607656!2d11.170927917511499!3d43.77993676468868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56a680d2d6ad%3A0x93d57917efc72a03!2sFirenze%20FI!5e0!3m2!1sit!2sit!4v1654259593216!5m2!1sit!2sit"
+            defaultIFrame : "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d9621.253864197715!2d11.247794228986873!3d43.76987745991937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spunti%20di%20interesse%20florence!5e0!3m2!1sit!2sit!4v1654531536668!5m2!1sit!2sit"
         }
     },
     async asyncData({ route, $axios }) {
