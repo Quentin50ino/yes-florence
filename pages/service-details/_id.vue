@@ -1,0 +1,82 @@
+<template>
+<div>
+    <nuxt-link to="/services"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
+        <div class="d-flex justify-content-around grey-card">
+            <div>
+                <h1>{{typeName}}</h1>
+            </div>
+            <iframe :src="`${this.activeCardIndex!==undefined?services[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div>
+       <h3 class="d-flex justify-content-center">{{typeName}} LIST</h3>
+       <info-box-service></info-box-service>
+        <div class="d-flex justify-content-center">
+            <card-no-button 
+            @child-clicked="clickedCard"
+            :class="{'selected-card' : serviceIndex===activeCardIndex}" 
+            v-for="(service, serviceIndex) of services" 
+          :key="`service-index-${serviceIndex}`"
+          :image="service.image"
+          :title="service.title"
+          :description="service.description"
+          :index="serviceIndex"
+            ></card-no-button>
+          </div>
+        </div>
+        <footer-icon></footer-icon>
+</div>
+</template>
+
+<style scoped>
+.grey-card{
+    background-color: #dfdfdf;
+}
+.vl {
+  border-left: 1px solid black;
+  height: 100px;
+}
+.info-card {
+    margin: 40px 0;
+}
+.title{
+    margin-bottom : 40px
+}
+.selected-card{
+    border : solid 2px blue;
+}
+</style>
+
+<script>
+import CardNoButton from '../../components/CardNoButton.vue'
+import InfoBoxService from '../../components/info-box-service.vue'
+import NavBar from '../../components/NavBar.vue'
+export default {
+    components : {
+        NavBar,
+        CardNoButton,
+        InfoBoxService,
+    },
+    data(){
+        return {
+            services : undefined,
+            typeName : undefined,
+            activeCardIndex : undefined,
+            defaultIFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92181.08820607656!2d11.170927917511499!3d43.77993676468868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56a680d2d6ad%3A0x93d57917efc72a03!2sFirenze%20FI!5e0!3m2!1sit!2sit!4v1654259593216!5m2!1sit!2sit"
+        }
+    },
+    async asyncData({ route, $axios }) {
+        const { id } = route.params
+        const { data } = await $axios.get('/api/services/' + id)
+        const typeName = await $axios.get('/api/servicesType/' + id)
+    return {
+        services : data,
+        typeName : typeName.data.type_name
+    }
+  },
+  methods : {
+      clickedCard(e) {
+          this.activeCardIndex = e
+      }
+  }
+}
+</script>
