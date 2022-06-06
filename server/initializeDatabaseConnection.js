@@ -4,10 +4,10 @@ const { Sequelize, DataTypes } = require("sequelize")
 //const database = new Sequelize("postgres://postgres:pippo@localhost:5432/hyp_project")
 //const database = new Sequelize("postgres://ztcxierawojlvx:1c38bd99e63fcec52d05abde0eabce5040ac413f46ae8cec45dbd1fd39f361ef@ec2-3-248-121-12.eu-west-1.compute.amazonaws.com:5432/d7akilp0g8abd2")
 
-// Production (use this code when deploying to production in Heroku)
+//Production (use this code when deploying to production in Heroku)
 const pg = require('pg')
 pg.defaults.ssl = true
-const database = new Sequelize('postgres://ztcxierawojlvx:1c38bd99e63fcec52d05abde0eabce5040ac413f46ae8cec45dbd1fd39f361ef@ec2-3-248-121-12.eu-west-1.compute.amazonaws.com:5432/d7akilp0g8abd2', {
+const database = new Sequelize(process.env.DATABASE_URL, {
     dialect : 'postgres',
     protocol : 'postgres',
     ssl: true,
