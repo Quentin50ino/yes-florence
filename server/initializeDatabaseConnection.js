@@ -7,6 +7,8 @@ const { Sequelize, DataTypes } = require("sequelize")
 const pg = require('pg')
 pg.defaults.ssl = true
 const database = new Sequelize(process.env.DATABASE_URL, {
+    dialect : 'postgres',
+    protocol : 'postgres',
     ssl: true,
     dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
 })
