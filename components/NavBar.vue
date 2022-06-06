@@ -2,10 +2,15 @@
 <div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
+    <a class="navbar-brand logo">
+      <div class="d-flex justify-content-center">
+        <img src="https://banner2.cleanpng.com/20180519/itf/kisspng-florence-flag-of-italy-clip-art-5b006f760452e7.4742771215267551900177.jpg" alt="" width="30px" height="24px">
+      </div>
+      </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
           <nuxt-link to="/" class="nav-link active" aria-current="page" href="#">HOME</nuxt-link>
@@ -19,12 +24,11 @@
         <li class="nav-item">
           <nuxt-link to="/services" class="nav-link active" aria-current="page" href="#">SERVICES</nuxt-link>
         </li>
-        <a class="navbar-brand logo">YesFlorence</a>
         <li class="nav-item">
           <nuxt-link to="/interest" class="nav-link active" aria-current="page" href="#">INTERESTS</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="itinerary" class="nav-link active" aria-current="page" href="#">ITINERARIES</nuxt-link>
+          <nuxt-link to="/itinerary" class="nav-link active" aria-current="page" href="#">ITINERARIES</nuxt-link>
         </li>
         <li class="nav-item">
           <nuxt-link to="/event" class="nav-link active" aria-current="page" href="#">EVENTS</nuxt-link>

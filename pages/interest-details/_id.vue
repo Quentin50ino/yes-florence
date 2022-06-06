@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!--<nav-bar></nav-bar>-->
+        <nav-bar></nav-bar>
         <nuxt-link to="/interest"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
         <div class="d-flex justify-content-around grey-card">
             <div>
@@ -93,8 +93,9 @@
 import Card from '../../components/Card.vue'
 import CardNoButton from '../../components/CardNoButton.vue'
 import Carousel from '../../components/Carousel.vue'
+import NavBar from '../../components/NavBar.vue'
 export default {
-  components: { Carousel, Card, CardNoButton },
+  components: { Carousel, Card, CardNoButton, NavBar},
     data() {
         return {
             pointOfInterest : undefined,

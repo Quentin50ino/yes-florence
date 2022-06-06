@@ -15,8 +15,7 @@ async function startApplicationServer() {
 
     app.get('/pointOfInterests/:id', async (req, res) => {
         const id = +req.params.id
-        console.log(id)
-        const result = await models.PointOfInterest.findOne({ where: { id : id }}) 
+        const result = await models.PointOfInterest.findOne({ where: { id : id }})
         return res.json(result)
     })
 

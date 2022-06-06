@@ -1,5 +1,6 @@
 <template>
     <div>
+        <nav-bar></nav-bar>
         <nuxt-link to="/itinerary"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
                 <div class="d-flex justify-content-around grey-card">
             <div>
@@ -73,8 +74,9 @@ import Card from '../../components/Card.vue'
 import CardNoButton from '../../components/CardNoButton.vue'
 import Carousel from '../../components/Carousel.vue'
 import InfoBox from '../../components/info-box.vue'
+import NavBar from '../../components/NavBar.vue'
 export default {
-  components: { Carousel, Card, CardNoButton, InfoBox },
+  components: { Carousel, Card, CardNoButton, InfoBox, NavBar },
     data() {
         return {
             pointOfInterests : undefined,
