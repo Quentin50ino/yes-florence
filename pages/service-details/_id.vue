@@ -2,16 +2,16 @@
 <div>
     <nav-bar></nav-bar>
     <nuxt-link to="/services"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
-        <div class="d-flex justify-content-around grey-card">
-            <div>
+        <div class="d-flex flex-column align-items-center grey-card">
+            <div style="margin-bottom : 12px">
                 <h1>{{typeName}}</h1>
             </div>
-            <iframe :src="`${this.activeCardIndex!==undefined?services[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe :src="`${this.activeCardIndex!==undefined?services[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div>
-       <h3 class="d-flex justify-content-center">{{typeName}} LIST</h3>
+       <h3 class="d-flex justify-content-center">{{typeName}} List</h3>
        <info-box-service></info-box-service>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" style="flex-wrap : wrap">
             <card-no-button 
             @child-clicked="clickedCard"
             :class="{'selected-card' : serviceIndex===activeCardIndex}" 

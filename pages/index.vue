@@ -4,21 +4,21 @@
     <nav-bar/>
     <div>
       <h3 class="d-flex justify-content-center" style="margin-top : 40px">Welcome to Florence</h3>
-      <div class="d-flex justify-content-around" style="margin-top : 40px; flex-wrap : wrap">
-        <div class="d-flex flex-column align-items-center">
-          <img :src="`${pointOfInterests[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px; margin-top : 20px">
-          <h6 style="margin-top : 20px">Point Of Interests</h6>
-          <a href="#section1"><button type="button" class="btn btn-success">DISCOVER</button></a>
+      <div class="d-flex justify-content-around" style="margin-top : 40px; flex-wrap : wrap;">
+        <div class="d-flex flex-column align-items-center" style="background-color : #343434; padding : 20px; border-radius: 10px">
+          <img :src="`${pointOfInterests[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px;">
+          <h6 style="margin-top : 20px; color : white">Point Of Interests</h6>
+          <a style="margin-bottom : 15px" href="#section1"><button type="button" class="btn btn-success">DISCOVER</button></a>
         </div>
-        <div class="d-flex flex-column align-items-center">
-          <img :src="`${itineraries[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px; margin-top : 20px">
-          <h6 style="margin-top : 20px">Itineraries</h6>
-          <a href="#section2"><button type="button" class="btn btn-success">EXPLORE</button></a>
+        <div class="d-flex flex-column align-items-center img-container"  style="background-color : #343434; padding : 20px; border-radius: 10px">
+          <img :src="`${itineraries[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px;">
+          <h6 style="margin-top : 20px; color : white">Itineraries</h6>
+          <a style="margin-bottom : 15px" href="#section2"><button type="button" class="btn btn-success">EXPLORE</button></a>
         </div>
-        <div class="d-flex flex-column align-items-center">
-          <img :src="`${events[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px; margin-top : 20px">
-          <h6 style="margin-top : 20px">Events</h6>
-          <a href="#section3"><button type="button" class="btn btn-success">HAVE FUN</button></a>
+        <div class="d-flex flex-column align-items-center img-container"  style="background-color : #343434; padding : 20px; border-radius: 10px">
+          <img :src="`${events[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px;">
+          <h6 style="margin-top : 20px; color : white">Events</h6>
+          <a style="margin-bottom : 15px" href="#section3"><button type="button" class="btn btn-success">HAVE FUN</button></a>
         </div>
       </div>
       <div>
@@ -124,6 +124,15 @@ h1{
 hr{
   width : 80%;
   margin-top: 40px;
+}
+img{
+    margin-top : 40px
+  }
+@media screen and (max-width: 600px) {
+
+  .img-container{
+    margin-top : 40px
+  }
 }
 </style>
 
