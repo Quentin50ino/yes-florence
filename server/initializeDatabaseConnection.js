@@ -18,9 +18,12 @@ export default async function initializeDatabaseConnection() {
     const PointOfInterest = database.define("point_of_interest", {
         title : DataTypes.STRING,
         image : DataTypes.STRING,
-        description : DataTypes.STRING,
-        information : DataTypes.STRING,
-        iFrame : DataTypes.STRING(1000)
+        description : DataTypes.STRING(1000),
+        information : DataTypes.STRING(10000),
+        iFrame : DataTypes.STRING(1000),
+        ticket : DataTypes.STRING,
+        address : DataTypes.STRING,
+        open : DataTypes.STRING
     })
     const Itinerary = database.define("itinerary", {
         title : DataTypes.STRING,

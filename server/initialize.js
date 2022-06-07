@@ -48,39 +48,99 @@ export default async function initialize (models) {
             title : "Basilica Santa Maria del Fiore",
             image : "https://duomo.firenze.it/application/mediaArchive/Image/bf53c2f5dbfca98d5d077a464e84b39c_visione%20%20insieme4.jpg",
             description : "Duomo of the city of Florence",
-            information : "Most beautiful building in the center of the city",
+            information : "Florence Cathedral was designed at the end of the 13th century by Arnolfo di Cambio and is dedicated to Santa Maria del Fiore, a reference to the lily, the city's symbol. The third largest cathedral of the world (after Saint Peter's in Rome and Saint Paul's in London), at the time of its consecretation in 1436 it was the largest in Europe. The building was erected on top of the earlier Cathedral of Santa Reparata, the remains of which are accessible via the nave. The exterior, now clad in polychrome marble, remained incomplete for a long time; the original façade, which had been partially built to the design by Arnolfo di Cambio, was demolished at the end of the 16th century, and the current one was only erected at the end of the 19th century. Inside, the nave and two side aisles end in a vast choir where the main altar stands, surrounded by the tribune on which the Cupola rests. On the left wall are frescoes depicting two condottieri, Sir John Hawkwood (otherwise known as Giovanni Acuto) by Paolo Uccello, who also did the fresco decoration on the clock on the interior façade, and Niccolò da Tolentino by Andrea del Castagno. The 44 stained-glass windows were the work of leading 15th-century masters, including Donatello, Andrea del Castagno and Paolo Uccello.",
             iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.9862151769994!2d11.253771515346!3d43.773144979117326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403bfe22ff5%3A0x5591438487aaf1f5!2sCattedrale%20di%20Santa%20Maria%20del%20Fiore!5e0!3m2!1sit!2sit!4v1654263552695!5m2!1sit!2sit",
-            typePointOfInterestId : typePointOfInterest0.id
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Free entrance",
+            address : "Piazza del Duomo, 50122 Firenze FI, Italia",
+            open : "Monday - Saturday from 10:15 to 16:45"
         },
         {
-            title : "Palazzo Vecchio",
+            title : "Torre di Palazzo Vecchio",
             image : "https://www.toscana.info/wp-content/uploads/sites/123/piazza-signoria-firenze.jpg",
             description : "Palace of amministration of the city",
-            information : "There where the Medici a while ago",
+            information : "Literally 'towering' over Florence, the 95 mt. high Tower of Palazzo Vecchio is one of the city's unmistakable symbols and focal points. It is also one of the oldest parts of the building built between 1299 and the early 14th century, possibly to a design by Arnolfo di Cambio, as the seat of the City Government. The spectacular view of Florence is nice from the top of the tower but also from the intermediate views during the ascent and to the suggestive path of the “Camminamento di Ronda”. It is recommended for children because the climb can be done easily despite the height and the high number of steps. Access to children is allowed from 6 years old.",
             iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.1713804914!2d11.253962215345897!3d43.76930117911743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5400e57893f9%3A0xe4e22be754c65787!2sPalazzo%20Vecchio!5e0!3m2!1sit!2sit!4v1654263613915!5m2!1sit!2sit",
-            typePointOfInterestId : typePointOfInterest0.id
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price € 12.50. For information about reduced tickets please check the website",
+            address : "Piazza della Signoria, 50122 Firenze FI, Italia",
+            open : "Friday - Wednesday from 09:00 to 17:00"
         },
         {
             title : "Basilica di Santa Maria Novella",
             image : "https://flawless.life/wp-content/uploads/2020/06/complesso-santa-maria-novella-cover.jpg",
-            description : "Rinascimental catedral",
-            information : "Near the central station",
+            description : "The first rinascimental catedral of Florence",
+            information : "The first of the great Florentine basilicas and the first large-scale Gothic building in the city, the Dominicans began constructing Santa Maria Novella soon after 1240; it was finished in 1357 but was not consecrated until 1420. In the following centuries it underwent various modifications, in particular the remodelling begun by Giorgio Vasari in 1566 and the 19th-century interventions designed to restore the Gothic appearance of the building. There are a number of important artworks in the church: Giotto’s Crucifix and a wooden Crucifix by Filippo Brunelleschi, Masaccio’s fresco of the Trinity and two chapels frescoed respectively by Domenico Ghirlandaio and Filippino Lippi. The rich polychrome-marble façade was completed in the second half of the 15th century by Leon Battista Alberti.",
             iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11523.657811934005!2d11.2493859!3d43.7746346!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x85e5747949866eb2!2sBasilica%20di%20Santa%20Maria%20Novella!5e0!3m2!1sit!2sit!4v1654268463243!5m2!1sit!2sit",
-            typePointOfInterestId : typePointOfInterest0.id
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price - Church and Museum € 7.50. For information about reduced tickets, please check on the website.",
+            address : "Piazza di Santa Maria Novella, 18, 50123 Firenze FI, Italia",
+            open : "Monday - Thursday from 09:30 to 17:30. Friday from 11:00 to 17:30"
         },
         {
-            title : "Giardino di Boboli",
+            title : "Boboli Garden",
             image : "https://mywowo.net/media/images/cache/firenze_giardino_dei_boboli_01_prima_parte_jpg_1200_630_cover_85.jpg",
-            description : "Amazing garden",
-            information : "Near of Palazzo Pitti",
+            description : "Amazing garden near Palazzo Pitti.",
+            information : "The Medici family was the first to take care of the Boboli garden’s arrangement, creating the model of the Italian-style garden, then an example for many European courts, in which a rational order is given to the vegetation and the geometries of the avenues and plants are embellished with grottoes, statues and fountains. Opened to the public in 1766, it is a real open-air museum: valuable are the Roman statues and those of Renaissance sculptors such as Baccio Bandinelli and Giambologna; the amphitheatre, where court performances took place; the Grotta del Buontalenti, where Michelangelo's Prisons were placed (now replaced by copies).",
             iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11525.996452533216!2d11.2483996!3d43.7624972!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40c02f73b03d9b2!2sGiardino%20di%20Boboli!5e0!3m2!1sit!2sit!4v1654268651558!5m2!1sit!2sit",
-            typePointOfInterestId : typePointOfInterest1.id
-        }
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "Full price - High Season (March - October) € 10.00. Full price- Low Season (November - February) € 6.00.",
+            address : "Giardino di Boboli, Piazza de' Pitti, 1, 50125 Firenze FI, Italia",
+            open : "Monday - Sunday from 08:15 to 19:30"
+        },
+        {
+            title : "Uffizi Gallery",
+            image : "https://uffizi-webpromotersncva.netdna-ssl.com/wp-content/uploads/2016/03/uffizi-piazzale.jpg",
+            description : "One of the most famous museum of the world.",
+            information : "An elegant edifice designed by Giorgio Vasari, it was begun in 1560 to house the grand ducal offices. In 1574 Grand Duke Francesco I ordered the top story converted to display the Medici art treasures. The Uffizi’s collection, one of the most precious in the world, offers examples of painting from the 13th century through the 18th and includes most of the significant names in Florentine art. With its immense artistic legacy, the Uffizi Gallery, now The Uffizi, is one of the most important museums in the world. Following a substantial reorganization in the 17th century, which led to the transfer of some collections (arms, scientific instruments, archaeological finds, ancient and modern bronzes) to other sites and the establishment of new museums, the Uffizi mainly became a picture gallery, with thousands of works ranging from the 13th to the 18th centuries. After the suppression of churches and convents in the 18th and 19th centuries, many works of ecclesiastical provenance swelled the gallery’s collections; other important paintings were acquired at the beginning of the 20th century.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.2443871123414!2d11.253122115345835!3d43.767785579117536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a54008dc59081%3A0xcddeb7c89bf0c4cd!2sGalleria%20degli%20Uffizi!5e0!3m2!1sit!2sit!4v1654636334128!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price - high season (March-October) € 20.00. Full price - low season (November-February) € 12.00.",
+            address : "Piazzale degli Uffizi, 50122 Firenze FI, Italia",
+            open : "Tuesday - Sunday from 08:15 to 18:50"
+        },
+        {
+            title : "Palazzo Strozzi",
+            image : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/ac/a7/04/donatello-il-rinascimento.jpg?w=1200&h=-1&s=1",
+            description : "One of the most important palace in Florence.",
+            information : "The grandest palace in Florence is the Strozzi Palace, begun in 1489 for one of the city’s largest and wealthiest families (which, however, had been eclipsed politically by the Medici). Its enormous scale deliberately surpassed that of the Medici Palace. Noteworthy within the Strozzi Palace is a spacious courtyard, which by its use of arches and a loggia achieves a feeling of openness and simplicity.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.3711805052644!2d11.24781941534575!3d43.76515327911766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a515441db99f1%3A0x5cd0cce4e6f1502a!2sPalazzo%20Pitti!5e0!3m2!1sit!2sit!4v1654636377588!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price € 8.00. For information about reduced tickets, please check on the website.",
+            address : "Piazza di Santa Croce, 16, 50122 Firenze FI, Italia",
+            open : "Monday - Saturday, from 09:30 to 17:30"
+        },
+        {
+            title : "Piazzale Michelangelo",
+            image : "https://cdn1.discovertuscany.com/img/florence/piazzas/piazzale-michelangelo-view.jpg?w=750&q=65",
+            description : "Most famous panoramic point in Florence!",
+            information : "The Piazzale Michelangelo was built on the hills located south of the Florence's historic center following the design of the architect Giuseppe Poggi. In 1869 Florence was the capital of Italy in this period, the whole city underwent an intense urban renewal, the 'lungarni' (riverside walkways following the Arno) were created; on the right side replacing the walls of the 14th century the bypass (Viali di Circonvallazione) was opened and to the left side a panoramic tree-lined street of 8 km, currently called Viale dei Colli, in which top was constructed the Piazzale Michelangelo, as a panoramic terrace on the city. In 1873 a copy of Michelangelo's David was taken to the square with the help of nine pairs of oxen. This monument occupies a privileged position, observing the city from above as a guard attentive to all the beauties that the city of Florence offers. This square was dedicated to the great Renaissance artist Michelangelo and the copy of the David was located in the center of the square next to the four allegories of the Medici Chapels of San Lorenzo. Poggi also designed the lodge in neoclassical style as a museum for the works of Michelangelo, but this museum was never built and currently houses a panoramic restaurant",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11525.912799569485!2d11.2650561!3d43.7629314!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb4f768e1820d5119!2sPiazzale%20Michelangelo!5e0!3m2!1sit!2sit!4v1654637238937!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price € 8.00. For information about reduced tickets, please check on the website.",
+            address : "Piazza di Santa Croce, 16, 50122 Firenze FI, Italia",
+            open : "Monday - Saturday, from 09:30 to 17:30"
+        },
+        {
+            title : "Basilica di Santa Croce",
+            image : "https://c9g6k7a7.stackpathcdn.com/wp-content/uploads/2021/07/istockphoto-1222429282-170667a.jpg",
+            description : "Rinascimental cathedral in the center of  Florence",
+            information : "Designed by Arnolfo di Cambio (1296), it is the largest Franciscan church in the world; it is also known as the 'Pantheon of Italian glories' for its illustrious tombs (Michelangelo, Galileo, Machiavelli, Rossini, Foscolo, Alfieri) that it preserves in the suggestive Gothic interior. Among the more than 200 tombs, the two Renaissance monuments stand out, masterpieces of Rossellino and Desiderio da Settignano. Of the numerous chapels in the transept, frescoed in the fourteenth century, authentic masterpieces are the Bardi and Peruzzi chapels, frescoed by Giotto; remarkable are also the works of Donatello (the Annunciation and the Crucifix). The famous Crucifix of Cimabue damaged by the 1966 flood, instead, is displayed in the sacristy. The museum itinerary includes the Cappella dei Pazzi, by Brunelleschi, the two cloisters and the Last Supper, frescoed by Taddeo Gaddi, a treasure chest of numerous works of art (Donatello, Orcagna, Domenico Veneziano).",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.2066846178254!2d11.260079015345866!3d43.76856827911753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a540723ccc331%3A0x8f8279649c131255!2sBasilica%20di%20Santa%20Croce%20di%20Firenze!5e0!3m2!1sit!2sit!4v1654637625340!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price € 8.00. For information about reduced tickets, please check on the website.",
+            address : "Piazza di Santa Croce, 16, 50122 Firenze FI, Italia",
+            open : "Monday - Saturday, from 09:30 to 17:30"
+        }, 
     ]
     const pointOfInterest0 = await models.PointOfInterest.create(pointOfInterestsList[0])
     const pointOfInterest1 = await models.PointOfInterest.create(pointOfInterestsList[1])
     const pointOfInterest2 = await models.PointOfInterest.create(pointOfInterestsList[2])
     const pointOfInterest3 = await models.PointOfInterest.create(pointOfInterestsList[3])
+    const pointOfInterest4 = await models.PointOfInterest.create(pointOfInterestsList[4])
+    const pointOfInterest5 = await models.PointOfInterest.create(pointOfInterestsList[5])
+    const pointOfInterest6 = await models.PointOfInterest.create(pointOfInterestsList[6])
+    const pointOfInterest7 = await models.PointOfInterest.create(pointOfInterestsList[7])
     //models.PointOfInterest.create(pointOfInterestsList[1])
     const typeEventList = [
         {

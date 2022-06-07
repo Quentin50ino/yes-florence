@@ -6,7 +6,6 @@
             <div>
                 <h1>{{pointOfInterest.title}}</h1>
                 <h6>{{pointOfInterest.description}}</h6>
-                <p>{{pointOfInterest.information}}</p>
             </div>
             <img width="700px" :src="`${pointOfInterest.image}`"/>
         </div>
@@ -14,14 +13,16 @@
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
                 <div class="mx-auto">
-                    <p>{{pointOfInterest.description}}</p>
-                    <p>{{pointOfInterest.information}}</p>
+                    <p style="padding : 0 40px">{{pointOfInterest.information}}</p>
                 </div>
                 <div class="vl"></div>
                 <div class="mx-auto">
+                    <h5>ADDRESS</h5>
+                    <div>{{pointOfInterest.address}}</div>
                     <h5>TICKET INFORMATION</h5>
-                    <h5>PUBLIC TRANSPORT</h5>
-                    <h5>SERVICES</h5>
+                    <div>{{pointOfInterest.ticket}}</div>
+                    <h5>OPEN HOURS</h5>
+                    <div>{{pointOfInterest.open}}</div>
                 </div>
             </div>
         </div>
