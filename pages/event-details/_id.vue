@@ -2,23 +2,23 @@
 <div>
     <nav-bar></nav-bar>
 <nuxt-link to="/event"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
-        <div class="d-flex justify-content-around grey-card">
+        <div class="d-flex justify-content-around grey-card" style="flex-wrap: wrap;">
             <div>
                 <h1>{{event.title}}</h1>
                 <h6>{{event.description}}</h6>
                 <p>{{event.information}}</p>
             </div>
-            <img width="700px" :src="`${event.image}`"/>
+            <img width="" :src="`${event.image}`"/>
         </div>
         <div class="info-card">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
-            <div class="d-flex justify-content-around">
-                <div>
+            <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+                <div class="mx-auto">
                     <p>{{event.description}}</p>
                     <p>{{event.information}}</p>
                 </div>
                 <div class="vl"></div>
-                <div>
+                <div class="mx-auto">
                     <h5>TICKET INFORMATION</h5>
                     <h5>PUBLIC TRANSPORT</h5>
                     <h5>SERVICES</h5>
@@ -26,8 +26,8 @@
             </div>
         </div>
         <h3 class="d-flex justify-content-center title">POINT OF INTERESTS LIST</h3>
-        <div class="d-flex justify-content-center title">
-            <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center title" >
+            <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
             <card :class="{'selected-card' : pointOfInterestIndex==activeCardIndex}" 
             @child-clicked="clickedCard" 
             v-for="(pointOfInterest, pointOfInterestIndex) of pointOfInterests" 
@@ -40,10 +40,10 @@
           </card>
           </div>
         </div>
-        <h3 class="d-flex justify-content-center title">MAP</h3>
+        <h3 class="d-flex justify-content-center title">CITY MAP</h3>
         <info-box></info-box>
         <div class="d-flex justify-content-center title">
-            <iframe :src="`${this.activeCardIndex!==undefined?pointOfInterests[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe :src="`${this.activeCardIndex!==undefined?pointOfInterests[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <footer-icon></footer-icon>
 </div>
@@ -54,9 +54,17 @@
 .grey-card{
     background-color: #dfdfdf;
 }
+@media screen and (min-width: 600px) {
 .vl {
   border-left: 1px solid black;
   height: 100px;
+}
+}
+
+@media screen and (max-width: 600px) {
+.descAndInfo{
+    display: none;
+}
 }
 .info-card {
     margin: 40px 0;

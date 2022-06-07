@@ -1,5 +1,5 @@
 <template>
-        <div class="card" style="width: 18rem;" @click="clickedCard()">
+        <div class="card" style="width: 22rem; margin : 20px 20px;" @click="clickedCard()">
           <img :src="`${image}`" class="card-img-top" alt="point of interest image" height="200px">
           <div class="card-body">
             <h5 class="card-title">{{title}}</h5>

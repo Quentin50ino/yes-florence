@@ -1,9 +1,12 @@
 <template>
-        <div class="card" style="width: 18rem;" @click="clickedCard()">
+        <div class="card" style="width: 18rem; margin : 10px 20px;" @click="clickedCard()">
           <img :src="`${image}`" class="card-img-top" alt="image" height="200px">
           <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
                 <p class="card-text">{{description}}</p>
+                <div v-if="typeOfPage==='event'" class="d-flex justify-content-between">
+                  <h5>Date: </h5><span>{{date}}</span>
+                </div>
                 <nuxt-link :to="`/${typeOfPage}-details/${id}`" class="d-flex justify-content-end">
                   <a @click="goToDetails()"><img width="50px" src="https://img.icons8.com/ios/100/undefined/circled-right-2.png"/></a>
                 </nuxt-link>
@@ -34,6 +37,10 @@ export default {
     description: {
       type: String,
       required: true,
+    },
+    date: {
+      type: String,
+      required: false,
     }
   },
   methods : {

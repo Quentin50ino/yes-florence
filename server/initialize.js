@@ -98,8 +98,7 @@ export default async function initialize (models) {
             image : "https://www.ansa.it/webimages/img_457x/2022/4/17/483328650a7ad0e54683b1e6e4e1b44b.jpg",
             description : "traditional party for easter",
             information :"it takes place in piazza duomo",
-            startDate : "2022-04-15",
-            endDate : "2022-04-16",
+            date : "2022-04-15",
             pointOfInterestId : pointOfInterest0.id,
             typeEventId : typeEvent0.id
         },
@@ -108,8 +107,7 @@ export default async function initialize (models) {
             image : "https://i.ytimg.com/vi/aYB2RlTxMhk/maxresdefault.jpg",
             description : "traditional game",
             information :"it takes place in piazza della signoria",
-            startDate : "2022-10-15",
-            endDate : "2022-12-22",
+            date : "2022-10-15",
             pointOfInterestId : pointOfInterest1.id,
             typeEventId : typeEvent1.id
         },
@@ -118,8 +116,7 @@ export default async function initialize (models) {
             image : "https://www.firenzetoday.it/~media/horizontal-hi/356682651955/fuochi-artificio-2.jpg",
             description : "festa del patrono",
             information :"it takes place sul lung'arno",
-            startDate : "2022-10-15",
-            endDate : "2022-12-22",
+            date : "2022-10-15",
             pointOfInterestId : pointOfInterest1.id,
             typeEventId : typeEvent1.id
         },
@@ -128,8 +125,7 @@ export default async function initialize (models) {
             image : "https://www.ilturista.info/repo/images/no/Rificolona.jpg",
             description : "festa della rificolona",
             information :"it takes place sul lung'arno",
-            startDate : "2022-10-15",
-            endDate : "2022-12-22",
+            date : "2022-10-15",
             pointOfInterestId : pointOfInterest1.id,
             typeEventId : typeEvent1.id
         },
@@ -138,8 +134,7 @@ export default async function initialize (models) {
             image : "https://massimilianosorvino.it/wp-content/uploads/2019/06/Pitti-Uomo.png",
             description : "tra gli eventi di moda più importanti d'italia",
             information :"it takes place alla fortezza",
-            startDate : "2022-10-15",
-            endDate : "2022-12-22",
+            date : "2022-10-15",
             pointOfInterestId : pointOfInterest0.id,
             typeEventId : typeEvent0.id
         }

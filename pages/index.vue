@@ -6,18 +6,18 @@
       <h3 class="d-flex justify-content-center" style="margin-top : 40px">Welcome to Florence</h3>
       <div class="d-flex justify-content-around" style="margin-top : 40px; flex-wrap : wrap">
         <div class="d-flex flex-column align-items-center">
-          <img :src="`${pointOfInterests[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px">
-          <h6>Point Of Interests</h6>
+          <img :src="`${pointOfInterests[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px; margin-top : 20px">
+          <h6 style="margin-top : 20px">Point Of Interests</h6>
           <a href="#section1"><button type="button" class="btn btn-success">DISCOVER</button></a>
         </div>
         <div class="d-flex flex-column align-items-center">
-          <img :src="`${itineraries[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px">
-          <h6>Itineraries</h6>
+          <img :src="`${itineraries[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px; margin-top : 20px">
+          <h6 style="margin-top : 20px">Itineraries</h6>
           <a href="#section2"><button type="button" class="btn btn-success">EXPLORE</button></a>
         </div>
         <div class="d-flex flex-column align-items-center">
-          <img :src="`${events[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px">
-          <h6>Events</h6>
+          <img :src="`${events[0].image}`" width="400px" height="200px" style="border : 1px solid black; border-radius:10px; margin-top : 20px">
+          <h6 style="margin-top : 20px">Events</h6>
           <a href="#section3"><button type="button" class="btn btn-success">HAVE FUN</button></a>
         </div>
       </div>
@@ -124,6 +124,16 @@ h1{
 hr{
   width : 80%;
   margin-top: 40px;
+}
+</style>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+  font-family: 'Roboto', sans-serif;
+}
+h1, h3{
+  margin-top : 20px
 }
 </style>
 

@@ -3,6 +3,7 @@ const app = express()
 const initialize = require('./initialize').default
 const initializeDatabaseConnection = require('./initializeDatabaseConnection').default
 app.use(express.json())
+const { Op } = require('sequelize');
 
 async function startApplicationServer() {
     const models = await initializeDatabaseConnection();
@@ -76,6 +77,15 @@ async function startApplicationServer() {
             where: {
               typeEventId: id
             }
+          });
+        return res.json(eventsList)
+    })
+
+    app.post("/findEventsByDate", async (req, res) => {
+        const startDate = req.body.startDate;
+        const endDate = req.body.endDate
+        const eventsList = await models.Event.findAll({
+            where : {"date" : {[Op.between] : [startDate , endDate ]}}
           });
         return res.json(eventsList)
     })

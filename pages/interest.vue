@@ -5,14 +5,14 @@
         <div class="d-flex justify-content-center">
         <h1>Point of Interests</h1>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" style="flex-wrap: wrap">
           <div class="d-flex flex-column align-items-center find-container">
-            <h6>all point of interests</h6>
-            <button type="button" class="btn btn-default" v-on:click="findAll()">Find</button>
+            <h6></h6>
+            <button type="button" class='btn btn-dark' v-on:click="findAll()">All Points</button>
           </div>
           <div class="d-flex flex-column align-items-center find-container" v-for="(interest, interestIndex) of typesPointOfInterest" :key="`type-index-${interestIndex}`" >
-            <h6>{{interest.type_name}} point of interests</h6>
-            <button type="button" class="btn btn-default" v-on:click="findInterests(interest.id)">Find</button>
+            <h6></h6>
+            <button type="button" class='btn btn-dark' v-on:click="findInterests(interest.id)">{{interest.type_name}} Points</button>
           </div>
         </div>
       <div class="d-flex justify-content-center" style="flex-wrap : wrap">

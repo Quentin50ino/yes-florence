@@ -5,28 +5,26 @@
         <div class="d-flex justify-content-center">
         <h1>Events</h1>
         </div>
-          <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-center" style="flex-wrap : wrap">
           <div class="d-flex flex-column align-items-center find-container">
-            <h6>Start Date</h6>
-            <input type="date"/>
+            <button type="button" class="btn btn-dark" v-on:click="findAll()">All Events</button>
           </div>
+          <div class="d-flex flex-column align-items-center find-container" v-for="(event, eventIndex) of typesEvent" :key="`type-index-${eventIndex}`" >
+            <button type="button" class="btn btn-dark" v-on:click="findEvent(event.id)">{{event.type_name}}</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div class="d-flex flex-column align-items-center find-container">
+            <input @change="startDateHandler" placeholder="Start Date" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
+            <input @change="endDateHandler"  style="margin: 10px 0" placeholder="End Date" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
+            <button :disabled="startDate===undefined && endDate===undefined" type="button" class="btn btn-secondary" v-on:click="findEventByDate(startDate, endDate)">Find</button>
+          </div>
+          <!--
             <div class="d-flex flex-column align-items-center find-container">
             <h6>End Date</h6>
             <input type="date"/>
-          </div>
-          <div class="d-flex flex-column align-items-center find-container">
-            <button type="button" class="btn btn-secondary" v-on:click="findAll()">Find</button>
-          </div>
-        </div>
-          <div class="d-flex justify-content-center">
-          <div class="d-flex flex-column align-items-center find-container">
-            <h6>all events</h6>
-            <button type="button" class="btn btn-default" v-on:click="findAll()">Find</button>
-          </div>
-          <div class="d-flex flex-column align-items-center find-container" v-for="(event, eventIndex) of typesEvent" :key="`type-index-${eventIndex}`" >
-            <h6>{{event.type_name}}</h6>
-            <button type="button" class="btn btn-default" v-on:click="findEvent(event.id)">Find</button>
-          </div>
+          </div>-->
+
         </div>
       <div class="d-flex flex-row justify-content-center" style="flex-wrap : wrap"> 
         <card  v-for="(event, eventIndex) of eventList" 
@@ -35,7 +33,8 @@
           :typeOfPage="`event`"
           :title="`${event.title}`"
           :image="`${event.image}`"
-          :description="`${event.description}`"></card>
+          :description="`${event.description}`"
+          :date="`${event.date}`"></card>
     </div>
     <footer-icon></footer-icon>
     </div>
@@ -61,12 +60,25 @@ export default {
     data() {
         return {
           typesEvent : [],
-          eventList : []
+          eventList : [],
+          startDate : undefined,
+          endDate : undefined
         }
      },
     async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/events')
     const typesEvent = await $axios.get('/api/eventsType')
+    for(var d of data){
+      let date = new Date(d.date)
+      let month;
+      if(date.getMonth()+1<10){
+        month = "0" + (date.getMonth()+1)
+      }
+      else {
+        month = (date.getMonth()+1)
+      }
+      d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
+    }
     return {
       eventList: data,
       typesEvent : typesEvent.data
@@ -75,12 +87,55 @@ export default {
   methods : {
       async findEvent(typeEventId){
         const { data } = await this.$axios.post('/api/findEvents', { id : typeEventId });
+        for(var d of data){
+          let date = new Date(d.date)
+          let month;
+          if(date.getMonth()+1<10){
+             month = "0" + (date.getMonth()+1)
+            }
+           else {
+              month = (date.getMonth()+1)
+            }
+            d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
+            }
+            this.eventList = data;
+        },
+      async findEventByDate(startDate, endDate){
+        const { data } = await this.$axios.post('/api/findEventsByDate', { startDate, endDate });
+        for(var d of data){
+          let date = new Date(d.date)
+          let month;
+          if(date.getMonth()+1<10){
+             month = "0" + (date.getMonth()+1)
+            }
+           else {
+              month = (date.getMonth()+1)
+            }
+            d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
+            }
         this.eventList = data;
       },
       async findAll(){
         const { data } = await this.$axios.get('/api/events');
+        for(var d of data){
+          let date = new Date(d.date)
+          let month;
+          if(date.getMonth()+1<10){
+             month = "0" + (date.getMonth()+1)
+            }
+           else {
+              month = (date.getMonth()+1)
+            }
+            d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
+            }
         this.eventList = data;
+      },
+      startDateHandler({target}) {
+        this.startDate = new Date(target.value)
+      },
+      endDateHandler({target}) {
+        this.endDate = new Date(target.value)
       }
-  }
+    }
 }
 </script>

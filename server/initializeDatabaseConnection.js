@@ -34,8 +34,7 @@ export default async function initializeDatabaseConnection() {
         image : DataTypes.STRING,
         description : DataTypes.STRING,
         information : DataTypes.STRING,
-        startDate : DataTypes.DATE,
-        endDate : DataTypes.DATE
+        date : DataTypes.DATE
     })
     const Service = database.define("service", {
         name : DataTypes.STRING,

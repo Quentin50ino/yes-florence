@@ -5,14 +5,12 @@
         <div class="d-flex justify-content-center">
           <h1>Itineraries</h1>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center align-items-center" style="flex-wrap : wrap">
           <div class="d-flex flex-column align-items-center find-container">
-            <h6>all itineraries</h6>
-            <button type="button" class="btn btn-default" v-on:click="findAll()">Find</button>
+            <button type="button" class="btn btn-dark" v-on:click="findAll()">All Itineraries</button>
           </div>
           <div class="d-flex flex-column align-items-center find-container" v-for="(itinerary, itineraryIndex) of typesItinerary" :key="`type-index-${itineraryIndex}`" >
-            <h6>{{itinerary.type_name}}</h6>
-            <button type="button" class="btn btn-default" v-on:click="findItinerary(itinerary.id)">Find</button>
+            <button type="button" class="btn btn-dark" v-on:click="findItinerary(itinerary.id)">{{itinerary.type_name}}</button>
           </div>
         </div>
         <div class="d-flex flex-row justify-content-center" style="flex-wrap : wrap">
