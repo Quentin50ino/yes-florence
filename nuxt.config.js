@@ -8,7 +8,7 @@ export default {
     }
   ],
   head: {
-    title: 'tourist-office-art-town',
+    title: 'YesFlorence',
     htmlAttrs: {
       lang: 'en'
     },

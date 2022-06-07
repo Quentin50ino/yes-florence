@@ -31,9 +31,6 @@
             <a class="nav-link" href="#">About us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Job postings</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#">News and articles</a>
           </li>
         </ul>

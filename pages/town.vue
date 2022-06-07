@@ -2,7 +2,9 @@
 <div>
     <nav-bar/>
     <img class="main-img" src="https://aws-tiqets-cdn.imgix.net/images/content/fa34dbee93874c79980ce5292032a119.jpg?auto=format&fit=crop&ixlib=python-3.2.1&q=70&s=2910a50d35dbb14685f8275475d4c9ae">
+    <h1 class="d-flex justify-content-center">Town</h1>
     <div class="card-container">
+
         <div style="flex-wrap : wrap;">
             <div class="d-flex justify-content-center">
             <h4>Discover Florence</h4>
@@ -40,6 +42,9 @@
 </template>
 
 <style scoped>
+h1{
+    
+}
 .main-img{
     height: 25em;
     width: 100%;
