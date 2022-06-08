@@ -2,6 +2,7 @@
     <div>
         <nav-bar></nav-bar>
         <nuxt-link to="/itinerary"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
+        <breadcrumbs page1="Itineraries" :page2="itinerary.title" pageBack="/itinerary"></breadcrumbs>
                 <div class="d-flex justify-content-around grey-card" style="flex-wrap: wrap;">
             <div>
                 <h1>{{itinerary.title}}</h1>
@@ -33,7 +34,7 @@
             @child-clicked="clickedCard"
             v-for="(pointOfInterest, pointOfInterestIndex) of pointOfInterests" 
           :key="`pointOfInterest-index-${pointOfInterestIndex}`"
-          :id="`${pointOfInterest.id}`"
+          :id="`${pointOfInterestIndex}`"
           :typeOfPage="`interest`"
           :title="`${pointOfInterest.title}`"
           :image="`${pointOfInterest.image}`"

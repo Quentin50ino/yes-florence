@@ -34,7 +34,8 @@
           :title="`${event.title}`"
           :image="`${event.image}`"
           :description="`${event.description}`"
-          :date="`${event.date}`"></card>
+          :date="`${event.date}`"
+          :endDate="`${event.endDate}`"></card>
     </div>
     <footer-icon></footer-icon>
     </div>
@@ -70,14 +71,20 @@ export default {
     const typesEvent = await $axios.get('/api/eventsType')
     for(var d of data){
       let date = new Date(d.date)
+      let endDate = new Date(d.endDate)
       let month;
+      let endDateMonth;
       if(date.getMonth()+1<10){
         month = "0" + (date.getMonth()+1)
+        endDateMonth = "0" + (endDate.getMonth()+1)
       }
       else {
         month = (date.getMonth()+1)
+        endDateMonth = (endDate.getMonth()+1)
       }
       d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
+      if(d.endDate!=null)
+        d.endDate = endDate.getDate() + "/" + endDateMonth + "/" + endDate.getFullYear()
     }
     return {
       eventList: data,
@@ -85,49 +92,38 @@ export default {
     }
   },
   methods : {
+    parseDate(data){
+      for(var d of data){
+      let date = new Date(d.date)
+      let endDate = new Date(d.endDate)
+      let month;
+      let endDateMonth;
+      if(date.getMonth()+1<10){
+        month = "0" + (date.getMonth()+1)
+        endDateMonth = "0" + (endDate.getMonth()+1)
+      }
+      else {
+        month = (date.getMonth()+1)
+        endDateMonth = (endDate.getMonth()+1)
+      }
+      d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
+      if(d.endDate!=null)
+        d.endDate = endDate.getDate() + "/" + endDateMonth + "/" + endDate.getFullYear()
+    }
+    },
       async findEvent(typeEventId){
         const { data } = await this.$axios.post('/api/findEvents', { id : typeEventId });
-        for(var d of data){
-          let date = new Date(d.date)
-          let month;
-          if(date.getMonth()+1<10){
-             month = "0" + (date.getMonth()+1)
-            }
-           else {
-              month = (date.getMonth()+1)
-            }
-            d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
-            }
-            this.eventList = data;
+        this.parseDate(data);
+          this.eventList = data;
         },
       async findEventByDate(startDate, endDate){
         const { data } = await this.$axios.post('/api/findEventsByDate', { startDate, endDate });
-        for(var d of data){
-          let date = new Date(d.date)
-          let month;
-          if(date.getMonth()+1<10){
-             month = "0" + (date.getMonth()+1)
-            }
-           else {
-              month = (date.getMonth()+1)
-            }
-            d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
-            }
+        this.parseDate(data)
         this.eventList = data;
       },
       async findAll(){
         const { data } = await this.$axios.get('/api/events');
-        for(var d of data){
-          let date = new Date(d.date)
-          let month;
-          if(date.getMonth()+1<10){
-             month = "0" + (date.getMonth()+1)
-            }
-           else {
-              month = (date.getMonth()+1)
-            }
-            d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
-            }
+        this.parseDate(data)
         this.eventList = data;
       },
       startDateHandler({target}) {

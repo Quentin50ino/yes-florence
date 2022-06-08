@@ -2,6 +2,7 @@
 <div>
     <nav-bar></nav-bar>
     <nuxt-link to="/services"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
+    <breadcrumbs page1="Services" :page2="typeName" pageBack="/services"></breadcrumbs>
         <div class="d-flex flex-column align-items-center grey-card">
             <div style="margin-bottom : 12px">
                 <h1>{{typeName}}</h1>
@@ -12,16 +13,18 @@
        <h3 class="d-flex justify-content-center">{{typeName}} List</h3>
        <info-box-service></info-box-service>
         <div class="d-flex justify-content-center" style="flex-wrap : wrap">
-            <card-no-button 
+            <card-service
             @child-clicked="clickedCard"
             :class="{'selected-card' : serviceIndex===activeCardIndex}" 
             v-for="(service, serviceIndex) of services" 
           :key="`service-index-${serviceIndex}`"
           :image="service.image"
-          :title="service.title"
+          :title="service.name"
           :description="service.description"
           :index="serviceIndex"
-            ></card-no-button>
+          :address="service.address"
+          :open="service.open"
+            ></card-service>
           </div>
         </div>
         <footer-icon></footer-icon>
@@ -49,6 +52,7 @@
 
 <script>
 import CardNoButton from '../../components/CardNoButton.vue'
+import CardService from '../../components/CardService.vue'
 import InfoBoxService from '../../components/info-box-service.vue'
 import NavBar from '../../components/NavBar.vue'
 export default {
@@ -56,6 +60,7 @@ export default {
         NavBar,
         CardNoButton,
         InfoBoxService,
+        CardService,
     },
     data(){
         return {

@@ -15,7 +15,7 @@ export default async function initialize (models) {
     const typeItinerary2 = await models.TypeItinerary.create(typeItineraryList[2])
     const itineraryList = [
         {
-            title : "Renaissance",
+            title : "Renaissance in Florence",
             image : "https://www.tuscanypeople.com/wp-content/uploads/2021/06/duomo_firenze_alba.jpg",
             description : "Guided visit in the center of Florence.",
             information : "Visita in italiano",
@@ -23,9 +23,17 @@ export default async function initialize (models) {
             typeItineraryId : typeItinerary0.id
         },
         {
-            title : "Itinerario 2",
-            image : "https://www.the-travel-bunny.com/wp-content/uploads/2021/05/2-days-in-florence-itinerary.jpg",
-            description : "Visita guidata lungo l'arno",
+            title : "Outdoor Florence",
+            image : "https://mywowo.net/media/images/cache/firenze_giardino_dei_boboli_01_prima_parte_jpg_1200_630_cover_85.jpg",
+            description : "Guided visit outdoor",
+            information : "Visita in italiano",
+            duration : 8,
+            typeItineraryId : typeItinerary2.id
+        },
+        {
+            title : "All around Medici",
+            image : "https://www.imuseidifirenze.it/wp-content/uploads/2019/02/palazzo-pitti-firenze-1024x577.jpg",
+            description : "Guided visit in all the old residences of the Medici family",
             information : "Visita in italiano",
             duration : 8,
             typeItineraryId : typeItinerary1.id
@@ -33,6 +41,7 @@ export default async function initialize (models) {
     ]
     const itinerary0 = await models.Itinerary.create(itineraryList[0])
     const itinerary1 = await models.Itinerary.create(itineraryList[1])
+    const itinerary2 = await models.Itinerary.create(itineraryList[2])
     const typePointOfInterestList = [
         {
             type_name : "History"
@@ -192,7 +201,7 @@ export default async function initialize (models) {
             image : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/71/63/48/giardino-dell-artecultura.jpg?w=1200&h=1200&s=1",
             description : "Beatiful garden in the city of Florence.",
             information : "In 1854 the 'Società Toscana d'Orticultura' (Tuscan Society of Horticulture) was constituted. In the second half of the 19th century the garden got larger and Giacomo Roster designed the big tepidarium, inaugurated in 1880. The little loggia 'Bondi' by the architect Castellucci was realized in 1911. The Municipality of Florence bought the garden in 1930 and designated the area as a public garden. In 1990 the 'snake' was completed with decorations of different materials following the project of Marco Dezzi Bardeschi. Inside the garden there is also a playground for children.",
-            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.3432289130037!2d11.258881815346488!3d43.78649047911689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a542280a78f85%3A0x2f67ac42295add0d!2sGiardino%20dell&#39;Orticoltura!5e0!3m2!1sit!2sit!4v1654677013232!5m2!1sit!2sit",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.3432289130037!2d11.258881815346488!3d43.78649047911689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a542280a78f85%3A0x2f67ac42295add0d!2sGiardino%20dell&#39;Orticoltura!5e0!3m2!1sit!2sit!4v1654696580687!5m2!1sit!2sit",
             typePointOfInterestId : typePointOfInterest1.id,
             ticket : "No ticket needed.",
             address : "Via Vittorio Emanuele II, 4, 50139 Firenze FI, Italia",
@@ -244,24 +253,24 @@ export default async function initialize (models) {
         }
 
     ]
-    const pointOfInterest0 = await models.PointOfInterest.create(pointOfInterestsList[0])
-    const pointOfInterest1 = await models.PointOfInterest.create(pointOfInterestsList[1])
-    const pointOfInterest2 = await models.PointOfInterest.create(pointOfInterestsList[2])
-    const pointOfInterest3 = await models.PointOfInterest.create(pointOfInterestsList[3])
-    const pointOfInterest4 = await models.PointOfInterest.create(pointOfInterestsList[4])
-    const pointOfInterest5 = await models.PointOfInterest.create(pointOfInterestsList[5])
-    const pointOfInterest6 = await models.PointOfInterest.create(pointOfInterestsList[6])
-    const pointOfInterest7 = await models.PointOfInterest.create(pointOfInterestsList[7])
-    const pointOfInterest8 = await models.PointOfInterest.create(pointOfInterestsList[8])
-    const pointOfInterest9 = await models.PointOfInterest.create(pointOfInterestsList[9])
-    const pointOfInterest10 = await models.PointOfInterest.create(pointOfInterestsList[10])
-    const pointOfInterest11 = await models.PointOfInterest.create(pointOfInterestsList[11])
-    const pointOfInterest12 = await models.PointOfInterest.create(pointOfInterestsList[12])
-    const pointOfInterest13 = await models.PointOfInterest.create(pointOfInterestsList[13])
-    const pointOfInterest14 = await models.PointOfInterest.create(pointOfInterestsList[14])
-    const pointOfInterest15 = await models.PointOfInterest.create(pointOfInterestsList[15])
-    const pointOfInterest16 = await models.PointOfInterest.create(pointOfInterestsList[16])
-    const pointOfInterest17 = await models.PointOfInterest.create(pointOfInterestsList[17])
+    const pointOfInterest0 = await models.PointOfInterest.create(pointOfInterestsList[0]) //ITINERARIO 1
+    const pointOfInterest1 = await models.PointOfInterest.create(pointOfInterestsList[1]) //ITINERARIO 3
+    const pointOfInterest2 = await models.PointOfInterest.create(pointOfInterestsList[2]) //ITINERARIO 1
+    const pointOfInterest3 = await models.PointOfInterest.create(pointOfInterestsList[3]) //ITINERARIO 2
+    const pointOfInterest4 = await models.PointOfInterest.create(pointOfInterestsList[4]) //ITINERARIO 3
+    const pointOfInterest5 = await models.PointOfInterest.create(pointOfInterestsList[5]) //ITINERARIO 3 
+    const pointOfInterest6 = await models.PointOfInterest.create(pointOfInterestsList[6]) //ITINERARIO 2
+    const pointOfInterest7 = await models.PointOfInterest.create(pointOfInterestsList[7]) //ITINERARIO 1
+    const pointOfInterest8 = await models.PointOfInterest.create(pointOfInterestsList[8]) //ITINERARIO 1
+    const pointOfInterest9 = await models.PointOfInterest.create(pointOfInterestsList[9]) //ITINERARIO 1
+    const pointOfInterest10 = await models.PointOfInterest.create(pointOfInterestsList[10]) //ITINERARIO 2
+    const pointOfInterest11 = await models.PointOfInterest.create(pointOfInterestsList[11]) //ITINERARIO 2
+    const pointOfInterest12 = await models.PointOfInterest.create(pointOfInterestsList[12]) //ITINERARIO 2
+    const pointOfInterest13 = await models.PointOfInterest.create(pointOfInterestsList[13]) //ITINERARIO 2
+    const pointOfInterest14 = await models.PointOfInterest.create(pointOfInterestsList[14]) //ITINERARIO 3
+    const pointOfInterest15 = await models.PointOfInterest.create(pointOfInterestsList[15]) //ITINERARIO 2
+    const pointOfInterest16 = await models.PointOfInterest.create(pointOfInterestsList[16]) //TINERARIO 3
+    const pointOfInterest17 = await models.PointOfInterest.create(pointOfInterestsList[17]) //ITINERARIO 2
     //models.PointOfInterest.create(pointOfInterestsList[1])
     const typeEventList = [
         {
@@ -307,6 +316,7 @@ export default async function initialize (models) {
             description : "festa della rificolona",
             information :"it takes place sul lung'arno",
             date : "2022-10-15",
+            endDate : "2022-10-22",
             pointOfInterestId : pointOfInterest1.id,
             typeEventId : typeEvent1.id
         },
@@ -348,12 +358,72 @@ export default async function initialize (models) {
             pointOfInterestId : pointOfInterest0.id
         },
         {
-            itineraryId : itinerary1.id,
-            pointOfInterestId : pointOfInterest0.id
+            itineraryId : itinerary0.id,
+            pointOfInterestId : pointOfInterest2.id
         },
         {
             itineraryId : itinerary0.id,
+            pointOfInterestId : pointOfInterest7.id
+        },
+        {
+            itineraryId : itinerary0.id,
+            pointOfInterestId : pointOfInterest8.id
+        },
+        {
+            itineraryId : itinerary0.id,
+            pointOfInterestId : pointOfInterest9.id
+        },
+        {
+            itineraryId : itinerary1.id,
+            pointOfInterestId : pointOfInterest10.id
+        },
+        {
+            itineraryId : itinerary1.id,
+            pointOfInterestId : pointOfInterest11.id
+        },
+        {
+            itineraryId : itinerary1.id,
+            pointOfInterestId : pointOfInterest12.id
+        },
+        {
+            itineraryId : itinerary1.id,
+            pointOfInterestId : pointOfInterest13.id
+        },
+        {
+            itineraryId : itinerary1.id,
+            pointOfInterestId : pointOfInterest15.id
+        },
+        {
+            itineraryId : itinerary1.id,
+            pointOfInterestId : pointOfInterest17.id
+        },
+        {
+            itineraryId : itinerary2.id,
             pointOfInterestId : pointOfInterest1.id
+        },
+        {
+            itineraryId : itinerary1.id,
+            pointOfInterestId : pointOfInterest3.id
+        },
+        {
+            itineraryId : itinerary2.id,
+            pointOfInterestId : pointOfInterest4.id
+        },
+        {
+            itineraryId : itinerary2.id,
+            pointOfInterestId : pointOfInterest5.id
+        },
+        {
+            itineraryId : itinerary1.id,
+            pointOfInterestId : pointOfInterest6.id
+        },
+        {
+            itineraryId : itinerary2.id,
+            pointOfInterestId : pointOfInterest14.id
+        },
+        {
+            itineraryId : itinerary2.id,
+            pointOfInterestId : pointOfInterest16.id
         }
     ]
     ItineraryPointOfInterestList.map((item) => models.ItineraryPointOfInterest.create(item))
@@ -379,7 +449,9 @@ export default async function initialize (models) {
             description : "Pharmacy in piazza SM Novella",
             information : "Pharmacy",
             iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5761.877428064988!2d11.247742!3d43.774131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b1cdc4af6c0fb7a!2sOfficina%20Profumo-Farmaceutica%20di%20Santa%20Maria%20Novella!5e0!3m2!1sit!2sit!4v1654259091272!5m2!1sit!2sit",
-            typeServiceId : typeService0.id
+            typeServiceId : typeService0.id,
+            address : "Piazza Santa Maria Novella, Firenze",
+            open : "7 days a week"
         },
         {
             name : "Santa Maria Novella Intesa San Paolo",

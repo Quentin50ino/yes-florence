@@ -4,8 +4,14 @@
           <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
                 <p class="card-text">{{description}}</p>
-                <div v-if="typeOfPage==='event'" class="d-flex justify-content-between">
+                <div v-if="typeOfPage==='event' && endDate=='null'" class="d-flex justify-content-between">
                   <h5>Date: </h5><span>{{date}}</span>
+                </div>
+                <div v-if="typeOfPage==='event' && endDate!='null'" class="d-flex justify-content-between">
+                  <h5>Start date: </h5><span>{{date}}</span>
+                </div>
+                <div v-if="typeOfPage==='event' && endDate!='null'" class="d-flex justify-content-between">
+                  <h5>End date: </h5><span>{{endDate}}</span>
                 </div>
                 <nuxt-link :to="`/${typeOfPage}-details/${id}`" class="d-flex justify-content-end">
                   <a @click="goToDetails()"><img width="50px" src="https://img.icons8.com/ios/100/undefined/circled-right-2.png"/></a>
@@ -41,6 +47,10 @@ export default {
     date: {
       type: String,
       required: false,
+    },
+    endDate: {
+      type: String,
+      required: false,
     }
   },
   methods : {
@@ -48,7 +58,7 @@ export default {
       this.$router.push(`/${this.typeOfPage}-details/${this.id}`)
     },
     clickedCard() {
-      this.$emit("child-clicked", this.id - 1)
+      this.$emit("child-clicked", this.id)
     }
   }
 }

@@ -37,14 +37,17 @@ export default async function initializeDatabaseConnection() {
         image : DataTypes.STRING,
         description : DataTypes.STRING,
         information : DataTypes.STRING,
-        date : DataTypes.DATE
+        date : DataTypes.DATE,
+        endDate : DataTypes.DATE
     })
     const Service = database.define("service", {
         name : DataTypes.STRING,
         image : DataTypes.STRING,
         description : DataTypes.STRING,
         information : DataTypes.STRING,
-        iFrame : DataTypes.STRING(1000)
+        iFrame : DataTypes.STRING(1000),
+        address : DataTypes.STRING,
+        open : DataTypes.STRING
     })
     const TypePointOfInterest = database.define("type_point_of_interest", {
         type_name : DataTypes.STRING
