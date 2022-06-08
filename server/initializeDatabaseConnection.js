@@ -21,7 +21,7 @@ export default async function initializeDatabaseConnection() {
         description : DataTypes.STRING(1000),
         information : DataTypes.STRING(10000),
         iFrame : DataTypes.STRING(1000),
-        ticket : DataTypes.STRING,
+        ticket : DataTypes.STRING(1000),
         address : DataTypes.STRING,
         open : DataTypes.STRING
     })

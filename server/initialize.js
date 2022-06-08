@@ -15,9 +15,9 @@ export default async function initialize (models) {
     const typeItinerary2 = await models.TypeItinerary.create(typeItineraryList[2])
     const itineraryList = [
         {
-            title : "Itinerario 1",
-            image : "https://images.ctfassets.net/bth3mlrehms2/41De5lKWlqJmU80JghXZDS/65f2121e4649d8fa24182466e849c400/Skyline_of_Florence__Italy.jpg?w=520&h=292&fl=progressive&q=50&fm=jpg",
-            description : "Visita guidata nel centro di firenze",
+            title : "Renaissance",
+            image : "https://www.tuscanypeople.com/wp-content/uploads/2021/06/duomo_firenze_alba.jpg",
+            description : "Guided visit in the center of Florence.",
             information : "Visita in italiano",
             duration : 2,
             typeItineraryId : typeItinerary0.id
@@ -132,6 +132,95 @@ export default async function initialize (models) {
             address : "Piazza di Santa Croce, 16, 50122 Firenze FI, Italia",
             open : "Monday - Saturday, from 09:30 to 17:30"
         }, 
+        {
+            title : "Campanile di Giotto",
+            image : "https://www.visita-firenze.it/storage/resize/medium/shutterstock_15485.jpg",
+            description : "Tower very near to the Duomo",
+            information : "The bell tower of Florence Cathedral, known as Giotto’s Campanile, was designed by the great 14th-century master. 84.7 metres tall and approximately 15 metres in breadth, it is the most eloquent example of the architecture of the period in Florence, combining a strong vertical thrust with the principle of sound solidity;  the terrace at the top offers a fabulous view of the city and of Brunelleschi’s Cupola. By the time Giotto died in 1337 he had completed only the first part of his bell tower. Andrea Pisano carried Giotto's design up to the first two levels, while artists such as Alberto Arnoldi adorned the outside with carved lozenges. Work was broken off for two years, between 1348 and 1350, but the bell tower was completed in 1359, after the terrible years of the Black Death, by Francesco Talenti.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11524.010180629675!2d11.2557051!3d43.772806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c4b8131377e75b8!2sCampanile%20di%20Giotto!5e0!3m2!1sit!2sit!4v1654674452378!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price - Brunelleschi Pass (valid 3 days includes Dome, Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 30.00. Full price - Giotto Pass (valid 3 days includes Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 20.00. For information about reduced tickets, please check on the website",
+            address : "Piazza del Duomo, 50122 Firenze FI, Italia",
+            open : "Monday - Sunday from 08:15 to 19:45"
+        }, 
+        {
+            title : "Battistero di San Giovanni",
+            image : "https://www.10cose.it/wp-content/uploads/2015/12/battistero-san-giovanni-firenze.jpg",
+            description : "San Giovanni Baptistery",
+            information : "Remembered by Dante as “beautiful San Giovanni”, the octagonal-shaped Baptistery is one of the city’s oldest buildings; it acquired its current appearance in the 11th–12th centuries but probably dates as far back as the 5th century. The exterior is clad with green and white marble from Prato with geometric motifs and the dome has eight segments; decorative statues and low reliefs were added in the 16th century. The three bronze doors are the work of Andrea Pisano (South Doors, c.1330), and Lorenzo Ghiberti (North Doors, 1402–25, and East Doors, 1425–52). The East Doors, decorated with Scenes from the Old Testament, face the Cathedral and were declared by Michelangelo ‘worthy to be the Gates of Paradise’ (the original doors are now in the Museo dell’Opera del Duomo and have been replaced with copies). The tessellated marble floor inside dates to the end of the 12th century, while the gold-ground mosaics on the walls and cupola were executed between 1266 and the beginning of the following century by Venetian and Tuscan craftsmen. The Baptistery also houses the Tomb of Anti-Pope John XXIII, attributed to Donatello and Michelozzo and carved in the first half of the 15th century.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.9874545256043!2d11.252834514668987!3d43.77311925268737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403bff30525%3A0x74a3341bfd1857d!2sBattistero%20di%20San%20Giovanni!5e0!3m2!1sit!2sit!4v1654674792439!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price - Brunelleschi Pass (valid 3 days includes Dome, Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 30.00. Full price - Giotto Pass (valid 3 days includes Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 20.00. For information about reduced tickets, please check on the website",
+            address : "Piazza San Giovanni, 50122 Firenze FI, Italia",
+            open : "Monday - Sunday from 09:00 to 19:45"
+        },
+        {
+            title : "Ponte Vecchio",
+            image : "https://images.placesonline.com/photos/firenze_559857091_202300_1623852711.jpg?quality=80&w=700",
+            description : "Oldest bridge in Florence",
+            information : "Ponte Vecchio, one of Florence's landmarks, stands at the Roman bridge of ancient Florentia. Over the centuries the bridge was rebuilt several times, also due to the numerous floods of the Arno; following one of these (1333) it was decided to build a new, more stable one (with three arches supported by just two pillars, with a series of masonry shops on both sides). The bridge, built in 1345, probably designed by Taddeo Gaddi, is essentially what we can still admire today. The current goldsmiths' workshops - established in 1593 in place of the old butchers' and fishmongers' shops - make it the 'most precious bridge in the world'. The Corridoio Vasariano, (the passage allowing the Medici to move easily between Palazzo Vecchio and Palazzo Pitti, through the Uffizi) built by Giorgio Vasari in 1565 on commission of Cosimo I, runs right above these buildings. At the centre of the bridge you can admire the monument to Benvenuto Cellini (Raffaello Romanelli, 1900) and the remains of a 14th-century sundial. In August 1944, during the Nazi retreat, this was the only Florentine bridge that remained intact. The terrible flood of 1966, while causing serious damage, did not compromise its structure.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.237672282988!2d11.250954815345823!3d43.76792497911756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56aaa2dcb667%3A0x40310ae830e702e8!2sPonte%20Vecchio!5e0!3m2!1sit!2sit!4v1654676351937!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "No ticket needed.",
+            address : "Ponte Vecchio, 50125 Firenze FI, Italia",
+            open : "Open 7 days a week"
+        },
+        {
+            title : "Ponte Santa Trinita",
+            image : "https://www.visita-firenze.it/storage/resize/medium/shutterstock_5657.jpg",
+            description : "One of the oldest and most famous bridge in Florence",
+            information : "The original bridge was built in1252, and it was named after the nearby church. Like all of Florence's historical bridges, it was rebuilt several times following the numerous floods of the Arno; after the terrible one of 1557, Cosimo I de' Medici commissioned its reconstruction to Bartolomeo Ammannati, who was perhaps inspired by an idea of Michelangelo Buonarroti.  Made of pietra forte and decorated with commemorative epigraphs, it was considered the most elegant bridge in Florence, worthy of the grand ducal processions that used to pass over it. The statues at both ends are by Giovanni Caccini (Autumn and Summer), Taddeo Landini (Winter) and Pietro Francavilla (Spring). Destroyed by the Germans during the Second World War, it was rebuilt exactly 'as it was and where it was' in 1958.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.185947294103!2d11.248143815345879!3d43.76899877911746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5404c8afd5d9%3A0xd598096fc71132e6!2sPonte%20Santa%20Trinita!5e0!3m2!1sit!2sit!4v1654676063794!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "No ticket needed.",
+            address : "Ponte Santa Trinita, 50100 Firenze FI, Italia",
+            open : "Open 7 days a week"
+        },
+        {
+            title : "Giardino di Bobolino",
+            image : "https://www.firenzegreenway.com/wp-content/uploads/2021/02/4-bobolino-358211.jpg",
+            description : "Very nice public park for relax yourself",
+            information : "This public park, located on Viale Machiavelli near Porta Romana, is a sloping garden, entirely made up of grassy slopes, steps and gravel yards with pretty green furniture solutions including tanks and artificial caves;the majestic 'Cedar of incense' located on the left side of the central flowerbed  is worth a mention.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.722815739041!2d11.24652381534546!3d43.75785247911782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5159c6430e05%3A0x438b4a3831ef8ded!2sGiardino%20del%20Bobolino!5e0!3m2!1sit!2sit!4v1654676583632!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "No ticket needed.",
+            address : "Giardino del Bobolino, Viale Machiavelli, 18, 50125 Firenze FI, Italia",
+            open : "Open 7 days a week"
+        },
+        {
+            title : "Giardino dell'Orticoltura",
+            image : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/71/63/48/giardino-dell-artecultura.jpg?w=1200&h=1200&s=1",
+            description : "Beatiful garden in the city of Florence.",
+            information : "In 1854 the 'Società Toscana d'Orticultura' (Tuscan Society of Horticulture) was constituted. In the second half of the 19th century the garden got larger and Giacomo Roster designed the big tepidarium, inaugurated in 1880. The little loggia 'Bondi' by the architect Castellucci was realized in 1911. The Municipality of Florence bought the garden in 1930 and designated the area as a public garden. In 1990 the 'snake' was completed with decorations of different materials following the project of Marco Dezzi Bardeschi. Inside the garden there is also a playground for children.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.3432289130037!2d11.258881815346488!3d43.78649047911689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a542280a78f85%3A0x2f67ac42295add0d!2sGiardino%20dell&#39;Orticoltura!5e0!3m2!1sit!2sit!4v1654677013232!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "No ticket needed.",
+            address : "Via Vittorio Emanuele II, 4, 50139 Firenze FI, Italia",
+            open : "Monday - Sunday from 08:30 to 18:00 *** PLEASE NOTE:THE GARDEN WILL BE TEMPORARILY OPEN FROM MONDAY TO SUNDAY FROM 9:30 TO 20:00. INFO: www.societatoscanaorticultura.it"
+        },
+        {
+            title : "Medici Ricciardi Palace",
+            image : "https://www.palazzomediciriccardi.it/wp-content/uploads/2018/09/Palazzo-Medici-Riccardi-fullhd.jpg",
+            description : "The old house of the Medici family (before Palazzo Pitti)",
+            information : "Commissioned in 1444 by Cosimo the Elder, the residence of the Medici family constitutes a model of civil architecture in the Renaissance. Not only private residence of the members of the family, among which Lorenzo the Magnificent, the palace performs its public function by welcoming important political figures. The  monumental courtyard of the palace leads up to the Chapel of the Magi, built to a design by Michelozzo and frescoed in 1459 by Benozzo Gozzoli with the Procession of the Magi. On the altar is a copy of the original altarpiece painted by Filippo Lippi. The Sala Sonnino on the first floor is decorated with a series of 31 low reliefs probably produced by the workshop of Bartolomeo Ammannati under the strong influence of Michelangelo. The Sala Sonnino leads into the Gallery, its vault is embellished with frescoes by Luca Giordano representing the Apology of the Medici Family, the protectors of the Riccardi. Three rooms in the palace basement house the Roman sculptures collected in the 16th–17th centuries by the Riccardi family. The museum organizes activities and workshops for families with children and school groups",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.8876875700403!2d11.253586215346063!3d43.775190179117345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a54031be7011b%3A0x8fcb8659c80d7240!2sPalazzo%20Medici%20Riccardi!5e0!3m2!1sit!2sit!4v1654677315322!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price € 7.00. Full price in case of exhibitions € 10.00. For information about reduced tickets please check on the website",
+            address : "Via Camillo Cavour, 3, 50129 Firenze FI, Italia",
+            open : "Thursday - Tuesday from 09:00 to 19:00"
+        },
+        {
+            title : "Rose Garden",
+            image : "https://www.055firenze.it/ridimensiona.html/cms/660/660/000/cms/custom/files/100005/ct50012_id122402_t1/4349888938_b37efbc410_z.jpg",
+            description : "Garden right below Piazzale Michelangelo.",
+            information : "The Rose garden is a green terrace right below Piazzale Michelangelo overlooking the historic centre of the city and enjoying a breath-taking view equal in beauty to that from Forte Belvedere. The Garden has been entirely redesigned better to display the works by Folon. Visitors will be able to admire the unique view of Santa Maria del Fiore and Palazzo Vecchio through the big suitcase of Partir; they will rest next to Folon’s man on the timeless bench of Je me souviens; they will stroke the Chat, the large cat sleeping on the grass among rosebushes. In the garden there is also a ... corner of Japan! The Japanese garden was donated to the Municipality of Florence by the twin city of Kyoto.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.4753302515387!2d11.260603315345644!3d43.76299097911772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a53f9e6f03551%3A0xe76b4f3dd060f63a!2sGiardino%20delle%20Rose!5e0!3m2!1sit!2sit!4v1654677808421!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "No ticket needed.",
+            address : "Giardino delle Rose, Viale Giuseppe Poggi, 2, 50125 Firenze FI, Italia",
+            open : "Monday - Saturday from 09:00 to 20:00. Sunday and holidays from 10:00 to 20:00."
+        }
+
     ]
     const pointOfInterest0 = await models.PointOfInterest.create(pointOfInterestsList[0])
     const pointOfInterest1 = await models.PointOfInterest.create(pointOfInterestsList[1])
@@ -141,6 +230,14 @@ export default async function initialize (models) {
     const pointOfInterest5 = await models.PointOfInterest.create(pointOfInterestsList[5])
     const pointOfInterest6 = await models.PointOfInterest.create(pointOfInterestsList[6])
     const pointOfInterest7 = await models.PointOfInterest.create(pointOfInterestsList[7])
+    const pointOfInterest8 = await models.PointOfInterest.create(pointOfInterestsList[8])
+    const pointOfInterest9 = await models.PointOfInterest.create(pointOfInterestsList[9])
+    const pointOfInterest10 = await models.PointOfInterest.create(pointOfInterestsList[10])
+    const pointOfInterest11 = await models.PointOfInterest.create(pointOfInterestsList[11])
+    const pointOfInterest12 = await models.PointOfInterest.create(pointOfInterestsList[12])
+    const pointOfInterest13 = await models.PointOfInterest.create(pointOfInterestsList[13])
+    const pointOfInterest14 = await models.PointOfInterest.create(pointOfInterestsList[14])
+    const pointOfInterest15 = await models.PointOfInterest.create(pointOfInterestsList[15])
     //models.PointOfInterest.create(pointOfInterestsList[1])
     const typeEventList = [
         {
