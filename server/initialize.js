@@ -132,6 +132,28 @@ export default async function initialize (models) {
             address : "Piazza di Santa Croce, 16, 50122 Firenze FI, Italia",
             open : "Monday - Saturday, from 09:30 to 17:30"
         }, 
+        {
+            title : "Campanile di Giotto",
+            image : "https://www.visita-firenze.it/storage/resize/medium/shutterstock_15485.jpg",
+            description : "Tower very near to the Duomo",
+            information : "The bell tower of Florence Cathedral, known as Giotto’s Campanile, was designed by the great 14th-century master. 84.7 metres tall and approximately 15 metres in breadth, it is the most eloquent example of the architecture of the period in Florence, combining a strong vertical thrust with the principle of sound solidity;  the terrace at the top offers a fabulous view of the city and of Brunelleschi’s Cupola. By the time Giotto died in 1337 he had completed only the first part of his bell tower. Andrea Pisano carried Giotto's design up to the first two levels, while artists such as Alberto Arnoldi adorned the outside with carved lozenges. Work was broken off for two years, between 1348 and 1350, but the bell tower was completed in 1359, after the terrible years of the Black Death, by Francesco Talenti.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11524.010180629675!2d11.2557051!3d43.772806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c4b8131377e75b8!2sCampanile%20di%20Giotto!5e0!3m2!1sit!2sit!4v1654674452378!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price - Brunelleschi Pass (valid 3 days includes Dome, Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 30.00. Full price - Giotto Pass (valid 3 days includes Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 20.00. For information about reduced tickets, please check on the website",
+            address : "Piazza del Duomo, 50122 Firenze FI, Italia",
+            open : "Monday - Sunday from 08:15 to 19:45"
+        }, 
+        {
+            title : "Battistero di San Giovanni",
+            image : "https://www.10cose.it/wp-content/uploads/2015/12/battistero-san-giovanni-firenze.jpg",
+            description : "San Giovanni Baptistery",
+            information : "Remembered by Dante as “beautiful San Giovanni”, the octagonal-shaped Baptistery is one of the city’s oldest buildings; it acquired its current appearance in the 11th–12th centuries but probably dates as far back as the 5th century. The exterior is clad with green and white marble from Prato with geometric motifs and the dome has eight segments; decorative statues and low reliefs were added in the 16th century. The three bronze doors are the work of Andrea Pisano (South Doors, c.1330), and Lorenzo Ghiberti (North Doors, 1402–25, and East Doors, 1425–52). The East Doors, decorated with Scenes from the Old Testament, face the Cathedral and were declared by Michelangelo ‘worthy to be the Gates of Paradise’ (the original doors are now in the Museo dell’Opera del Duomo and have been replaced with copies). The tessellated marble floor inside dates to the end of the 12th century, while the gold-ground mosaics on the walls and cupola were executed between 1266 and the beginning of the following century by Venetian and Tuscan craftsmen. The Baptistery also houses the Tomb of Anti-Pope John XXIII, attributed to Donatello and Michelozzo and carved in the first half of the 15th century.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.9874545256043!2d11.252834514668987!3d43.77311925268737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5403bff30525%3A0x74a3341bfd1857d!2sBattistero%20di%20San%20Giovanni!5e0!3m2!1sit!2sit!4v1654674792439!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price - Brunelleschi Pass (valid 3 days includes Dome, Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 30.00. Full price - Giotto Pass (valid 3 days includes Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 20.00. For information about reduced tickets, please check on the website",
+            address : "Piazza San Giovanni, 50122 Firenze FI, Italia",
+            open : "Monday - Sunday from 09:00 to 19:45"
+        },
     ]
     const pointOfInterest0 = await models.PointOfInterest.create(pointOfInterestsList[0])
     const pointOfInterest1 = await models.PointOfInterest.create(pointOfInterestsList[1])
@@ -141,6 +163,8 @@ export default async function initialize (models) {
     const pointOfInterest5 = await models.PointOfInterest.create(pointOfInterestsList[5])
     const pointOfInterest6 = await models.PointOfInterest.create(pointOfInterestsList[6])
     const pointOfInterest7 = await models.PointOfInterest.create(pointOfInterestsList[7])
+    const pointOfInterest8 = await models.PointOfInterest.create(pointOfInterestsList[8])
+    const pointOfInterest9 = await models.PointOfInterest.create(pointOfInterestsList[9])
     //models.PointOfInterest.create(pointOfInterestsList[1])
     const typeEventList = [
         {
