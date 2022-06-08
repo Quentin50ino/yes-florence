@@ -219,6 +219,28 @@ export default async function initialize (models) {
             ticket : "No ticket needed.",
             address : "Giardino delle Rose, Viale Giuseppe Poggi, 2, 50125 Firenze FI, Italia",
             open : "Monday - Saturday from 09:00 to 20:00. Sunday and holidays from 10:00 to 20:00."
+        },
+        {
+            title : "G.A.M. - Palazzo Pitti",
+            image : "https://www.imuseidifirenze.it/wp-content/uploads/2019/02/palazzo-pitti-firenze-1024x577.jpg",
+            description : "Old residence of the Medici family in Florence.",
+            information : "Situated on the second floor of Palazzo Pitti, the thirty rooms of the Modern Art Gallery contain paintings and sculptures, for the most part Italian, from the end of the 18th century through to the First World War. There is Neoclassical and Romantic art, an extensive selection of Macchiaioli paintings and works of the Italian schools of the second half of the 19th century (Decadentism, Symbolism, Post-Impressionism, Divisionism) and early 20th-century art movements.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11525.484717997688!2d11.2500081!3d43.7651533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cd0cce4e6f1502a!2sPalazzo%20Pitti!5e0!3m2!1sit!2sit!4v1654690075990!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "Full price - high season (March-October) € 16.00. Full price - low season (November-February) € 10.00",
+            address : "Piazza de' Pitti, 1, 50125 Firenze FI, Italia",
+            open : "Tuesday - Sunday from 08:15 to 18:50. Closed: Monday , December 25th, January 1st. The ticket office closes at 17:30"
+        },
+        {
+            title : "Piazza Santissima Annunziata",
+            image : "https://www.visittuscany.com/shared/visittuscany/immagini/attivita/innocents-museum-florence.jpg",
+            description : "Square characterised by the Renaissance aspect",
+            information : "The Piazza della Santissima Annunziata is characterised by the Renaissance aspect which Brunelleschi conferred in it with the construction of the colonnade for the Ospedale degli Innocenti. The elegant harmony of the hospital building conditions the entire square, and the colonnade itself is later repeated in the Loggiato dei Serviti, and in the façade of the church. As a result Brunelleschi’s design assumes a certain urbanistic importance, underlined by the fact that this square is one of the few points of the city from which one can see the cupola of the Cathedral, the monumental symbol of the fifteenth century city. The square has also always played a significant role in the religious, cultural and economic life of Florence, which is closely related to the religious institute of the Servants of Mary. In fact the presence of an image of the Annunciation which is believed to be miraculous has made the church of Santissima Annunziata an important centre of devotion, and a destination for pilgrimages and processions. As well as this, the fact that in Florence the feast of the Annunciation (25 March) coincided up until 1750 with the start of the new civil year, made the square the obvious choice for the celebration of this holiday which was both civic and religious. This square also hosts one of the most typical traditions, the Rificolona. This Florentine Feast is held every September 7th, the night before the Nativity of the Virgin Mary.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.8286328375775!2d11.258414865346108!3d43.77641597911727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5404d4f23393%3A0xdac6cafc2c6474c4!2sPiazza%20della%20Santissima%20Annunziata%2C%20Firenze%20FI!5e0!3m2!1sit!2sit!4v1654690746364!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "No ticket needed.",
+            address : "Piazza della Santissima Annunziata, Firenze",
+            open : "Open 7 days a week"
         }
 
     ]
@@ -238,6 +260,8 @@ export default async function initialize (models) {
     const pointOfInterest13 = await models.PointOfInterest.create(pointOfInterestsList[13])
     const pointOfInterest14 = await models.PointOfInterest.create(pointOfInterestsList[14])
     const pointOfInterest15 = await models.PointOfInterest.create(pointOfInterestsList[15])
+    const pointOfInterest16 = await models.PointOfInterest.create(pointOfInterestsList[16])
+    const pointOfInterest17 = await models.PointOfInterest.create(pointOfInterestsList[17])
     //models.PointOfInterest.create(pointOfInterestsList[1])
     const typeEventList = [
         {
