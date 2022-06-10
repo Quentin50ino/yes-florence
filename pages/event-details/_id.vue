@@ -33,7 +33,7 @@
             @child-clicked="clickedCard" 
             v-for="(pointOfInterest, pointOfInterestIndex) of pointOfInterests" 
           :key="`pointOfInterest-index-${pointOfInterestIndex}`"
-          :id="`${pointOfInterest.id}`"
+          :id="`${pointOfInterestIndex}`"
           :typeOfPage="`interest`"
           :title="`${pointOfInterest.title}`"
           :image="`${pointOfInterest.image}`"
