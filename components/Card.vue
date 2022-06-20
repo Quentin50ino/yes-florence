@@ -64,6 +64,10 @@ export default {
     endDate: {
       type: String,
       required: false,
+    },
+    index: {
+      type : String,
+      required : false
     }
   },
   methods : {
@@ -71,7 +75,7 @@ export default {
       this.$router.push(`/${this.typeOfPage}-details/${this.id}`)
     },
     clickedCard() {
-      this.$emit("child-clicked", this.id)
+      this.$emit("child-clicked", this.index)
     }
   }
 }
