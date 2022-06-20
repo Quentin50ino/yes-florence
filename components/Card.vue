@@ -1,7 +1,8 @@
 <template>
-        <div class="card zoom" style="width: 18rem; margin : 15px 20px;" @click="clickedCard()">
-          <img :src="`${image}`" class="card-img-top" alt="image" height="200px">
+        <div class="card zoom" style="width: 18rem; margin : 15px 20px;">
+          <img :src="`${image}`" class="card-img-top" alt="image" height="200px"  @click="clickedCard()">
           <div class="card-body">
+            <div @click="clickedCard()">
             <h5 class="card-title">{{title}}</h5>
                 <p class="card-text">{{description}}</p>
                 <div v-if="typeOfPage==='event' && endDate=='null'" class="d-flex justify-content-between">
@@ -13,6 +14,7 @@
                 <div v-if="typeOfPage==='event' && endDate!='null'" class="d-flex justify-content-between">
                   <h5>End date: </h5><span>{{endDate}}</span>
                 </div>
+              </div>
                 <nuxt-link :to="`/${typeOfPage}-details/${id}`" class="d-flex justify-content-end">
                   <a @click="goToDetails()"><img width="50px" src="https://img.icons8.com/ios/100/undefined/circled-right-2.png"/></a>
                 </nuxt-link>
