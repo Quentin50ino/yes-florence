@@ -15,8 +15,8 @@
         </div>
         <div class="d-flex justify-content-center">
           <div class="d-flex flex-column align-items-center find-container">
-            <input @change="startDateHandler" placeholder="Start Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
-            <input @change="endDateHandler" :min="startDateForInput" style="margin: 10px 0" placeholder="End Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
+            <input @change="startDateHandler" placeholder="Start Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" :value="startDate!==undefined?startDateForInput:''"/>
+            <input :disabled="!startDate" @change="endDateHandler" :min="startDateForInput" style="margin: 10px 0" placeholder="End Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" :value="startDate!==undefined?endDateForInput:''"/>
             <div>
             <button :disabled="startDate===undefined || endDate===undefined" type="button" class="btn btn-danger" v-on:click="clearInputDate()">Clear</button>
             <button :disabled="startDate===undefined || endDate===undefined" type="button" class="btn btn-secondary" v-on:click="findEventByDate(startDate, endDate)">Find</button>
@@ -67,7 +67,8 @@ export default {
           eventList : [],
           startDate : undefined,
           startDateForInput : undefined,
-          endDate : undefined
+          endDate : undefined,
+          endDateForInput : undefined
         }
      },
     async asyncData({ $axios }) {
@@ -132,14 +133,34 @@ export default {
       },
       startDateHandler({target}) {
         this.startDate = new Date(target.value)
+        let month;
+        if( this.startDate.getMonth()+1<10){
+          month = "0" + (this.startDate.getMonth() + 1)
+        }
+        else{
+          month = this.startDate.getMonth() + 1;
+        }
+        //this.startDateForInput = this.startDate.getDate() + "/" + month + "/" + this.startDate.getFullYear();
         this.startDateForInput = target.value;
       },
       endDateHandler({target}) {
         this.endDate = new Date(target.value)
+        let month;
+        if( this.endDate.getMonth()+1<10){
+          month = "0" + (this.endDate.getMonth() + 1)
+        }
+        else{
+          month = this.endDate.getMonth() + 1;
+        }
+        //this.endDateForInput = this.endDate.getDate() + "/" + month + "/" + this.endDate.getFullYear();
+        this.endDateForInput = target.value;
       },
-      clearInputDate(){
-        this.startDate = undefined,
-        this.endDate = undefined
+      async clearInputDate(){
+        this.startDate = undefined;
+        this.endDate = undefined;
+        const { data } = await this.$axios.get('/api/events');
+        this.parseDate(data)
+        this.eventList = data;
       }
     }
 }
