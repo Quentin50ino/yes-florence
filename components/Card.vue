@@ -1,5 +1,5 @@
 <template>
-        <div class="card" style="width: 18rem; margin : 10px 20px;" @click="clickedCard()">
+        <div class="card zoom" style="width: 18rem; margin : 15px 20px;" @click="clickedCard()">
           <img :src="`${image}`" class="card-img-top" alt="image" height="200px">
           <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
@@ -19,6 +19,17 @@
           </div>
       </div>
 </template>
+
+<style scoped>
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform:  scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+</style>
 
 <script>
 export default {

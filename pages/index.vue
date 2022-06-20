@@ -7,18 +7,18 @@
       <br>
       <h5 class="d-flex justify-content-center" style="padding : 0 70px">Discover Florence and its Metropolitan Area</h5>
       <span class="d-flex justify-content-center" style="padding : 0 70px">The Official Tourism website of the Metropolitan City and of the Municipality of Florence. Find the descriptions of fascinating points of interest, find the opening times of museums and all the events taking place in Florence and around. Follow our tips and itineraries, try the most amazing experiences.</span>
-      <div class="d-flex justify-content-around" style="margin-top : 40px; flex-wrap : wrap;">
-        <div class="d-flex flex-column align-items-center img-container" style=" background-color: #f0f0f0; padding : 20px; border-radius: 10px">
+      <div class="d-flex justify-content-around " style="margin-top : 40px; flex-wrap : wrap;">
+        <div class="d-flex flex-column align-items-center img-container zoom" style=" background-color: #f0f0f0; padding : 20px; border-radius: 10px">
           <img :src="`${pointOfInterests[0].image}`" width="400px" height="200px" style=" border-radius:10px;">
           <h5 style="margin-top : 20px; color : black">Point Of Interests</h5>
           <a style="margin-bottom : 15px" href="#section1"><button type="button" class="btn btn-success">DISCOVER</button></a>
         </div>
-        <div class="d-flex flex-column align-items-center img-container"  style=" background-color: #f0f0f0; padding : 20px; border-radius: 10px">
+        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #f0f0f0; padding : 20px; border-radius: 10px">
           <img :src="`${itineraries[0].image}`" width="400px" height="200px" style=" border-radius:10px;">
           <h5 style="margin-top : 20px; color : black">Itineraries</h5>
           <a style="margin-bottom : 15px" href="#section2"><button type="button" class="btn btn-success">EXPLORE</button></a>
         </div>
-        <div class="d-flex flex-column align-items-center img-container"  style=" background-color: #f0f0f0; padding : 20px; border-radius: 10px">
+        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #f0f0f0; padding : 20px; border-radius: 10px">
           <img :src="`${events[0].image}`" width="400px" height="200px" style=" border-radius:10px;">
           <h5 style="margin-top : 20px; color : black">Events</h5>
           <a style="margin-bottom : 15px" href="#section3"><button type="button" class="btn btn-success">HAVE FUN</button></a>
@@ -136,6 +136,14 @@ img{
   .img-container{
     margin-top : 40px;
   }
+}
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 </style>
 

@@ -250,6 +250,17 @@ export default async function initialize (models) {
             ticket : "No ticket needed.",
             address : "Piazza della Santissima Annunziata, Firenze",
             open : "Open 7 days a week"
+        },
+        {
+            title : "Fortezza da Basso",
+            image : "https://upload.wikimedia.org/wikipedia/commons/6/63/Fortezza_da_basso%2C_11.JPG",
+            description : "Fortezza designed in 1500",
+            information : "Designed by Antonio da Sangallo the Younger (1533-35), the Fortezza has been completely remodeled and is now an exhibition and conference center. This complex and prestigious environment combines charming and perfectly restored historic places (such as the Quartieri Monumentali - the Monumental Area - or the Polveriera) with modern pavilions, specifically built to increase the space availability, such as the Spadolini Pavilion and the more recently built Cavaniglia Pavilion.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11522.294821185724!2d11.2487085!3d43.7817072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdae6de98479783b0!2sFortezza%20da%20Basso!5e0!3m2!1sit!2sit!4v1654856909196!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest0.id,
+            ticket : "The entrance fee depends on the events hosted.",
+            address : "Viale Filippo Strozzi, 1, 50129 Firenze FI, Italia",
+            open : "Open during temporary exhibitions and events."
         }
 
     ]
@@ -271,6 +282,7 @@ export default async function initialize (models) {
     const pointOfInterest15 = await models.PointOfInterest.create(pointOfInterestsList[15]) //ITINERARIO 2
     const pointOfInterest16 = await models.PointOfInterest.create(pointOfInterestsList[16]) //TINERARIO 3
     const pointOfInterest17 = await models.PointOfInterest.create(pointOfInterestsList[17]) //ITINERARIO 2
+    const pointOfInterest18 = await models.PointOfInterest.create(pointOfInterestsList[18])
     //models.PointOfInterest.create(pointOfInterestsList[1])
     const typeEventList = [
         {
