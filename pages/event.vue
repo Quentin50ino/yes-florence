@@ -16,7 +16,7 @@
         <div class="d-flex justify-content-center">
           <div class="d-flex flex-column align-items-center find-container">
             <input @change="startDateHandler" placeholder="Start Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" :value="startDate!==undefined?startDateForInput:''"/>
-            <input :disabled="!startDate" @change="endDateHandler" :min="startDateForInput" style="margin: 10px 0" placeholder="End Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" :value="startDate!==undefined?endDateForInput:''"/>
+            <input :disabled="!startDate" @change="endDateHandler" :min="startDateForInput" style="margin: 10px 0" placeholder="End Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" :value="endDate!==undefined?endDateForInput:''"/>
             <div>
             <button :disabled="startDate===undefined || endDate===undefined" type="button" class="btn btn-danger" v-on:click="clearInputDate()">Clear</button>
             <button :disabled="startDate===undefined || endDate===undefined" type="button" class="btn btn-secondary" v-on:click="findEventByDate(startDate, endDate)">Find</button>
