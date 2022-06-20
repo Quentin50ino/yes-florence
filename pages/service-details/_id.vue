@@ -3,7 +3,7 @@
     <nav-bar></nav-bar>
     <nuxt-link to="/services"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
     <breadcrumbs page1="Services" :page2="typeName" pageBack="/services"></breadcrumbs>
-        <div class="d-flex flex-column align-items-center grey-card">
+        <div id="city-map" class="d-flex flex-column align-items-center grey-card">
             <div style="margin-bottom : 12px">
                 <h1>{{typeName}}</h1>
             </div>
@@ -46,7 +46,8 @@
     margin-bottom : 40px
 }
 .selected-card{
-    border : solid 2px blue;
+    border : solid 3px #3b5998;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 </style>
 
@@ -83,7 +84,8 @@ export default {
   },
   methods : {
       clickedCard(e) {
-          this.activeCardIndex = e
+          this.activeCardIndex = e;
+          window.location.href = '#city-map';
       }
   }
 }

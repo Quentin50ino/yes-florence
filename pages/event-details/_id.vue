@@ -41,7 +41,7 @@
           </card>
           </div>
         </div>
-        <h3 class="d-flex justify-content-center title">CITY MAP</h3>
+        <h3 class="d-flex justify-content-center title" id="city-map">CITY MAP</h3>
         <info-box></info-box>
         <div class="d-flex justify-content-center title">
             <iframe :src="`${this.activeCardIndex!==undefined?pointOfInterests[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -74,7 +74,8 @@
     margin-bottom : 40px
 }
 .selected-card{
-    border : solid 2px blue;
+    border : solid 3px #3b5998;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 </style>
 
@@ -107,6 +108,7 @@ export default {
   methods : {
       clickedCard(e){
           this.activeCardIndex = e;
+          window.location.href = '#city-map'
       }
   }
 }

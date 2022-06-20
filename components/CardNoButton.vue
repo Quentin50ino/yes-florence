@@ -1,5 +1,5 @@
 <template>
-        <div class="card" style="width: 22rem; margin : 20px 20px;" @click="clickedCard()">
+        <div class="card shadow" style="width: 22rem; margin : 20px 20px;" @click="clickedCard()">
           <img :src="`${image}`" class="card-img-top" alt="point of interest image" height="200px">
           <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
@@ -7,6 +7,15 @@
           </div>
       </div>
 </template>
+
+<style scoped>
+.shadow{
+  box-shadow: none;
+}
+.shadow:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+</style>
 
 <script>
 export default {

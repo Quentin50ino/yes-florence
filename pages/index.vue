@@ -115,6 +115,35 @@
   <hr>
 </div>
     </div>
+       <div>
+      <h1 class="d-flex justify-content-center" id="section3">SERVICES</h1>
+  <div id="carouselServices" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <carousel
+    v-for="(service, serviceIndex) of services" 
+    :key="`service-index-${serviceIndex}`"
+    :image="service.image"
+    :index="serviceIndex"
+    :title="service.name"
+    :description="service.description"
+    ></carousel>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselServices" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselServices" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="d-flex justify-content-center" style="margin-top : 40px">
+  <nuxt-link to="/services"><button type="button" class="btn btn-light">Learn More</button></nuxt-link>
+</div>
+<div class="d-flex justify-content-center">
+  <hr>
+</div>
+    </div>
     <footer-icon></footer-icon>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   </div> 
@@ -162,23 +191,26 @@ import Carousel from '../components/Carousel.vue'
 import FooterIcon from '../components/footer-icon.vue'
 import NavBar from '../components/NavBar.vue'
 export default {
-  components: { NavBar, Carousel, FooterIcon },
+  components: { NavBar, Carousel, FooterIcon},
   name: 'IndexPage',
   data(){
     return{
       pointOfInterests : undefined,
       itineraries : undefined,
-      events : undefined
+      events : undefined,
+      services : undefined
     }
   },
   async asyncData({ $axios }) {
     const pointOfInterests = await $axios.get('/api/pointOfInterests')
     const itineraries = await $axios.get('/api/itineraries')
     const events = await $axios.get('/api/events')
+    const services = await $axios.get('/api/services')
     return {
       pointOfInterests: pointOfInterests.data,
       itineraries : itineraries.data,
-      events : events.data
+      events : events.data,
+      services : services.data
       }
     },
 }

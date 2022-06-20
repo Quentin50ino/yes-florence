@@ -15,9 +15,12 @@
         </div>
         <div class="d-flex justify-content-center">
           <div class="d-flex flex-column align-items-center find-container">
-            <input @change="startDateHandler" placeholder="Start Date" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
-            <input @change="endDateHandler"  style="margin: 10px 0" placeholder="End Date" class="textbox-n" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" />
-            <button :disabled="startDate===undefined && endDate===undefined" type="button" class="btn btn-secondary" v-on:click="findEventByDate(startDate, endDate)">Find</button>
+            <input @change="startDateHandler" placeholder="Start Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
+            <input @change="endDateHandler" :min="startDateForInput" style="margin: 10px 0" placeholder="End Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"/>
+            <div>
+            <button :disabled="startDate===undefined || endDate===undefined" type="button" class="btn btn-danger" v-on:click="clearInputDate()">Clear</button>
+            <button :disabled="startDate===undefined || endDate===undefined" type="button" class="btn btn-secondary" v-on:click="findEventByDate(startDate, endDate)">Find</button>
+            </div>
           </div>
           <!--
             <div class="d-flex flex-column align-items-center find-container">
@@ -63,6 +66,7 @@ export default {
           typesEvent : [],
           eventList : [],
           startDate : undefined,
+          startDateForInput : undefined,
           endDate : undefined
         }
      },
@@ -128,9 +132,14 @@ export default {
       },
       startDateHandler({target}) {
         this.startDate = new Date(target.value)
+        this.startDateForInput = target.value;
       },
       endDateHandler({target}) {
         this.endDate = new Date(target.value)
+      },
+      clearInputDate(){
+        this.startDate = undefined,
+        this.endDate = undefined
       }
     }
 }
