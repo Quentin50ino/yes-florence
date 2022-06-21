@@ -8,7 +8,7 @@
                 <h1>{{pointOfInterest.title}}</h1>
                 <h6>{{pointOfInterest.description}}</h6>
             </div>
-            <img width="700px" :src="`${pointOfInterest.image}`"/>
+            <img width="100%" :src="`${pointOfInterest.image}`"/>
         </div>
         <div class="info-card">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>

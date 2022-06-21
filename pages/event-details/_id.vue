@@ -9,7 +9,7 @@
                 <h6>{{event.description}}</h6>
                 <p>{{event.information}}</p>
             </div>
-            <img width="" :src="`${event.image}`"/>
+            <img width="100%" :src="`${event.image}`"/>
         </div>
         <div class="info-card">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>

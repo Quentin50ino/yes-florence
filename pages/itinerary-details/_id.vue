@@ -9,7 +9,7 @@
                 <h6>{{itinerary.description}}</h6>
                 <p>{{itinerary.information}}</p>
             </div>
-            <img width="700px" :src="`${itinerary.image}`"/>
+            <img width="100%" :src="`${itinerary.image}`"/>
         </div>
         <div class="info-card">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
