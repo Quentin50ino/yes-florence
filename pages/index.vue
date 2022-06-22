@@ -7,22 +7,40 @@
       <br>
       <h5 class="d-flex justify-content-center" style="padding : 0 70px">Discover Florence and its Metropolitan Area</h5>
       <span class="d-flex justify-content-center" style="padding : 0 70px">The Official Tourism website of the Metropolitan City and of the Municipality of Florence. Find the descriptions of fascinating points of interest, find the opening times of museums and all the events taking place in Florence and around. Follow our tips and itineraries, try the most amazing experiences.</span>
-      <div class="d-flex justify-content-around " style="margin-top : 40px; flex-wrap : wrap;">
-        <div class="d-flex flex-column align-items-center img-container zoom" style=" background-color: #fff;">
+      <div class="d-flex justify-content-center " style="margin-top : 40px; flex-wrap : wrap;">
+        <div class="d-flex flex-column align-items-center img-container zoom" style=" background-color: #fff; margin : 0px 5px;">
           <img :src="`${pointOfInterests[0].image}`" width="400px" height="200px">
           <h5 style="margin : 20px 0px; color : black">Point Of Interests</h5>
           <a style="margin-bottom : 15px" href="#section1"><button type="button" class="btn btn-light">DISCOVER</button></a>
         </div>
-        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff;">
+        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff; margin : 0px 5px;">
           <img :src="`${itineraries[0].image}`" width="400px" height="200px">
           <h5 style="margin : 20px 0px; color : black">Itineraries</h5>
           <a style="margin-bottom : 15px" href="#section2"><button type="button" class="btn btn-light">EXPLORE</button></a>
         </div>
-        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff;">
+        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff; margin : 0px 5px;">
           <img :src="`${events[0].image}`" width="400px" height="200px">
           <h5 style="margin : 20px 0px; color : black">Events</h5>
           <a style="margin-bottom : 15px" href="#section3"><button type="button" class="btn btn-light">HAVE FUN</button></a>
         </div>
+      </div>
+        <div class="d-flex justify-content-center">
+          <hr>
+        </div>
+      <div class="d-flex justify-content-center img-container-2" style="margin-top : 40px; flex-wrap : wrap;">
+        <nuxt-link to="/interest-details/2"><img class="img-zoom" :src="`${pointOfInterests[1].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/itinerary-details/1"><img class="img-zoom" :src="`${itineraries[0].image}`" width="400px" height="200px" style="border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/event-details/2"><img class="img-zoom" :src="`${events[1].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
+      </div>
+      <div class="d-flex justify-content-center img-container-2" style="margin-top : 40px; flex-wrap : wrap;">
+        <nuxt-link to="/interest-details/3"><img class="img-zoom" :src="`${pointOfInterests[2].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/itinerary-details/2"><img class="img-zoom" :src="`${itineraries[1].image}`" width="400px" height="200px" style="border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/event-details/3"><img class="img-zoom" :src="`${events[2].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
+      </div>
+      <div class="d-flex justify-content-center img-container-2" style="margin-top : 40px; flex-wrap : wrap;">
+        <nuxt-link to="/interest-details/5"><img class="img-zoom" :src="`${pointOfInterests[4].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/itinerary-details/3"><img class="img-zoom" :src="`${itineraries[2].image}`" width="400px" height="200px" style="border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/event-details/4"><img class="img-zoom" :src="`${events[3].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
       </div>
       <div>
         <div class="d-flex justify-content-center">
@@ -164,13 +182,29 @@ img{
   .img-container{
     margin-top : 40px;
   }
+  .img-container-2{
+    margin: 0px;
+  }
+  .img-zoom {
+    margin : 10px 0px;
+  }
 }
 .zoom {
   transition: transform .2s; /* Animation */
 }
 
 .zoom:hover {
-  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.img-zoom {
+  transition: transform .2s; /* Animation */
+  cursor: pointer;
+}
+
+.img-zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 </style>
