@@ -7,21 +7,28 @@
       <br>
       <h5 class="d-flex justify-content-center" style="padding : 0 70px">Discover Florence and its Metropolitan Area</h5>
       <span class="d-flex justify-content-center" style="padding : 0 70px">The Official Tourism website of the Metropolitan City and of the Municipality of Florence. Find the descriptions of fascinating points of interest, find the opening times of museums and all the events taking place in Florence and around. Follow our tips and itineraries, try the most amazing experiences.</span>
-      <div class="d-flex justify-content-center " style="margin-top : 40px; flex-wrap : wrap;">
-        <div class="d-flex flex-column align-items-center img-container zoom" style=" background-color: #fff; margin : 0px 5px;">
+      <div class="d-flex justify-content-center " style="margin-top : 80px; flex-wrap : wrap;">
+        <div class="d-flex flex-column align-items-center img-container zoom" style=" background-color: #fff; margin : 0px 20px;">
           <img :src="`${pointOfInterests[0].image}`" width="400px" height="200px">
           <h5 style="margin : 20px 0px; color : black">Point Of Interests</h5>
           <a style="margin-bottom : 15px" href="#section1"><button type="button" class="btn btn-light">DISCOVER</button></a>
         </div>
-        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff; margin : 0px 5px;">
+        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff; margin : 0px 20px;">
           <img :src="`${itineraries[0].image}`" width="400px" height="200px">
           <h5 style="margin : 20px 0px; color : black">Itineraries</h5>
           <a style="margin-bottom : 15px" href="#section2"><button type="button" class="btn btn-light">EXPLORE</button></a>
         </div>
-        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff; margin : 0px 5px;">
+      </div>
+        <div class="d-flex justify-content-center " style="margin-top : 40px; margin-bottom : 80px; flex-wrap : wrap;">
+        <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff; margin : 0px 20px;">
           <img :src="`${events[0].image}`" width="400px" height="200px">
           <h5 style="margin : 20px 0px; color : black">Events</h5>
           <a style="margin-bottom : 15px" href="#section3"><button type="button" class="btn btn-light">HAVE FUN</button></a>
+        </div>
+          <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff; margin : 0px 20px;">
+          <img :src="`${services[0].image}`" width="400px" height="200px">
+          <h5 style="margin : 20px 0px; color : black">Services</h5>
+          <a style="margin-bottom : 15px" href="#section4"><button type="button" class="btn btn-light">FIND</button></a>
         </div>
       </div>
         <div class="d-flex justify-content-center">
@@ -134,7 +141,7 @@
 </div>
     </div>
        <div>
-      <h1 class="d-flex justify-content-center" id="section3">SERVICES</h1>
+      <h1 class="d-flex justify-content-center" id="section4">SERVICES</h1>
   <div id="carouselServices" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <carousel
