@@ -1,8 +1,7 @@
 <template>
     <div>
         <nav-bar></nav-bar>
-        <nuxt-link to="/itinerary"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
-        <breadcrumbs page1="Itineraries" :page2="itinerary.title" pageBack="/itinerary"></breadcrumbs>
+        <breadcrumbs page1="Itineraries" :page2="itinerary.title" pageBack="/itinerary" style="margin-top : 15px"></breadcrumbs>
                 <div class="d-flex justify-content-around grey-card" style="flex-wrap: wrap;">
             <div>
                 <h1>{{itinerary.title}}</h1>

@@ -1,8 +1,7 @@
 <template>
 <div>
     <nav-bar></nav-bar>
-    <nuxt-link to="/services"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
-    <breadcrumbs page1="Services" :page2="typeName" pageBack="/services"></breadcrumbs>
+    <breadcrumbs page1="Services" :page2="typeName" pageBack="/services" style="margin-top : 15px"></breadcrumbs>
         <div id="city-map" class="d-flex flex-column align-items-center grey-card">
             <div style="margin-bottom : 12px">
                 <h1>{{typeName}}</h1>

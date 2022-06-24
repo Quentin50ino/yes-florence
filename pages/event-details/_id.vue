@@ -1,8 +1,7 @@
 <template>
 <div>
     <nav-bar></nav-bar>
-<nuxt-link to="/event"><img src="https://img.icons8.com/ios-filled/250/undefined/circled-left-2.png" width="50px"/></nuxt-link>
-<breadcrumbs page1="Events" :page2="event.title" pageBack="/event"></breadcrumbs>
+<breadcrumbs page1="Events" :page2="event.title" pageBack="/event" style="margin-top : 15px"></breadcrumbs>
         <div class="d-flex justify-content-around grey-card" style="flex-wrap: wrap;">
             <div>
                 <h1>{{event.title}}</h1>
