@@ -9,16 +9,16 @@
             <span class="footer-title">QUICK LINKS</span>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Point of Interests</a>
+            <nuxt-link to="/interest" class="nav-link" href="#">Point of Interests</nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Itineraries</a>
+            <nuxt-link to="/itinerary" class="nav-link" href="#">Itineraries</nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Events</a>
+            <nuxt-link to="/event" class="nav-link" href="#">Events</nuxt-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <nuxt-link to="/services" class="nav-link" href="#">Services</nuxt-link>
           </li>
         </ul>
       </div>
@@ -99,14 +99,6 @@
 </template>
 
 <style scoped>
-
-.col-md-4:nth-child(even) {
-  /*background: blue;*/
-}
-.col-md-4:nth-child(odd) {
-  /*background: red;*/
-}
-
 a {
   color: #6c757d;
 }
@@ -128,7 +120,7 @@ footer {
   }
 
 
-.footer-column:not(:first-child) {
+.footer-column {
     padding-top: 2rem;
     @media (min-width: 768px) {
       padding-top: 0rem;

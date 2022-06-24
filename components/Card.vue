@@ -15,10 +15,11 @@
                   <h5>End date: </h5><span>{{endDate}}</span>
                 </div>
               </div>
-                <nuxt-link :to="`/${typeOfPage}-details/${id}`" class="d-flex justify-content-end">
-                  <a @click="goToDetails()"><img width="50px" src="https://img.icons8.com/ios/100/undefined/circled-right-2.png"/></a>
-                </nuxt-link>
+
           </div>
+              <nuxt-link :to="`/${typeOfPage}-details/${id}`" class="d-flex justify-content-end" style="padding: 15px">
+                <a @click="goToDetails()"><img width="50px" src="https://img.icons8.com/ios/100/undefined/circled-right-2.png"/></a>
+              </nuxt-link>
       </div>
 </template>
 
