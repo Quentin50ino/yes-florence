@@ -46,7 +46,7 @@ export default async function initializeDatabaseConnection() {
         name : DataTypes.STRING,
         image : DataTypes.STRING,
         description : DataTypes.STRING,
-        information : DataTypes.STRING,
+        information : DataTypes.STRING(1000),
         iFrame : DataTypes.STRING(1000),
         address : DataTypes.STRING,
         open : DataTypes.STRING

@@ -1,11 +1,16 @@
 <template>
-        <div class="card zoom" style="width: 28rem; margin : 20px 20px;" @click="clickedCard()">
+        <div class="card zoom" style="width: 30rem; margin : 20px 20px;" @click="clickedCard()">
           <img :src="`${image}`" class="card-img-top" alt="point of interest image" height="200px">
           <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
-                <div style="margin-top : 20px" class="d-flex justify-content-between">
+            <hr>
+                <div style="margin-top : 20px" class="d-flex flex-column align-items-center">
                     <h6>Description:</h6><p lass="card-text">{{description}}</p>
                 </div>
+                <div style="margin-top : 20px" class="d-flex flex-column align-items-center">
+                    <h6>Information:</h6><p lass="card-text">{{information}}</p>
+                </div>
+                <hr>
                 <div class="d-flex justify-content-between">
                     <h6>Address:</h6><p lass="card-text">{{address}}</p>
                 </div>
@@ -39,6 +44,10 @@ export default {
       required: true,
     },
     description: {
+      type: String,
+      required: true,
+    },
+    information: {
       type: String,
       required: true,
     },

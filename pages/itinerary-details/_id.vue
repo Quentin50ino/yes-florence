@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <h3 class="d-flex justify-content-center title">POINTS OF INTERESTS LIST</h3>
+        <h3 class="d-flex justify-content-center title">POINTS OF INTEREST LIST</h3>
         <info-box></info-box>
         <div class="d-flex justify-content-center title">
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">

@@ -473,11 +473,11 @@ export default async function initialize (models) {
         },
         {
             type_name : "Parkings",
-            image : "https://www.inflorencetoday.com/ita/servizi/parcheggi/foto/Parcheggio-Parking-Duomo.jpg"
+            image : "https://www.internationalgarage.com/images/6.jpg"
         },
         {
             type_name : "Hospitals",
-            image : "https://www.interno.gov.it/sites/default/files/styles/top_pagina/public/field/image/prontosoccorso_885.jpg"
+            image : "https://i0.wp.com/www.firenzepost.it/wp-content/uploads/2013/09/CAREGGI.jpg?resize=600%2C399"
         }
     ]
     const typeService0 = await models.TypeService.create(typeServiceList[0])
@@ -637,31 +637,115 @@ export default async function initialize (models) {
     EventPointOfInterestList.map((item) => models.EventPointOfInterest.create(item))
     const serviceList = [
         {
-            name : "Pharmacy Santa Maria Novella",
+            name : "Officina Profumo Famraceutica di Santa Maria Novella",
             image : "https://d1e00ek4ebabms.cloudfront.net/production/0c09b29c-f361-473d-a6d9-b08bdfe156c0.jpg",
-            description : "Pharmacy in piazza SM Novella",
-            information : "Pharmacy",
+            description : "Pharmacy very near to piazza SM Novella",
+            information : "The Officina Profumo-Farmaceutica di Santa Maria Novella is one of the oldest in the world, its origins date back to the XIII century.",
             iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5761.877428064988!2d11.247742!3d43.774131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b1cdc4af6c0fb7a!2sOfficina%20Profumo-Farmaceutica%20di%20Santa%20Maria%20Novella!5e0!3m2!1sit!2sit!4v1654259091272!5m2!1sit!2sit",
             typeServiceId : typeService0.id,
-            address : "Piazza Santa Maria Novella, Firenze",
-            open : "7 days a week"
+            address : "Via della Scala 16, Firenze",
+            open : "Monday - Sunday from 10:00 to 19:00"
+        },
+        {
+            name : "Farmacia del Cinghiale",
+            image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Piazza_del_Mercato_Nuovo_4r%2C_farmacia_del_cinghiale_01.jpg/640px-Piazza_del_Mercato_Nuovo_4r%2C_farmacia_del_cinghiale_01.jpg",
+            description : "Pharmacy located inside the Loggia of 'Mercato della Paglia'",
+            information : "This pharmacy - whose foundation dates back to 1752 - owes its name to the wild boar statue “Fontana del Porcellino”.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.1336721386083!2d11.252267515501556!3d43.77008397911734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5400497bc2f7%3A0xe0cbac252804808c!2sAntica%20Farmacia%20del%20Cinghiale!5e0!3m2!1sit!2sit!4v1656335146137!5m2!1sit!2sit",
+            typeServiceId : typeService0.id,
+            open : "Monday - Sunday from 09:00 to 20:00",
+            address: "P.zza Mercato Nuovo 4r, Firenze"
+        },
+        {
+            name : "Farmacia Santo Spirito",
+            image : "https://www.feelflorence.it/sites/www.feelflorence.it/files/2020-07/santo-spirito-orizz.jpg",
+            description : "Pharmacy located in the city center.",
+            information : "Founded in 1908 by Gilda Bacci, the pharmacy is located on the ground floor of the fifteenth-century Palazzo Dati.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11525.288097920278!2d11.2468823!3d43.7661738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x170865fabdad2f3e!2sFarmacia%20Santo%20Spirito!5e0!3m2!1sit!2sit!4v1656334465783!5m2!1sit!2sit",
+            typeServiceId : typeService0.id,
+            open : "From Monday to Saturday. 09-13, 16:20.",
+            address: "Piazza Santo Spirito, 12/r, 50125 Firenze FI"
         },
         {
             name : "Santa Maria Novella Intesa San Paolo",
             image : "https://www.italicom.net/site/wp-content/uploads/2019/11/intesa-sanpaolo-1.jpg",
-            description : "Bank in piazza SM Novella",
-            information : "Bank",
-            iFrame: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.8865321122025!2d11.221774915346778!3d43.795967479116655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56ee8918d15d%3A0x88e5c2788936c6ed!2sIntesa%20Sanpaolo%20S.p.A.!5e0!3m2!1sit!2sit!4v1654263266285!5m2!1sit!2sit",
-            typeServiceId : typeService1.id
+            description : "Intesa San Paolo Bank.",
+            information : "Bank very near to the central station and Piazza Santa Maria Novella",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.7779019484465!2d11.250128315346128!3d43.77746897911716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a541d541d9a2b%3A0x6ac23f48c6f48903!2sIntesa%20Sanpaolo%20S.p.A.!5e0!3m2!1sit!2sit!4v1656336356674!5m2!1sit!2sit",
+            typeServiceId : typeService1.id,
+            address: "Via Nazionale, 93 95/R, 50123 Firenze FI",
+            open: "From Monday to Friday. 08:30-13:30, 14:45-16:55."
         },
         {
-            name : "Farmacia Comunale Canova",
-            image : "https://s3-media0.fl.yelpcdn.com/bphoto/ExPlzD-hUZio7HfeU7rv0A/258s.jpg",
-            description : "Pharmacy",
-            information : "Pharmacy",
-            iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11522.799887876075!2d11.198619!3d43.7790865!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cb29e1d48917bc5!2sFarmacia%20Comunale%20Canova%20-%20Apoteca%20Natura!5e0!3m2!1sit!2sit!4v1654263120623!5m2!1sit!2sit",
-            typeServiceId : typeService0.id
+            name : "Banca Monte dei Paschi di Siena",
+            image : "https://img.zonebourse.com/reuters/2022-03/2022-03-28T162901Z_1_LYNXNPEI2R0UR_RTROPTP_3_ITALY-POLITICS-MONTE-PASCHI.JPG",
+            description : "Monte dei Paschi di Siena Bank.",
+            information : "Bank located in the city center, very near to the Duomo of Florence.",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11524.01025770784!2d11.252992!3d43.7728056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f733e39aada89c4!2sBanca%20Monte%20dei%20Paschi%20di%20Siena!5e0!3m2!1sit!2sit!4v1656336017153!5m2!1sit!2sit",
+            typeServiceId : typeService1.id,
+            address: "Via dei Pecori, 6 - 8, 50123 Firenze FI",
+            open: "From Monday to Friday. 08:20-13:25, 14:20-15:45."
         },
+        {
+            name : "Coop.fi",
+            image : "https://www.coopfirenze.it/uploads/45062/original/montramito_2.jpeg",
+            description : "UniCoop supermarket.",
+            information : "UniCoop supermarket located very near to the city center",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.096295635828!2d11.271228315345933!3d43.770859879117424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a540c992a3475%3A0x67cb9fb86c0d79e3!2sCoop!5e0!3m2!1sit!2sit!4v1656336673664!5m2!1sit!2sit",
+            typeServiceId : typeService2.id,
+            address: "Via Cimabue, 48, 50121 Firenze FI",
+            open: "From Monday to Sunday. 08:00-21:00."
+        },
+        {
+            name : "Conad City",
+            image : "https://www.viverecamerino.it/upload/2021_11/719870_Cfakepath32.jpg",
+            description : "Conad supermarket.",
+            information : "Little Conad City located very near to the city center",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5762.192579625311!2d11.273417!3d43.77086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90432a3fedd58ab8!2sCONAD%20CITY!5e0!3m2!1sit!2sit!4v1656336745172!5m2!1sit!2sit",
+            typeServiceId : typeService2.id,
+            address: "Via Scipione Ammirato, 94, 50136 Firenze FI",
+            open: "From Monday to Sunday. 07:30-20:30."
+        },
+        {
+            name : "Parking Duomo",
+            image : "https://www.inflorencetoday.com/ita/servizi/parcheggi/foto/Parcheggio-Parking-Duomo.jpg",
+            description : "Car Park.",
+            information : "Very big car park located in the city center, very near to the Duomo.",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11524.151984231352!2d11.2608537!3d43.7720701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3767a63e59a39fbf!2sParking%20Duomo!5e0!3m2!1sit!2sit!4v1656337301872!5m2!1sit!2sit",
+            typeServiceId : typeService3.id,
+            address: "Via dell' Oriuolo, 14, 50122 Firenze FI",
+            open: "24/7"
+        },
+        {
+            name : "Quick Garage Centrale",
+            image : "https://www.inflorencetoday.com/ita/servizi/parcheggi/foto/Quick-Garage-Centrale-Gozzoli-Firenze.jpg",
+            description : "Central Cark Park.",
+            information : "Underground car park located in the city center, very near to Palazzo Ruccellai and Ponte alla Carraia.",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1676.3870308856858!2d11.24708493540515!3d43.77138409551926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56abc637dee3%3A0x1510841555a19fdb!2sQuick%20Garage%20Centrale!5e0!3m2!1sit!2sit!4v1656337554292!5m2!1sit!2sit",
+            typeServiceId : typeService3.id,
+            address: "Via dei Fossi, 50R, 50123 Firenze FI",
+            open: "From Monday to Sunday. 07:00-00:00."
+        },
+        {
+            name : "Ospedale Torregalli",
+            image : "https://www.gpapartners.com/upload/progetti/GL-1586334640.jpg",
+            description : "The biggest and most famous hospital in Florence.",
+            information : "The New Hospital of San Giovanni di Dio is located in Florence in Soffiano-Le Bagnese. It is also called Torregalli, from the name of the Castle of Torre Galli next to which it stands. He inherited the hospitaller activity of the old hospital of San Giovanni di Dio, in the city center.",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.7195408075318!2d11.201462915345443!3d43.757920479117885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a57525edba73d%3A0x174ba80da408acef!2sMedicina%20Interna%20Nuovo%20San%20Giovanni%20di%20Dio%20(Torregalli)!5e0!3m2!1sit!2sit!4v1656338067399!5m2!1sit!2sit",
+            typeServiceId : typeService4.id,
+            address: "Via Torregalli, 1, 50143 Firenze FI",
+            open: "24/7"
+        },
+        {
+            name : "Ospedale Santa Maria Nuova",
+            image : "https://upload.wikimedia.org/wikipedia/commons/4/44/Ospedale_di_santa_maria_nuova%2C_porticato_%285%29.JPG",
+            description : "The oldest hospital located in the Florence city center.",
+            information : "The hospital of Santa Maria Nuova is a hospital in Florence, located in the square of the same name, in the historic center. Founded in 1288 by Folco Portinari, father of the famous Beatrice loved by Dante, it is the oldest hospital in the city among those still fully active, and one of the oldest in Europe.",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511546.3135782622!2d9.290073750962446!3d44.03803826061776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5548bf60cf25%3A0x69074f9350caf598!2sOspedale%20Santa%20Maria%20Nuova!5e0!3m2!1sit!2sit!4v1656338316891!5m2!1sit!2sit",
+            typeServiceId : typeService4.id,
+            address: "PIAZZA DI SANTA MARIA NUOVA, 1, 50122 Firenze FI",
+            open: "24/7"
+        }
     ]
     serviceList.map(service => models.Service.create(service))
 }

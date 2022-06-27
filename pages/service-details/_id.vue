@@ -19,6 +19,7 @@
           :key="`service-index-${serviceIndex}`"
           :image="service.image"
           :title="service.name"
+          :information="service.information"
           :description="service.description"
           :index="serviceIndex"
           :address="service.address"
