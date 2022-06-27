@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav-bar/>
-        <img class="main-img" src="https://www.the-travel-bunny.com/wp-content/uploads/2021/05/2-days-in-florence-itinerary.jpg">
+        <img class="main-img" src="https://a.cdn-hotels.com/gdcs/production92/d1146/87b98bdb-666a-4ae3-964a-5872d4580ef4.jpg">
         <div class="d-flex justify-content-center">
           <h1>Itineraries</h1>
         </div>

@@ -8,7 +8,7 @@
                 <h6>{{itinerary.description}}</h6>
                 <p>{{itinerary.information}}</p>
             </div>
-            <img width="100%" :src="`${itinerary.image}`"/>
+            <img id="top-img" height="600px" :src="`${itinerary.image}`"/>
         </div>
         <div class="info-card">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
@@ -25,7 +25,8 @@
                 </div>
             </div>
         </div>
-        <h3 class="d-flex justify-content-center title">POINT OF INTERESTS LIST</h3>
+        <h3 class="d-flex justify-content-center title">POINTS OF INTERESTS LIST</h3>
+        <info-box></info-box>
         <div class="d-flex justify-content-center title">
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
             <card 
@@ -43,7 +44,6 @@
           </div>
         </div>
         <h3 class="d-flex justify-content-center title" id="city-map">CITY MAP</h3>
-        <info-box></info-box>
         <div class="d-flex justify-content-center title">
             <iframe :src="`${this.activeCardIndex!==undefined?pointOfInterests[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -54,6 +54,12 @@
 <style scoped>
 .grey-card{
     background-color: #dfdfdf;
+}
+@media screen and (max-width: 600px) {
+#top-img{
+    width: 100%;
+    height: 100%;
+}
 }
 @media screen and (min-width: 600px) {
 .vl {

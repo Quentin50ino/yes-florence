@@ -7,7 +7,7 @@
                 <h1>{{pointOfInterest.title}}</h1>
                 <h6>{{pointOfInterest.description}}</h6>
             </div>
-            <img width="100%" :src="`${pointOfInterest.image}`"/>
+            <img id="top-img" height="600px" :src="`${pointOfInterest.image}`"/>
         </div>
         <div class="info-card">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
@@ -67,6 +67,12 @@
 <style scoped>
 .grey-card{
     background-color: #dfdfdf;
+}
+@media screen and (max-width: 600px){
+#top-img{
+    width: 100%;
+    height: 100%;
+}
 }
 @media screen and (min-width: 600px) {
 .vl {

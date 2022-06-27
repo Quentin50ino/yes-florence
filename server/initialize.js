@@ -37,17 +37,26 @@ export default async function initialize (models) {
             information : "Visita in italiano",
             duration : 8,
             typeItineraryId : typeItinerary1.id
+        },
+        {
+            title : "Bridges of Florence",
+            image : "https://www.alishaaneja.com/assets/images/ponte.jpg",
+            description : "Guided visit around all the most beautiful bridges in the city of Florence.",
+            information : "Visita in italiano",
+            duration : 6,
+            typeItineraryId : typeItinerary2.id
         }
     ]
     const itinerary0 = await models.Itinerary.create(itineraryList[0])
     const itinerary1 = await models.Itinerary.create(itineraryList[1])
     const itinerary2 = await models.Itinerary.create(itineraryList[2])
+    const itinerary3 = await models.Itinerary.create(itineraryList[3])
     const typePointOfInterestList = [
         {
-            type_name : "History"
+            type_name : "Historical"
         },
         {
-            type_name : "Nature"
+            type_name : "Natural"
         }
     ]
     const typePointOfInterest0 = await models.TypePointOfInterest.create(typePointOfInterestList[0])
@@ -261,7 +270,41 @@ export default async function initialize (models) {
             ticket : "The entrance fee depends on the events hosted.",
             address : "Viale Filippo Strozzi, 1, 50129 Firenze FI, Italia",
             open : "Open during temporary exhibitions and events."
+        },
+        {
+            title : "Ponte alle Grazie",
+            image : "https://i0.wp.com/www.risorgimentofirenze.it/wp-content/uploads/2017/12/copertina-4.jpg?fit=700%2C376&ssl=1",
+            description : "Ponte alle Grazie was the third bridge to be built after Ponte Vecchio and Ponte alla Carraia.",
+            information : "Its first name was 'Ponte Rubaconte' after the Podestà at the time of its first construction (1237). The present name derives from the chapel of 'Santa Maria delle Grazie', located on the bridge since the 14th century, where the image of the saint was worshipped; among the numerous religious buildings that characterized the bridge the one of the cloistered nuns 'Le Murate' (then moved to Via Ghibellina) is worthy of mention. During the 19th century from one of its 'shops' it was possible to reach the river and use the 'public baths' real bathing estabishments of the time.In 1944 the bridge - like all the others, with the exception of the Ponte Vecchio - was destroyed during the Nazi retreat. The present bridge was inaugurated in 1957.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11525.291084337825!2d11.2587278!3d43.7661583!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b6bcb90d040fd40!2sPonte%20alle%20Grazie!5e0!3m2!1sit!2sit!4v1656318411089!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "No ticket needed.",
+            address : "Ponte alle Grazie, 50122 Firenze FI, Italia",
+            open : "Open 7 days a week"
+        },
+        {
+            title : "Ponte alla Carraia",
+            image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Ponte_alla_carraia%2C_view.JPG/1200px-Ponte_alla_carraia%2C_view.JPG",
+            description : "The second bridge built over the Arno after Ponte Vecchio",
+            information : "The original bridge was the second one built over the Arno after Ponte Vecchio, hence the name 'new bridge'. It was also known as the 'ponte alle Carra: the work was erected at the behest of the Umiliati di Ognissanti fathers, the first Florentine wool entrepreneurs, and was used to divert wagon traffic to the homonymous city Gate of the penultimate circle of walls. Over the centuries it was rebuilt several times following the numerous floods of the Arno, but also in 1304, when it collapsed under the excessive weight of the crowd that had come to attend a show on the river. The bridge, rebuilt by Cosimo I de' Medici, lasted for about four centuries, as it was destroyed – like all others, with the only exception of Ponte Vecchio - in 1944 during the Nazi retreat. The current version dates back to 1951.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.127968631159!2d11.245144215345944!3d43.77020237911753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56ab7a958695%3A0x2d1ab5e5c9c04c9d!2sPonte%20alla%20Carraia!5e0!3m2!1sit!2sit!4v1656318724574!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "No ticket needed.",
+            address : "Ponte Alla Carraia, 50125 Firenze FI, Italia",
+            open : "Open 7 days a week"
+        },
+        {
+            title : "Corridoio Vasariano",
+            image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/2016_Vasari_Corridor_02.jpg/1200px-2016_Vasari_Corridor_02.jpg",
+            description : "Built by the celebrated architect Giorgio Vasari.",
+            information : "The corridor was built by the celebrated architect Giorgio Vasari in just five months during 1565 to enable the Grand Dukes to move freely – and safely – from the seat of government to their residence in Palazzo Pitti; the butcher’s stalls on Ponte Vecchio were moved elsewhere in order to do away with the bad smells they emanated and were replaced with goldsmith’s workshops; after crossing the Arno, the corridor ran along above the façade of Santa Felicita, where the Medici family could attend religious functions by making use of a balcony protected with a grille that looked onto the interior of the church. Closed to the public since 2016, once the refurbishment works will be over, the world-renowned Corridor will re-open to visitors, presumably in 2022. The collection of self-portraits that was traditionally on view there will be substituted with a selection of ancient statues and inscriptions, sixteenth-century frescoes originally decorating the external walls of the Corridor, and two memorials dedicated to the Georgofili bombing occurred in 1993 and the WWII bombing of Florence.",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.232826419934!2d11.25097721534585!3d43.76802557911754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5400089286d7%3A0xaf9de1c796cdfea4!2sCorridoio%20Vasariano%2C%2050125%20Firenze%20FI!5e0!3m2!1sit!2sit!4v1656319305541!5m2!1sit!2sit",
+            typePointOfInterestId : typePointOfInterest1.id,
+            ticket : "The access will be defined once reopened.",
+            address : "Piazzale degli Uffizi, 50122 Firenze FI, Italia",
+            open : "Temporary closed."
         }
+
 
     ]
     const pointOfInterest0 = await models.PointOfInterest.create(pointOfInterestsList[0]) //ITINERARIO 1
@@ -275,7 +318,7 @@ export default async function initialize (models) {
     const pointOfInterest8 = await models.PointOfInterest.create(pointOfInterestsList[8]) //ITINERARIO 1
     const pointOfInterest9 = await models.PointOfInterest.create(pointOfInterestsList[9]) //ITINERARIO 1
     const pointOfInterest10 = await models.PointOfInterest.create(pointOfInterestsList[10]) //ITINERARIO 2
-    const pointOfInterest11 = await models.PointOfInterest.create(pointOfInterestsList[11]) //ITINERARIO 2
+    const pointOfInterest11 = await models.PointOfInterest.create(pointOfInterestsList[11]) //ITINERARIO 4
     const pointOfInterest12 = await models.PointOfInterest.create(pointOfInterestsList[12]) //ITINERARIO 2
     const pointOfInterest13 = await models.PointOfInterest.create(pointOfInterestsList[13]) //ITINERARIO 2
     const pointOfInterest14 = await models.PointOfInterest.create(pointOfInterestsList[14]) //ITINERARIO 3
@@ -283,6 +326,9 @@ export default async function initialize (models) {
     const pointOfInterest16 = await models.PointOfInterest.create(pointOfInterestsList[16]) //TINERARIO 3
     const pointOfInterest17 = await models.PointOfInterest.create(pointOfInterestsList[17]) //ITINERARIO 2
     const pointOfInterest18 = await models.PointOfInterest.create(pointOfInterestsList[18])
+    const pointOfInterest19 = await models.PointOfInterest.create(pointOfInterestsList[19]) //ITINERARIO 4
+    const pointOfInterest20 = await models.PointOfInterest.create(pointOfInterestsList[20]) //ITINERARIO 4
+    const pointOfInterest21 = await models.PointOfInterest.create(pointOfInterestsList[21]) //ITINERARIO 4
     //models.PointOfInterest.create(pointOfInterestsList[1])
     const typeEventList = [
         {
@@ -349,15 +395,15 @@ export default async function initialize (models) {
     const event4 = await models.Event.create(eventList[4])
     const typeServiceList = [
         {
-            type_name : "pharmacy",
+            type_name : "Pharmacies",
             image : "https://cdn.farmaciediturno.org/foto728/f_8226.jpg" 
         },
         {
-            type_name : "bank",
+            type_name : "Banks",
             image : "https://upload.wikimedia.org/wikipedia/commons/b/b5/Firenze_-_Banca_Toscana_Piazza_Della_Signoria.jpg"
         },
         {
-            type_name : "supermarket",
+            type_name : "Supermarkets",
             image : "https://www.coopfirenze.it/uploads/38598/news/coopfi.jpg"
         }
     ]
@@ -386,11 +432,11 @@ export default async function initialize (models) {
             pointOfInterestId : pointOfInterest9.id
         },
         {
-            itineraryId : itinerary1.id,
+            itineraryId : itinerary3.id,
             pointOfInterestId : pointOfInterest10.id
         },
         {
-            itineraryId : itinerary1.id,
+            itineraryId : itinerary3.id,
             pointOfInterestId : pointOfInterest11.id
         },
         {
@@ -436,6 +482,18 @@ export default async function initialize (models) {
         {
             itineraryId : itinerary2.id,
             pointOfInterestId : pointOfInterest16.id
+        },
+        {
+            itineraryId : itinerary3.id,
+            pointOfInterestId : pointOfInterest19.id
+        },
+        {
+            itineraryId : itinerary3.id,
+            pointOfInterestId : pointOfInterest20.id
+        },
+        {
+            itineraryId : itinerary3.id,
+            pointOfInterestId : pointOfInterest21.id
         }
     ]
     ItineraryPointOfInterestList.map((item) => models.ItineraryPointOfInterest.create(item))

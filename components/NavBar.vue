@@ -10,7 +10,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="d-flex justify-content-center collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
           <nuxt-link to="/" class="nav-link active" aria-current="page" href="#">HOME</nuxt-link>
@@ -25,7 +25,7 @@
           <nuxt-link to="/services" class="nav-link active" aria-current="page" href="#">SERVICES</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="/interest" class="nav-link active" aria-current="page" href="#">INTERESTS</nuxt-link>
+          <nuxt-link to="/interest" class="nav-link active" aria-current="page" href="#">POINTS OF INTEREST</nuxt-link>
         </li>
         <li class="nav-item">
           <nuxt-link to="/itinerary" class="nav-link active" aria-current="page" href="#">ITINERARIES</nuxt-link>

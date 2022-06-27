@@ -3,7 +3,7 @@
         <nav-bar/>
         <img class="main-img" src="https://image-service.web.oebb.at/www.nightjet.com/.imaging/default/dam/nightjet/hero-header/header-overlay-1422x800/laender-und-staedte-1422x800/florenz-santamaria-del-fiore.jpg/jcr:content.jpg?t=1618495685135&scale=1.0">
         <div class="d-flex justify-content-center">
-        <h1>Point of Interests</h1>
+        <h1>Points of Interest</h1>
         </div>
         <div class="d-flex justify-content-center" style="flex-wrap: wrap">
           <div class="d-flex flex-column align-items-center find-container">
