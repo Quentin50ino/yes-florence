@@ -20,7 +20,8 @@ export default async function initialize (models) {
             description : "Guided visit in the center of Florence.",
             information : "Visita in italiano",
             duration : 2,
-            typeItineraryId : typeItinerary0.id
+            typeItineraryId : typeItinerary0.id,
+            ticket : "Full price € 15.40"
         },
         {
             title : "Outdoor Florence",
@@ -28,7 +29,8 @@ export default async function initialize (models) {
             description : "Guided visit outdoor",
             information : "Visita in italiano",
             duration : 8,
-            typeItineraryId : typeItinerary2.id
+            typeItineraryId : typeItinerary2.id,
+            ticket : "Full price € 24.90."
         },
         {
             title : "All around Medici",
@@ -36,7 +38,8 @@ export default async function initialize (models) {
             description : "Guided visit in all the old residences of the Medici family",
             information : "Visita in italiano",
             duration : 8,
-            typeItineraryId : typeItinerary1.id
+            typeItineraryId : typeItinerary1.id,
+            ticket : "Full price € 25.30."
         },
         {
             title : "Bridges of Florence",
@@ -44,7 +47,8 @@ export default async function initialize (models) {
             description : "Guided visit around all the most beautiful bridges in the city of Florence.",
             information : "Visita in italiano",
             duration : 6,
-            typeItineraryId : typeItinerary2.id
+            typeItineraryId : typeItinerary2.id,
+            ticket : "Full price € 12.50."
         }
     ]
     const itinerary0 = await models.Itinerary.create(itineraryList[0])
@@ -344,48 +348,104 @@ export default async function initialize (models) {
         {
             title : "Scoppio del carro",
             image : "https://www.ansa.it/webimages/img_457x/2022/4/17/483328650a7ad0e54683b1e6e4e1b44b.jpg",
-            description : "traditional party for easter",
-            information :"it takes place in piazza duomo",
-            date : "2022-04-15",
+            description : "Traditional party for easter that takes place in Piazza del Duomo.",
+            information :"On the morning of Easter, the magic of the 'explosion of the cart' is renewed. The 'Brindellone', the chariot 'of fire' escorted by 150 among armed, musicians and flag-wavers of the Historical Parade of the Florentine Republic, moves from the square of Prato, pulled by two pairs of white cattle infiorati, and arrives in Piazza del Duomo, where it is placed in the space between the Baptistery and the Cathedral. Then, to the song of 'Gloria in Excelsis Deo', is set fire to the fuse of the dove that, hissing, goes to ignite the firecrackers and fireworks expertly arranged on the cart. The explosion of the cart is a ceremony that has a particular significance, especially for the Florentines, because it calls into question historical and devotional motives intimately connected to the identity of the city. Just think of the hopes drawn for centuries from the flight of the Colombina from the high altar of the Duomo reaches the cart causing the explosion; from the course of that race has always fantasized about how it would appear in the campaigns the upcoming harvest season. Not to mention the legendary story of the Brindellone: the word 'brindellone' belongs to the Florentine jargon and defines a tall person, dangling, maybe a bit 'malformed and a little 'beggar, to which one looks but with a certain affection and with a substantial sympathy. It seems that the origin of the combination between this word and the cart goes back to the feast celebrated by the Florentine Mint in honor of its patron, Saint John the Baptist. On June 24, a hay cart started from the tower of the Mint and went around the city, pulling a man dressed in rags that obviously represented the holy hermit and that was called 'brindellone', also because it tended to dangle a lot, especially after eating and drinking abundantly during the banquet consumed in the square. Since then the term remained in popular use to identify all the floats used in the city for public ceremonies",
+            date : "2022-04-17",
             pointOfInterestId : pointOfInterest0.id,
-            typeEventId : typeEvent0.id
+            typeEventId : typeEvent0.id,
+            ticket : "No ticket needed. Free event."
         },
         {
             title : "Calcio Storico",
             image : "https://i.ytimg.com/vi/aYB2RlTxMhk/maxresdefault.jpg",
-            description : "traditional game",
-            information :"it takes place in piazza della signoria",
-            date : "2022-10-15",
+            description : "Traditional game that takes place in Piazza Santa Croce.",
+            information :"A tradition still very dear to fans and footballers, which has its origins in the history of the first games with the ball, from the Sphincter of the ancient Greeks passing through the Roman Harpastum and through the Middle Ages, in which Football on the streets was an activity very appreciated by the Florentines, until the iconic match of February 17, 1530 in which the citizens, albeit exhausted by the hunger and the siege of Charles V, took to the streets and began to play football in mockery of the enemy. Today the historical Football is the most fierce competition involving the city, a unique show of its kind and a strong element of identity for citizens.",
+            date : "2022-06-10",
+            endDate : "2022-06-24",
             pointOfInterestId : pointOfInterest1.id,
-            typeEventId : typeEvent1.id
+            typeEventId : typeEvent0.id,
+            ticket : "No ticket needed. Free event."
         },
         {
             title : "Fuochi di San Giovanni",
             image : "https://www.firenzetoday.it/~media/horizontal-hi/356682651955/fuochi-artificio-2.jpg",
-            description : "festa del patrono",
-            information :"it takes place sul lung'arno",
-            date : "2022-10-15",
+            description : "Patron saint festival.",
+            information :"On June 24, Florence is characterized by events of all kinds that take place throughout the day: flag-wavers, historical parade, races between the rowing clubs along the Arno and fireworks (or fire). The local festivity coincides with the final of Football in Costume, a lively medieval version of football or football in Piazza Santa Croce. At 22.00 there are fireworks and the best place to see them is definitely from Ponte Santa Trinita, from there you can see the Ponte Vecchio in the foreground and the fireworks behind, with their spectacular games and colors.",
+            date : "2022-06-24",
             pointOfInterestId : pointOfInterest1.id,
-            typeEventId : typeEvent1.id
+            typeEventId : typeEvent0.id,
+            ticket : "No ticket needed. Free event."
         },
         {
             title : "Festa della Rificolona",
             image : "https://www.ilturista.info/repo/images/no/Rificolona.jpg",
-            description : "festa della rificolona",
-            information :"it takes place sul lung'arno",
-            date : "2022-10-15",
-            endDate : "2022-10-22",
+            description : "Traditional party that takes place around Piazza SS. Annunziata.",
+            information :"The Festa dell Rificolona, otherwise known as the paper lantern festival, is one of the best Italian festivals and specific to the Tuscan capital of Florence. This festival celebrates the birthday of Madonna who sometime, over 2000 years ago, was born in a small village close to Nazareth. In Florence, the Basilica Santissima Annunziata is dedicated to the Virgin Mary. And, for centuries, peasants and farmers would travel in pilgrimage from the surrounding areas to participate in the religious celebrations.",
+            date : "2022-09-07",
             pointOfInterestId : pointOfInterest1.id,
-            typeEventId : typeEvent1.id
+            typeEventId : typeEvent1.id,
+            ticket : "No ticket needed. Free event."
         },
         {
-            title : "Pitti Immagine",
+            title : "Pitti Immagine Uomo",
             image : "https://massimilianosorvino.it/wp-content/uploads/2019/06/Pitti-Uomo.png",
-            description : "tra gli eventi di moda più importanti d'italia",
-            information :"it takes place alla fortezza",
-            date : "2022-10-15",
+            description : "One of the most important fashion event in Italy.",
+            information :"Pitti Immagine Uomo is the most important event for Pitti Immagine. It is organized every year every six months and has a worldwide relevance with regard to men’s fashion. It takes place inside the Fortezza da Basso. Among the stylists involved in the following years are Valentino, Missoni, Moschino and Dries van Noten.",
+            date : "2022-06-14",
+            endDate : "2022-06-17",
             pointOfInterestId : pointOfInterest0.id,
-            typeEventId : typeEvent0.id
+            typeEventId : typeEvent0.id,
+            ticket : "No ticket needed. Free event."
+        },
+        {
+            title : "Cavalcata dei Magi",
+            image : "https://www.intoscana.it/wp-content/uploads/Cavalcata-dei-Magi-2014-16-courtesy-Opera-foto-Marco-Mori-1.jpg",
+            description : "Traditional party that takes place in Piazza del Duomo.",
+            information :"The origins of this festival date back to the fifteenth century when it was customary to organize a lively performance entitled Feast of the Magi, which culminated in the 'ride' of three different parades that, once gathered at the Baptistery of San Giovanni, went on to St Mark’s Square. The event was very linked to the Medici family who had wanted and organized it for decades. At the turn of the sixteenth century, after their expulsion, this tradition lost strength and became extinct, to find new life in the second half of the 90s of the last century. The event, whose composition is inspired by the famous cycle of frescoes 'The Chapel of the Magi' by Benozzo Gozzoli, includes a procession, composed of 700 participants (including those of the Historical Procession of the Florentine Republic), which usually starts from Piazza Pitti, to parade in the streets of the historic center and arrive in Piazza Duomo, where the final part of the celebration takes place, with the greeting of the participants, the explosion of the colubrina, and the deposition of gifts at the foot of the living crib.",
+            date : "2022-01-06",
+            pointOfInterestId : pointOfInterest9.id,
+            typeEventId : typeEvent1.id,
+            ticket : "No ticket needed. Free event."
+        },
+        {
+            title : "Capodanno Fiorentino",
+            image : "https://www.artemidefirenze.com/wp-content/uploads/2019/03/capodanno-fiorentino-3.jpg",
+            description : "Traditional party that takes place in Piazza SS. Annunziata",
+            information :"The Florentine New Year is one of the official holidays of the City of Florence and is celebrated on 25 March each year.The origin of this particular location dates back to the Middle Ages when on March 25 (the day on which the Church celebrates the Announcement of the Incarnation received by the Virgin Mary, corresponding to the ninth month before the birth of Jesus) was taken over by the city as the beginning of the civil calendar. In 1582 came into force the Gregorian calendar that fixed the beginning of the year to January 1. But Florence stubbornly continued to consider March 25 as his New Year’s Eve, until, in November 1749, the Grand Duke Francis III of Lorraine issued a decree that also fixed for Florence the 1st of January as the starting date from which to start the calendar year. The event is remembered with a historical parade that starts from the Palagio di Parte Guelfa winds through the city streets, up to the Basilica of SS. Annunziata, where the people of the countryside went on pilgrimage to pay homage to the sacred effigy of Our Lady. About this image the popular story tells that the Servants of Mary, founders of the Basilica, did paint the fresco of their 'Glorious Virgin' in 1252 to a certain friar Bartholomew, but the pious artist, when he found himself outlining the face of Our Lady, He was taken by a creative void and was unable to proceed in the work; he made several attempts that left him however more and more dissatisfied, so much so that the poor man almost decided to abandon the enterprise. One evening, suddenly he was taken by a strange drowsiness and upon waking up, the legend says, the face of the Virgin looked before him prodigiously painted by the angels; the miracle was accomplished! This image was considered miraculous and remained the object of great veneration especially by the spouses who still go to the Basilica to leave a bouquet of flowers and ask for the blessing for their union.",
+            date : "2022-03-25",
+            pointOfInterestId : pointOfInterest9.id,
+            typeEventId : typeEvent1.id,
+            ticket : "No ticket needed. Free event."
+        },
+        {
+            title : "Trofeo Marzocco",
+            image : "https://www.ilpendolo.it/wp-content/uploads/2022/05/Bandierai-degli-Uffizi.jpg",
+            description : "Traditional party that takes place in Piazza della Signoria",
+            information :"The Marzocco Trophy, the exciting competition of flag-wavers that every year takes us back into the atmosphere of the chivalric tenzoni, sees challenge, in Piazza Signoria, historical groups of flag-wavers accompanied by the exhibition of 'Musici', which give even more thickness to the ethereal choreographies of the flags. Before the race, the teams are accompanied in the square by the Historical Parade of the Florentine Republic, along an itinerary through the city streets.",
+            date : "2022-05-01",
+            pointOfInterestId : pointOfInterest9.id,
+            typeEventId : typeEvent0.id,
+            ticket : "No ticket needed. Free event."
+        },
+        {
+            title : "La Fiorita",
+            image : "https://citynews-firenzetoday.stgy.ovh/~media/original-hi/23793256218801/foto-comm-ne-savonarola-madonne-3.jpg",
+            description : "Traditional party that takes place from Piazza della Signoria to Ponte Vecchio",
+            information :"After being forcibly torn from the convent of San Marco and having suffered repeated and terrifying tortures in the cell at the base of the Tower of Arnolfo (still open)On 23 May 1498, Girolamo Savonarola was hanged in Piazza della Signoria with his brothers Domenico Buonvicini and Silvestro Maruffi. Their bodies were subsequently burned and the ashes thrown into the Arno, in a frenzied crescendo of violence and hatred. The next morning, on the site of the stake (still identifiable today through a commemorative plaque in red granite) was found a carpet of flowers, a tribute that someone had wanted to set up with love and tenderness, almost to bring to light that humanity that the orgy of violence just consumed seemed to have obscured. That moving gesture gave rise to the ceremony of the Infiorata, which has the merit of reminding us of a historical figure of extraordinary interest, a sort of ridge between the Middle Ages and the modern era, with the radicality of its spiritual, ethical and political tensions. The ceremony, preceded by the Mass in the Chapel of the Priors of Palazzo Vecchio, takes place in Piazza della Signoria, with the Historical Parade of the Florentine Republic that reaches the Ponte Vecchio from where flowers are thrown into the Arno.",
+            date : "2022-05-23",
+            pointOfInterestId : pointOfInterest9.id,
+            typeEventId : typeEvent0.id,
+            ticket : "No ticket needed. Free event."
+        },
+        {
+            title : "Partita dell'Assedio",
+            image : "https://cultura.comune.fi.it/system/files/2020-09/calcio%20storico.png",
+            description : "Traditional party that takes place in Piazza Santa Croce.",
+            information :"Every year, in the picturesque setting of Piazza Santa Croce, the historic match played on 17 February 1530 is commemorated. Florence had been a republic for three years and Pope Clement VII (born Giulio de' Medici) had made an agreement with Emperor Charles V for a military siege that forced the Florentines to embrace the Medici cause. The city, which had resisted the Spanish troops for two years, decided, in mockery to the enemies, to keep alive the traditional game of Historical Football, which was then played for the Carnival. A show of strength made through the game, at a time when there would be little will to play. The message was clear: we are stronger than your guns. The imperial troops positioned on the adjacent hills could only observe, white of wonder and green of bile (the same colors of the players on the field), the spirit of a city rising higher than the difficulties. The re-enactment of the event is preceded by the exhibition of the Bandierai of the Uffizi and the parade of the Florentine Historical Parade.",
+            date : "2022-02-17",
+            pointOfInterestId : pointOfInterest9.id,
+            typeEventId : typeEvent1.id,
+            ticket : "No ticket needed. Free event."
         }
     ]
     const event0 = await models.Event.create(eventList[0])
@@ -393,6 +453,11 @@ export default async function initialize (models) {
     const event2 = await models.Event.create(eventList[2])
     const event3 = await models.Event.create(eventList[3])
     const event4 = await models.Event.create(eventList[4])
+    const event5 = await models.Event.create(eventList[5])
+    const event6 = await models.Event.create(eventList[6])
+    const event7 = await models.Event.create(eventList[7])
+    const event8 = await models.Event.create(eventList[8])
+    const event9 = await models.Event.create(eventList[9])
     const typeServiceList = [
         {
             type_name : "Pharmacies",
@@ -405,11 +470,21 @@ export default async function initialize (models) {
         {
             type_name : "Supermarkets",
             image : "https://www.coopfirenze.it/uploads/38598/news/coopfi.jpg"
+        },
+        {
+            type_name : "Parkings",
+            image : "https://www.inflorencetoday.com/ita/servizi/parcheggi/foto/Parcheggio-Parking-Duomo.jpg"
+        },
+        {
+            type_name : "Hospitals",
+            image : "https://www.interno.gov.it/sites/default/files/styles/top_pagina/public/field/image/prontosoccorso_885.jpg"
         }
     ]
     const typeService0 = await models.TypeService.create(typeServiceList[0])
     const typeService1 = await models.TypeService.create(typeServiceList[1])
     const typeService2 = await models.TypeService.create(typeServiceList[2])
+    const typeService3 = await models.TypeService.create(typeServiceList[3])
+    const typeService4 = await models.TypeService.create(typeServiceList[4])
     const ItineraryPointOfInterestList = [
         {
             itineraryId : itinerary0.id,
@@ -503,12 +578,60 @@ export default async function initialize (models) {
             pointOfInterestId : pointOfInterest0.id
         },
         {
+            eventId : event0.id,
+            pointOfInterestId : pointOfInterest1.id
+        },
+        {
             eventId : event1.id,
+            pointOfInterestId : pointOfInterest7.id
+        },
+        {
+            eventId : event2.id,
+            pointOfInterestId : pointOfInterest10.id
+        },
+        {
+            eventId : event2.id,
+            pointOfInterestId : pointOfInterest11.id
+        },
+        {
+            eventId : event3.id,
+            pointOfInterestId : pointOfInterest17.id
+        },
+        {
+            eventId : event4.id,
+            pointOfInterestId : pointOfInterest18.id
+        },
+        {
+            eventId : event5.id,
+            pointOfInterestId : pointOfInterest9.id
+        },
+        {
+            eventId : event5.id,
             pointOfInterestId : pointOfInterest0.id
         },
         {
-            eventId : event0.id,
+            eventId : event6.id,
+            pointOfInterestId : pointOfInterest17.id
+        },
+        {
+            eventId : event6.id,
+            pointOfInterestId : pointOfInterest0.id
+        },
+        {
+            eventId : event7.id,
             pointOfInterestId : pointOfInterest1.id
+        },
+        {
+            eventId : event8.id,
+            pointOfInterestId : pointOfInterest1.id
+        },
+        {
+            eventId : event8.id,
+            pointOfInterestId : pointOfInterest10.id
+        },
+        {
+            eventId : event9.id,
+            pointOfInterestId : pointOfInterest7.id
         },
     ]
     EventPointOfInterestList.map((item) => models.EventPointOfInterest.create(item))

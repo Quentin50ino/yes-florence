@@ -6,7 +6,6 @@
             <div>
                 <h1>{{event.title}}</h1>
                 <h6>{{event.description}}</h6>
-                <p>{{event.information}}</p>
             </div>
             <img id="top-img" height="600px" :src="`${event.image}`"/>
         </div>
@@ -14,14 +13,17 @@
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
                 <div class="mx-auto">
-                    <p>{{event.description}}</p>
                     <p>{{event.information}}</p>
                 </div>
                 <div class="vl"></div>
                 <div class="mx-auto">
                     <h5>TICKET INFORMATION</h5>
-                    <h5>PUBLIC TRANSPORT</h5>
-                    <h5>SERVICES</h5>
+                    <p>{{event.ticket}}</p>
+                    <h5 v-if="event.endDate==null">WHEN</h5>
+                    <h5 v-if="event.endDate!=null">FROM</h5>
+                    <p>{{parseDate(event.date)}}</p>
+                    <h5 v-if="event.endDate!=null">TO</h5>
+                    <p v-if="event.endDate!=null">{{parseDate(event.endDate)}}</p>
                 </div>
             </div>
         </div>
@@ -113,7 +115,19 @@ export default {
       clickedCard(e){
           this.activeCardIndex = e;
           window.location.href = '#city-map'
+      },
+    parseDate(d){
+      let date = new Date(d)
+      let month;
+      if(date.getMonth()+1<10){
+        month = "0" + (date.getMonth()+1)
       }
+      else {
+        month = (date.getMonth()+1)
+      }
+      date = date.getDate() + "/" + month + "/" + date.getFullYear()
+      return date;
+  }
   }
 }
 </script>

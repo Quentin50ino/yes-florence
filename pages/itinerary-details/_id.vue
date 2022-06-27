@@ -20,8 +20,7 @@
                 <div class="vl"></div>
                 <div class="mx-auto">
                     <h5>TICKET INFORMATION</h5>
-                    <h5>PUBLIC TRANSPORT</h5>
-                    <h5>SERVICES</h5>
+                    <p>{{itinerary.ticket}}</p>
                 </div>
             </div>
         </div>

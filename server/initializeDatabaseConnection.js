@@ -31,14 +31,16 @@ export default async function initializeDatabaseConnection() {
         description : DataTypes.STRING,
         information : DataTypes.STRING,
         duration : DataTypes.INTEGER,
+        ticket : DataTypes.STRING(1000)
     })
     const Event = database.define("event", {
         title : DataTypes.STRING,
         image : DataTypes.STRING,
-        description : DataTypes.STRING,
-        information : DataTypes.STRING,
+        description : DataTypes.STRING(1000),
+        information : DataTypes.STRING(10000),
         date : DataTypes.DATE,
-        endDate : DataTypes.DATE
+        endDate : DataTypes.DATE,
+        ticket : DataTypes.STRING(1000),
     })
     const Service = database.define("service", {
         name : DataTypes.STRING,
