@@ -11,28 +11,28 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse mx-auto" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <nuxt-link to="/" class="nav-link active" aria-current="page" href="#">HOME</nuxt-link>
+          <nuxt-link to="/" class="nav-link" aria-current="page" href="#">HOME</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="/town" class="nav-link active" aria-current="page" href="#">TOWN</nuxt-link>
+          <nuxt-link to="/town" class="nav-link" aria-current="page" href="#">TOWN</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="/interest" class="nav-link active" aria-current="page" href="#">POINTS OF INTEREST</nuxt-link>
+          <nuxt-link to="/interest" class="nav-link" aria-current="page" href="#">POINTS OF INTEREST</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="/itinerary" class="nav-link active" aria-current="page" href="#">ITINERARIES</nuxt-link>
+          <nuxt-link to="/itinerary" class="nav-link" aria-current="page" href="#">ITINERARIES</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="/event" class="nav-link active" aria-current="page" href="#">EVENTS</nuxt-link>
+          <nuxt-link to="/event" class="nav-link" aria-current="page" href="#">EVENTS</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="/services" class="nav-link active" aria-current="page" href="#">SERVICES</nuxt-link>
+          <nuxt-link to="/services" class="nav-link" aria-current="page" href="#">SERVICES</nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link to="/contacts" class="nav-link active" aria-current="page" href="/home">CONTACTS</nuxt-link>
+          <nuxt-link to="/contacts" class="nav-link" aria-current="page" href="/home">CONTACTS</nuxt-link>
         </li>
       </ul>
     </div>
@@ -49,6 +49,9 @@
 }
 li{
   margin : 0 20px;
+}
+li:hover{
+  color : red;
 }
 .logo{
   margin : 0 20px;

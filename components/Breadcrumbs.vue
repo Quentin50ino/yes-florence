@@ -2,7 +2,7 @@
     <div style="margin-left : 10px">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><nuxt-link :to="pageBack"><a href="#">{{page1}}</a></nuxt-link></li>
+    <li class="breadcrumb-item"><nuxt-link :to="pageBack"><a href="#" style="color : black">{{page1}}</a></nuxt-link></li>
     <li class="breadcrumb-item active" aria-current="page">{{page2}}</li>
   </ol>
 </nav>
