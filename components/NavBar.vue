@@ -1,7 +1,7 @@
 <template>
 <div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid d">
+  <div class="container-fluid">
     <a class="navbar-brand logo">
       <div class="d-flex flex-column align-items-center" style="margin-top : 12px">
         <img src="https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/GIGLIO.png" alt="" width="30px">
