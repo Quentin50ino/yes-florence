@@ -185,7 +185,7 @@ hr{
 /*img{
     margin-top : 40px
   }*/
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 600px) {
   .img-container{
     margin-top : 40px;
   }

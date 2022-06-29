@@ -9,14 +9,14 @@
             </div>
             <img id="top-img" height="600px" :src="`${event.image}`"/>
         </div>
-        <div class="info-card">
+        <div class="info-card" style="padding : 0px 40px">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
-                <div class="mx-auto">
+                <div class="mx-auto" style="margin-bottom : 10px">
                     <p>{{event.information}}</p>
                 </div>
-                <div class="vl"></div>
-                <div class="mx-auto">
+                <!--<div class="vl"></div>-->
+                <div class="mx-auto d-flex flex-column align-items-center">
                     <h5>TICKET INFORMATION</h5>
                     <p>{{event.ticket}}</p>
                     <h5 v-if="event.endDate==null">WHEN</h5>
@@ -77,7 +77,7 @@
     margin: 40px 0;
 }
 .title{
-    margin-bottom : 40px
+    margin-bottom : 20px
 }
 .selected-card{
     border : solid 3px #3b5998;

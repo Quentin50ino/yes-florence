@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav-bar></nav-bar>
-        <breadcrumbs page1="Point of Interests" :page2="pointOfInterest.title" pageBack="/interest" style="margin-top : 15px"></breadcrumbs>
+        <breadcrumbs page1="Points of Interest" :page2="pointOfInterest.title" pageBack="/interest" style="margin-top : 15px"></breadcrumbs>
         <div class="d-flex justify-content-around grey-card" style="flex-wrap: wrap;">
             <div>
                 <h1>{{pointOfInterest.title}}</h1>
@@ -12,16 +12,16 @@
         <div class="info-card">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
-                <div class="mx-auto">
+                <div class="mx-auto" style="margin-bottom : 10px">
                     <p style="padding : 0 40px">{{pointOfInterest.information}}</p>
                 </div>
-                <div class="vl"></div>
-                <div class="mx-auto">
+                <!--<div class="vl"></div>-->
+                <div class="d-flex flex-column align-items-center" style="padding : 0px 40px">
                     <h5>ADDRESS</h5>
                     <div>{{pointOfInterest.address}}</div>
-                    <h5>TICKET INFORMATION</h5>
+                    <h5 style="margin-top : 20px">TICKET INFORMATION</h5>
                     <div>{{pointOfInterest.ticket}}</div>
-                    <h5>OPEN HOURS</h5>
+                    <h5 style="margin-top : 20px">OPEN HOURS</h5>
                     <div>{{pointOfInterest.open}}</div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
           </div>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" v-if="events.length!==0">
             <div>
             <h3 class="d-flex justify-content-center title">LIST OF EVENTS</h3>
             <div class="d-flex justify-content-center title" style="flex-wrap: wrap;">
@@ -84,7 +84,7 @@
     margin: 40px 0;
 }
 .title{
-    margin-bottom : 40px
+    margin-bottom : 20px
 }
 .material-symbols-outlined {
     width: 600px;

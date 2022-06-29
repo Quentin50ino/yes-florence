@@ -25,19 +25,6 @@
       <div class="col-md-4 footer-column">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <span class="footer-title">Company</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">News and articles</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 footer-column">
-        <ul class="nav flex-column">
-          <li class="nav-item">
             <span class="footer-title">Contact & Support</span>
           </li>
           <li class="nav-item">
@@ -115,9 +102,15 @@ a:hover {
 footer {
   padding: 2rem 0;
   background-color: #212529;
-  /*.container .row:not(:last-child) {
-   padding-bottom: 2rem;*/
+}
+.container .row:not(:last-child) {
+   padding-bottom: 2rem;
   }
+
+.row{
+  display: flex;
+  justify-content: space-around;
+}
 
 
 .footer-column {

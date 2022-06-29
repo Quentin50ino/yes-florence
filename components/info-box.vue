@@ -8,7 +8,7 @@
         <div class="alert alert-primary d-flex align-items-center justify-content-center" role="alert" style="height : 20px; width : fit-content;"> 
             <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
         <div>
-            Click on the point of interest to show it on the map!
+            Click on the card of the point of interest to show it on the map!
             </div>
         </div>
 </div>

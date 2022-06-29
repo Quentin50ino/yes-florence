@@ -21,7 +21,8 @@ export default async function initialize (models) {
             information : "Visita in italiano",
             duration : 2,
             typeItineraryId : typeItinerary0.id,
-            ticket : "Full price € 15.40"
+            ticket : "Full price € 15.40",
+            itineraryImage : "https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/Renaissance%20in%20Florence.jpg"
         },
         {
             title : "Outdoor Florence",
@@ -30,7 +31,8 @@ export default async function initialize (models) {
             information : "Visita in italiano",
             duration : 8,
             typeItineraryId : typeItinerary2.id,
-            ticket : "Full price € 24.90."
+            ticket : "Full price € 24.90.",
+            itineraryImage : "https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/Outdoor%20Florence.jpg"
         },
         {
             title : "All around Medici",
@@ -39,7 +41,8 @@ export default async function initialize (models) {
             information : "Visita in italiano",
             duration : 8,
             typeItineraryId : typeItinerary1.id,
-            ticket : "Full price € 25.30."
+            ticket : "Full price € 25.30.",
+            itineraryImage : "https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/All%20around%20Medici.jpg"
         },
         {
             title : "Bridges of Florence",
@@ -48,7 +51,8 @@ export default async function initialize (models) {
             information : "Visita in italiano",
             duration : 6,
             typeItineraryId : typeItinerary2.id,
-            ticket : "Full price € 12.50."
+            ticket : "Full price € 12.50.",
+            itineraryImage : "https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/Bridges%20of%20Florence.jpg"
         }
     ]
     const itinerary0 = await models.Itinerary.create(itineraryList[0])
@@ -145,7 +149,7 @@ export default async function initialize (models) {
         },
         {
             title : "Basilica di Santa Croce",
-            image : "https://c9g6k7a7.stackpathcdn.com/wp-content/uploads/2021/07/istockphoto-1222429282-170667a.jpg",
+            image : "https://upload.wikimedia.org/wikipedia/commons/7/7a/Santa_Croce_%28Florence%29_-_Facade.jpg",
             description : "Rinascimental cathedral in the center of  Florence",
             information : "Designed by Arnolfo di Cambio (1296), it is the largest Franciscan church in the world; it is also known as the 'Pantheon of Italian glories' for its illustrious tombs (Michelangelo, Galileo, Machiavelli, Rossini, Foscolo, Alfieri) that it preserves in the suggestive Gothic interior. Among the more than 200 tombs, the two Renaissance monuments stand out, masterpieces of Rossellino and Desiderio da Settignano. Of the numerous chapels in the transept, frescoed in the fourteenth century, authentic masterpieces are the Bardi and Peruzzi chapels, frescoed by Giotto; remarkable are also the works of Donatello (the Annunciation and the Crucifix). The famous Crucifix of Cimabue damaged by the 1966 flood, instead, is displayed in the sacristy. The museum itinerary includes the Cappella dei Pazzi, by Brunelleschi, the two cloisters and the Last Supper, frescoed by Taddeo Gaddi, a treasure chest of numerous works of art (Donatello, Orcagna, Domenico Veneziano).",
             iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.2066846178254!2d11.260079015345866!3d43.76856827911753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a540723ccc331%3A0x8f8279649c131255!2sBasilica%20di%20Santa%20Croce%20di%20Firenze!5e0!3m2!1sit!2sit!4v1654637625340!5m2!1sit!2sit",
@@ -214,7 +218,7 @@ export default async function initialize (models) {
             image : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/71/63/48/giardino-dell-artecultura.jpg?w=1200&h=1200&s=1",
             description : "Beatiful garden in the city of Florence.",
             information : "In 1854 the 'Società Toscana d'Orticultura' (Tuscan Society of Horticulture) was constituted. In the second half of the 19th century the garden got larger and Giacomo Roster designed the big tepidarium, inaugurated in 1880. The little loggia 'Bondi' by the architect Castellucci was realized in 1911. The Municipality of Florence bought the garden in 1930 and designated the area as a public garden. In 1990 the 'snake' was completed with decorations of different materials following the project of Marco Dezzi Bardeschi. Inside the garden there is also a playground for children.",
-            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.3432289130037!2d11.258881815346488!3d43.78649047911689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a542280a78f85%3A0x2f67ac42295add0d!2sGiardino%20dell&#39;Orticoltura!5e0!3m2!1sit!2sit!4v1654696580687!5m2!1sit!2sit",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.306679575506!2d11.258612156798899!3d43.787248981395244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82bc67a1f95aea9c!2zNDPCsDQ3JzE0LjEiTiAxMcKwMTUnMzguNCJF!5e0!3m2!1sit!2sit!4v1656493839392!5m2!1sit!2sit",
             typePointOfInterestId : typePointOfInterest1.id,
             ticket : "No ticket needed.",
             address : "Via Vittorio Emanuele II, 4, 50139 Firenze FI, Italia",
@@ -719,7 +723,7 @@ export default async function initialize (models) {
         {
             name : "Quick Garage Centrale",
             image : "https://www.inflorencetoday.com/ita/servizi/parcheggi/foto/Quick-Garage-Centrale-Gozzoli-Firenze.jpg",
-            description : "Central Cark Park.",
+            description : "Central Car Park.",
             information : "Underground car park located in the city center, very near to Palazzo Ruccellai and Ponte alla Carraia.",
             iFrame: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1676.3870308856858!2d11.24708493540515!3d43.77138409551926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56abc637dee3%3A0x1510841555a19fdb!2sQuick%20Garage%20Centrale!5e0!3m2!1sit!2sit!4v1656337554292!5m2!1sit!2sit",
             typeServiceId : typeService3.id,

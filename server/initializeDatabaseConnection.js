@@ -31,7 +31,8 @@ export default async function initializeDatabaseConnection() {
         description : DataTypes.STRING,
         information : DataTypes.STRING,
         duration : DataTypes.INTEGER,
-        ticket : DataTypes.STRING(1000)
+        ticket : DataTypes.STRING(1000),
+        itineraryImage: DataTypes.STRING
     })
     const Event = database.define("event", {
         title : DataTypes.STRING,

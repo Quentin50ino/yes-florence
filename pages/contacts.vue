@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav-bar/>
-        <img class="main-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/33/dc/8a/caption.jpg?w=700&h=-1&s=1">
+        <img class="main-img" src="https://michelangelobuonarrotietornato.files.wordpress.com/2020/03/ponte-santa-trinita-florence_5_orig-1.jpg">
         <div  class="d-flex flex-column align-items-center">
             <div class="d-flex justify-content-center" style="margin-top : 60px">
                 <h4>Contacts</h4>

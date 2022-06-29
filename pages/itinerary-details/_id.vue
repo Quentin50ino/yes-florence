@@ -6,7 +6,6 @@
             <div>
                 <h1>{{itinerary.title}}</h1>
                 <h6>{{itinerary.description}}</h6>
-                <p>{{itinerary.information}}</p>
             </div>
             <img id="top-img" height="600px" :src="`${itinerary.image}`"/>
         </div>
@@ -14,15 +13,20 @@
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
                 <div class="mx-auto">
-                    <p>{{itinerary.description}}</p>
                     <p>{{itinerary.information}}</p>
                 </div>
-                <div class="vl"></div>
+                <!--<div class="vl"></div>-->
                 <div class="mx-auto">
                     <h5>TICKET INFORMATION</h5>
                     <p>{{itinerary.ticket}}</p>
                 </div>
             </div>
+                <div class="d-flex justify-content-center" style="margin : 80px 0px">
+                    <div class="mx-suto">
+                    <h5 class="d-flex justify-content-center" style="margin-bottom: 30px">ITINERARY INFORMATION</h5>
+                    <img :src="`${itinerary.itineraryImage}`" width="100%"/>
+                    </div>
+                </div>
         </div>
         <h3 class="d-flex justify-content-center title">POINTS OF INTEREST LIST</h3>
         <info-box></info-box>
@@ -100,7 +104,7 @@ export default {
         const pointOfInterests = await $axios.get('/api/itineraries/pointOfInterestsInvolved/' + id)
     return {
         itinerary : data,
-        pointOfInterests : pointOfInterests.data
+        pointOfInterests : pointOfInterests.data,
     }
   },
     methods : {
