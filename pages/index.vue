@@ -2,6 +2,7 @@
   <div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <nav-bar/>
+    <img class="main-img" src="https://wallpaperaccess.com/full/1127841.jpg">
     <div>
       <h3 class="d-flex justify-content-center" style="margin-top : 40px">Welcome to Florence!</h3>
       <br>
@@ -213,6 +214,11 @@ hr{
 .img-zoom:hover {
   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.main-img{
+    height: 25em;
+    width: 100%;
+    object-fit: cover;
 }
 </style>
 
