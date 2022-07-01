@@ -17,8 +17,8 @@ export default async function initialize (models) {
         {
             title : "Renaissance in Florence",
             image : "https://www.tuscanypeople.com/wp-content/uploads/2021/06/duomo_firenze_alba.jpg",
-            description : "Guided visit in the center of Florence.",
-            information : "Guided visit starts from Basilica di Santa Maria Novella, followed by a longer stop in Battistero di San Giovanni, Cattedrale di Santa Maria del Fiore where it will be possible to admire and take pictures at the famous Campanile di Giotto. Last stop will take place at Basilica di Santa Croce di Firenze where the visit will end.",
+            description : "Itinerary in the center of Florence.",
+            information : "This itinerary starts from Basilica di Santa Maria Novella, followed by a longer stop in Battistero di San Giovanni, Cattedrale di Santa Maria del Fiore where it will be possible to admire and take pictures at the famous Campanile di Giotto. Last stop will take place at Basilica di Santa Croce di Firenze where the itinerary ends.",
             duration : 2,
             typeItineraryId : typeItinerary0.id,
             ticket : "Full price € 15.40",
@@ -27,8 +27,8 @@ export default async function initialize (models) {
         {
             title : "Outdoor Florence",
             image : "https://mywowo.net/media/images/cache/firenze_giardino_dei_boboli_01_prima_parte_jpg_1200_630_cover_85.jpg",
-            description : "Guided visit outdoor",
-            information : "This guided visit is for everyone who aims to visit the most beautiful outdoor locations of Florence. The tour starts at the beautiful Giardino dell’Orticoltura, followed by a stop at the Piazza Santissima Annunziata. Other stops will be at Piazzale Michelangelo, Rose Garden, Giardino del Bobolink and eventually Bobble Garden will close the tour.",
+            description : "Outdoor itinerary",
+            information : "This itinerary is for everyone who aims to visit the most beautiful outdoor locations of Florence. The itinerary starts at the beautiful Giardino dell’Orticoltura, followed by a stop at the Piazza Santissima Annunziata. Other stops will be at Piazzale Michelangelo, Rose Garden, Giardino del Bobolink and eventually Bobble Garden will close the itinerary.",
             duration : 8,
             typeItineraryId : typeItinerary2.id,
             ticket : "Full price € 24.90.",
@@ -37,8 +37,8 @@ export default async function initialize (models) {
         {
             title : "All around Medici",
             image : "https://www.imuseidifirenze.it/wp-content/uploads/2019/02/palazzo-pitti-firenze-1024x577.jpg",
-            description : "Guided visit in all the old residences of the Medici family",
-            information : "This guided visit for tourists interested in deepen their knowledge about Medici family. The visit starts at Palazzo Medici Riccardi, followed by Palazzo Stroizzi and Torre di Arnolfo, later stop will be at the famous Galleria degli Uffizi, ending with a tour at the Galleria d’Arte Moderna where the visit will end.",
+            description : "Itinerary through all the old residences of the Medici family",
+            information : "This itinerary guides tourists interested in deepen their knowledge about Medici family. The visit starts at Palazzo Medici Riccardi, followed by Palazzo Stroizzi and Torre di Arnolfo, later stop will be at the famous Galleria degli Uffizi, ending with a tour at the Galleria d’Arte Moderna where the itinerary will end.",
             duration : 8,
             typeItineraryId : typeItinerary1.id,
             ticket : "Full price € 25.30.",
@@ -47,8 +47,8 @@ export default async function initialize (models) {
         {
             title : "Bridges of Florence",
             image : "https://www.alishaaneja.com/assets/images/ponte.jpg",
-            description : "Guided visit around all the most beautiful bridges in the city of Florence.",
-            information : "This guided tour will present the most famous bridges of Florence constructed to traverse Arno river. The guide will explain the history of the bridges in Italian language. First bridge will be Ponte alla Carraia, followed by Ponte Santa Trinità and Ponte Vecchio. The last two steps of the tour will be Corridoio Vasariano and Ponte alle Grazie where the tour will end. ",
+            description : "Itinerary around all the most beautiful bridges in the city of Florence.",
+            information : "This itinerary will present the most famous bridges of Florence constructed to traverse Arno river. First bridge will be Ponte alla Carraia, followed by Ponte Santa Trinità and Ponte Vecchio. The last two steps of the tour will be Corridoio Vasariano and Ponte alle Grazie where the itinerary ends. ",
             duration : 6,
             typeItineraryId : typeItinerary2.id,
             ticket : "Full price € 12.50.",

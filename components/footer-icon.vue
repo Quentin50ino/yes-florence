@@ -3,13 +3,13 @@
        <footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-4 footer-column">
+      <div class="col-md-6 footer-column">
         <ul class="nav flex-column">
           <li class="nav-item">
             <span class="footer-title">QUICK LINKS</span>
           </li>
           <li class="nav-item">
-            <nuxt-link to="/interest" class="nav-link" href="#">Point of Interests</nuxt-link>
+            <nuxt-link to="/interest" class="nav-link" href="#">Points of Interest</nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link to="/itinerary" class="nav-link" href="#">Itineraries</nuxt-link>
@@ -22,7 +22,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-4 footer-column">
+      <div class="col-md-6 footer-column">
         <ul class="nav flex-column">
           <li class="nav-item">
             <span class="footer-title">Contact & Support</span>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="text-center"><i class="fas fa-ellipsis-h"></i></div>
-    
+
     <div class="row text-center">
       <div class="col-md-4 box">
         <span class="copyright quick-links">Copyright &copy; Web Cookies 2022

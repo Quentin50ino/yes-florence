@@ -52,7 +52,9 @@
           :typeOfPage="`event`"
           :title="`${event.title}`"
           :image="`${event.image}`"
-          :description="`${event.description}`"></card>
+          :description="`${event.description}`"
+           :date="`${event.date}`"
+          :endDate="`${event.endDate}`"></card>
             </div>
             </div>
         </div>
@@ -120,6 +122,23 @@ export default {
         const { data } = await $axios.get('/api/pointOfInterests/' + id)
         const itineraries = await $axios.get('/api/pointOfInterests/itinerariesInvolved/' + id)
         const events = await $axios.get('/api/pointOfInterests/eventsInvolved/' + id)
+        for(var d of events.data){
+        let date = new Date(d.date)
+        let endDate = new Date(d.endDate)
+        let month;
+        let endDateMonth;
+        if(date.getMonth()+1<10){
+            month = "0" + (date.getMonth()+1)
+            endDateMonth = "0" + (endDate.getMonth()+1)
+        }
+        else {
+            month = (date.getMonth()+1)
+            endDateMonth = (endDate.getMonth()+1)
+        }
+        d.date = date.getDate() + "/" + month + "/" + date.getFullYear()
+        if(d.endDate!=null)
+            d.endDate = endDate.getDate() + "/" + endDateMonth + "/" + endDate.getFullYear()
+    }
     return {
         pointOfInterest : data,
         itineraries : itineraries.data,

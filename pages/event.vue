@@ -142,6 +142,9 @@ export default {
         this.parseDate(data)
         this.eventList = data;
         window.location.href = "#events-cards";
+        this.all = false;
+        this.summer = false;
+        this.winter = false;
       },
       async findAll(){
         const { data } = await this.$axios.get('/api/events');
@@ -183,6 +186,9 @@ export default {
         this.parseDate(data)
         this.eventList = data;
         window.location.href = "#events-cards";
+        this.all = true;
+        this.summer = false;
+        this.winter = false;
       }
     }
 }
