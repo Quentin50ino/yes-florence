@@ -29,7 +29,7 @@ export default async function initializeDatabaseConnection() {
         title : DataTypes.STRING,
         image : DataTypes.STRING,
         description : DataTypes.STRING,
-        information : DataTypes.STRING,
+        information : DataTypes.STRING(1000),
         duration : DataTypes.INTEGER,
         ticket : DataTypes.STRING(1000),
         itineraryImage: DataTypes.STRING

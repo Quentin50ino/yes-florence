@@ -11,7 +11,7 @@
       <!--<div class="d-flex justify-content-center " style="margin-top : 80px; flex-wrap : wrap;">
         <div class="d-flex flex-column align-items-center img-container zoom" style=" background-color: #fff; margin : 0px 20px;">
           <img :src="`${pointOfInterests[0].image}`" width="400px" height="200px">
-          <h5 style="margin : 20px 0px; color : black">Point Of Interests</h5>
+          <h5 style="margin : 20px 0px; color : black">Points Of Interest</h5>
           <a style="margin-bottom : 15px" href="#section1"><button type="button" class="btn btn-light">DISCOVER</button></a>
         </div>
         <div class="d-flex flex-column align-items-center img-container zoom"  style=" background-color: #fff; margin : 0px 20px;">
@@ -36,7 +36,7 @@
         <div class="d-flex justify-content-center">
           <hr>
         </div>
-      <h1 class="d-flex justify-content-center" id="section1">POINT OF INTERESTS</h1>
+      <h1 class="d-flex justify-content-center" id="section1">POINTS OF INTEREST</h1>
   <div id="carouselInterests" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <carousel
@@ -223,7 +223,7 @@ hr{
 </style>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');*/
 *{
   font-family: 'Roboto', sans-serif;
 }

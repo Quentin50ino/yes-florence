@@ -20,6 +20,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/GIGLIO.png' },
+      { rel : "preconnect" , href : "https://fonts.googleapis.com"},
+      { rel : "preconnect" , href : "preconnect"},
+      { rel : "stylesheet" , href : "https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"},
       {
         rel: 'stylesheet',
         href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',

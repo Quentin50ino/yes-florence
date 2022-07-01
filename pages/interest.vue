@@ -8,14 +8,16 @@
         <div class="d-flex justify-content-center" style="flex-wrap: wrap">
           <div class="d-flex flex-column align-items-center find-container">
             <h6></h6>
-            <button type="button" class='btn btn-dark' v-on:click="findAll()">All Points</button>
+            <button type="button" :class="{'btn btn-light' : !allPoi, 'btn btn-dark' : allPoi}" v-on:click="findAll()">All Points</button>
           </div>
           <div class="d-flex flex-column align-items-center find-container" v-for="(interest, interestIndex) of typesPointOfInterest" :key="`type-index-${interestIndex}`" >
             <h6></h6>
-            <button type="button" class='btn btn-dark' v-on:click="findInterests(interest.id)">{{interest.type_name}} Points</button>
+            <button type="button" :class="{
+              'btn btn-light' : !hisoricalPoi && interestIndex==0 || !naturalPoi && interestIndex==1, 
+              'btn btn-dark' : hisoricalPoi && interestIndex==0 || naturalPoi && interestIndex==1}" v-on:click="findInterests(interest.id)">{{interest.type_name}} Points</button>
           </div>
         </div>
-      <div class="d-flex justify-content-center" style="flex-wrap : wrap">
+      <div class="d-flex justify-content-center" style="flex-wrap : wrap" id="poi-cards">
         <card v-for="(interest, interestIndex) of pointOfInterestList" 
           :id="`${interest.id}`"
           :typeOfPage="`interest`"
@@ -48,7 +50,10 @@ export default {
     data() {
         return {
           pointOfInterestList : [],
-          typesPointOfInterest : []
+          typesPointOfInterest : [],
+          allPoi : true,
+          hisoricalPoi : false,
+          naturalPoi : false
         }
      },
     async asyncData({ $axios }) {
@@ -63,10 +68,25 @@ export default {
       async findInterests(typePointOfInterestId){
         const { data } = await this.$axios.post('/api/findInterests', { id : typePointOfInterestId });
         this.pointOfInterestList = data;
+        window.location.href = "#poi-cards";
+        if(typePointOfInterestId==1){
+          this.hisoricalPoi = true;
+          this.allPoi = false;
+          this.naturalPoi = false;
+        }
+        if(typePointOfInterestId==2){
+          this.hisoricalPoi = false;
+          this.allPoi = false;
+          this.naturalPoi = true;
+        }
       },
       async findAll(){
         const { data } = await this.$axios.get('/api/pointOfInterests');
         this.pointOfInterestList = data;
+        window.location.href = "#poi-cards";
+        this.allPoi = true;
+        this.hisoricalPoi = false;
+        this.naturalPoi = false;
       }
     }
 }

@@ -11,19 +11,23 @@
         </div>
         <div class="info-card">
             <h3 class="d-flex justify-content-center title">DESCRIPTION & INFO</h3>
-            <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+            <div class="d-flex flex-column align-items-center" style="flex-wrap: wrap;">
                 <div class="mx-auto">
-                    <p>{{itinerary.information}}</p>
+                    <p style="padding : 0 40px">{{itinerary.information}}</p>
                 </div>
                 <!--<div class="vl"></div>-->
-                <div class="mx-auto">
+                <div class="d-flex flex-column align-items-center" style="margin-top : 15px">
                     <h5>TICKET INFORMATION</h5>
                     <p>{{itinerary.ticket}}</p>
                 </div>
+                <div class="d-flex flex-column align-items-center" style="margin-top : 15px">
+                    <h5>DURATION</h5>
+                    <p>{{itinerary.duration}} hours</p>
+                </div>
             </div>
-                <div class="d-flex justify-content-center" style="margin : 80px 0px">
+                <div class="d-flex justify-content-center" style="margin : 20px 0px 80px 0px">
                     <div class="mx-suto">
-                    <h5 class="d-flex justify-content-center" style="margin-bottom: 30px">ITINERARY INFORMATION</h5>
+                    <h3 class="d-flex justify-content-center" style="margin-bottom: 30px">ITINERARY INFORMATION</h3>
                     <img :src="`${itinerary.itineraryImage}`" width="100%"/>
                     </div>
                 </div>
@@ -74,7 +78,7 @@
     margin: 40px 0;
 }
 .title{
-    margin-bottom : 40px
+    margin-bottom : 15px
 }
 .selected-card{
     border : solid 3px #3b5998;

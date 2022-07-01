@@ -7,10 +7,12 @@
         </div>
           <div class="d-flex justify-content-center" style="flex-wrap : wrap">
           <div class="d-flex flex-column align-items-center find-container">
-            <button type="button" class="btn btn-dark" v-on:click="findAll()">All Events</button>
+            <button type="button" :class="{'btn btn-light' : !all, 'btn btn-dark' : all}" v-on:click="findAll()">All Events</button>
           </div>
           <div class="d-flex flex-column align-items-center find-container" v-for="(event, eventIndex) of typesEvent" :key="`type-index-${eventIndex}`" >
-            <button type="button" class="btn btn-dark" v-on:click="findEvent(event.id)">{{event.type_name}}</button>
+            <button type="button" :class="{
+              'btn btn-light' : !summer && eventIndex==0 || !winter && eventIndex==1, 
+              'btn btn-dark' : summer && eventIndex==0 || winter && eventIndex==1}" v-on:click="findEvent(event.id)">{{event.type_name}}</button>
           </div>
         </div>
         <div class="d-flex justify-content-center">
@@ -29,7 +31,7 @@
           </div>-->
 
         </div>
-      <div class="d-flex flex-row justify-content-center" style="flex-wrap : wrap"> 
+      <div class="d-flex flex-row justify-content-center" style="flex-wrap : wrap" id="events-cards"> 
         <card  v-for="(event, eventIndex) of eventList" 
           :key="`event-index-${eventIndex}`"
           :id="`${event.id}`"
@@ -68,7 +70,10 @@ export default {
           startDate : undefined,
           startDateForInput : undefined,
           endDate : undefined,
-          endDateForInput : undefined
+          endDateForInput : undefined,
+          all : true,
+          summer : false,
+          winter : false
         }
      },
     async asyncData({ $axios }) {
@@ -119,17 +124,33 @@ export default {
       async findEvent(typeEventId){
         const { data } = await this.$axios.post('/api/findEvents', { id : typeEventId });
         this.parseDate(data);
-          this.eventList = data;
+        this.eventList = data;
+        window.location.href = "#events-cards";
+        if(typeEventId==1){
+          this.all = false;
+          this.summer = true;
+          this.winter = false;
+        }
+        if(typeEventId==2){
+          this.all = false;
+          this.summer = false;
+          this.winter = true;
+        }
         },
       async findEventByDate(startDate, endDate){
         const { data } = await this.$axios.post('/api/findEventsByDate', { startDate, endDate });
         this.parseDate(data)
         this.eventList = data;
+        window.location.href = "#events-cards";
       },
       async findAll(){
         const { data } = await this.$axios.get('/api/events');
         this.parseDate(data)
         this.eventList = data;
+        window.location.href = "#events-cards";
+        this.all = true;
+        this.summer = false;
+        this.winter = false;
       },
       startDateHandler({target}) {
         this.startDate = new Date(target.value)
@@ -161,6 +182,7 @@ export default {
         const { data } = await this.$axios.get('/api/events');
         this.parseDate(data)
         this.eventList = data;
+        window.location.href = "#events-cards";
       }
     }
 }

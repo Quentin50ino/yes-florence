@@ -18,7 +18,7 @@ export default async function initialize (models) {
             title : "Renaissance in Florence",
             image : "https://www.tuscanypeople.com/wp-content/uploads/2021/06/duomo_firenze_alba.jpg",
             description : "Guided visit in the center of Florence.",
-            information : "Visita in italiano",
+            information : "Guided visit starts from Basilica di Santa Maria Novella, followed by a longer stop in Battistero di San Giovanni, Cattedrale di Santa Maria del Fiore where it will be possible to admire and take pictures at the famous Campanile di Giotto. Last stop will take place at Basilica di Santa Croce di Firenze where the visit will end.",
             duration : 2,
             typeItineraryId : typeItinerary0.id,
             ticket : "Full price € 15.40",
@@ -28,7 +28,7 @@ export default async function initialize (models) {
             title : "Outdoor Florence",
             image : "https://mywowo.net/media/images/cache/firenze_giardino_dei_boboli_01_prima_parte_jpg_1200_630_cover_85.jpg",
             description : "Guided visit outdoor",
-            information : "Visita in italiano",
+            information : "This guided visit is for everyone who aims to visit the most beautiful outdoor locations of Florence. The tour starts at the beautiful Giardino dell’Orticoltura, followed by a stop at the Piazza Santissima Annunziata. Other stops will be at Piazzale Michelangelo, Rose Garden, Giardino del Bobolink and eventually Bobble Garden will close the tour.",
             duration : 8,
             typeItineraryId : typeItinerary2.id,
             ticket : "Full price € 24.90.",
@@ -38,7 +38,7 @@ export default async function initialize (models) {
             title : "All around Medici",
             image : "https://www.imuseidifirenze.it/wp-content/uploads/2019/02/palazzo-pitti-firenze-1024x577.jpg",
             description : "Guided visit in all the old residences of the Medici family",
-            information : "Visita in italiano",
+            information : "This guided visit for tourists interested in deepen their knowledge about Medici family. The visit starts at Palazzo Medici Riccardi, followed by Palazzo Stroizzi and Torre di Arnolfo, later stop will be at the famous Galleria degli Uffizi, ending with a tour at the Galleria d’Arte Moderna where the visit will end.",
             duration : 8,
             typeItineraryId : typeItinerary1.id,
             ticket : "Full price € 25.30.",
@@ -48,7 +48,7 @@ export default async function initialize (models) {
             title : "Bridges of Florence",
             image : "https://www.alishaaneja.com/assets/images/ponte.jpg",
             description : "Guided visit around all the most beautiful bridges in the city of Florence.",
-            information : "Visita in italiano",
+            information : "This guided tour will present the most famous bridges of Florence constructed to traverse Arno river. The guide will explain the history of the bridges in Italian language. First bridge will be Ponte alla Carraia, followed by Ponte Santa Trinità and Ponte Vecchio. The last two steps of the tour will be Corridoio Vasariano and Ponte alle Grazie where the tour will end. ",
             duration : 6,
             typeItineraryId : typeItinerary2.id,
             ticket : "Full price € 12.50.",
@@ -157,7 +157,7 @@ export default async function initialize (models) {
             ticket : "Full price € 8.00. For information about reduced tickets, please check on the website.",
             address : "Piazza di Santa Croce, 16, 50122 Firenze FI, Italia",
             open : "Monday - Saturday, from 09:30 to 17:30"
-        }, 
+        },
         {
             title : "Campanile di Giotto",
             image : "https://www.visita-firenze.it/storage/resize/medium/shutterstock_15485.jpg",
@@ -168,7 +168,7 @@ export default async function initialize (models) {
             ticket : "Full price - Brunelleschi Pass (valid 3 days includes Dome, Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 30.00. Full price - Giotto Pass (valid 3 days includes Bell Tower, Baptistery, Opera del Duomo Museum, Santa Reparata) € 20.00. For information about reduced tickets, please check on the website",
             address : "Piazza del Duomo, 50122 Firenze FI, Italia",
             open : "Monday - Sunday from 08:15 to 19:45"
-        }, 
+        },
         {
             title : "Battistero di San Giovanni",
             image : "https://www.10cose.it/wp-content/uploads/2015/12/battistero-san-giovanni-firenze.jpg",
@@ -320,7 +320,7 @@ export default async function initialize (models) {
     const pointOfInterest2 = await models.PointOfInterest.create(pointOfInterestsList[2]) //ITINERARIO 1
     const pointOfInterest3 = await models.PointOfInterest.create(pointOfInterestsList[3]) //ITINERARIO 2
     const pointOfInterest4 = await models.PointOfInterest.create(pointOfInterestsList[4]) //ITINERARIO 3
-    const pointOfInterest5 = await models.PointOfInterest.create(pointOfInterestsList[5]) //ITINERARIO 3 
+    const pointOfInterest5 = await models.PointOfInterest.create(pointOfInterestsList[5]) //ITINERARIO 3
     const pointOfInterest6 = await models.PointOfInterest.create(pointOfInterestsList[6]) //ITINERARIO 2
     const pointOfInterest7 = await models.PointOfInterest.create(pointOfInterestsList[7]) //ITINERARIO 1
     const pointOfInterest8 = await models.PointOfInterest.create(pointOfInterestsList[8]) //ITINERARIO 1
@@ -465,7 +465,7 @@ export default async function initialize (models) {
     const typeServiceList = [
         {
             type_name : "Pharmacies",
-            image : "https://cdn.farmaciediturno.org/foto728/f_8226.jpg" 
+            image : "https://cdn.farmaciediturno.org/foto728/f_8226.jpg"
         },
         {
             type_name : "Banks",
@@ -745,7 +745,7 @@ export default async function initialize (models) {
             image : "https://upload.wikimedia.org/wikipedia/commons/4/44/Ospedale_di_santa_maria_nuova%2C_porticato_%285%29.JPG",
             description : "The oldest hospital located in the Florence city center.",
             information : "The hospital of Santa Maria Nuova is a hospital in Florence, located in the square of the same name, in the historic center. Founded in 1288 by Folco Portinari, father of the famous Beatrice loved by Dante, it is the oldest hospital in the city among those still fully active, and one of the oldest in Europe.",
-            iFrame: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1511546.3135782622!2d9.290073750962446!3d44.03803826061776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5548bf60cf25%3A0x69074f9350caf598!2sOspedale%20Santa%20Maria%20Nuova!5e0!3m2!1sit!2sit!4v1656338316891!5m2!1sit!2sit",
+            iFrame: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6561.5775762984!2d11.254668719645649!3d43.77398799421558!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x69074f9350caf598!2sOspedale%20Santa%20Maria%20Nuova!5e0!3m2!1sit!2sit!4v1656665250502!5m2!1sit!2sit",
             typeServiceId : typeService4.id,
             address: "PIAZZA DI SANTA MARIA NUOVA, 1, 50122 Firenze FI",
             open: "24/7"
