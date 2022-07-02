@@ -40,7 +40,8 @@
           :image="`${event.image}`"
           :description="`${event.description}`"
           :date="`${event.date}`"
-          :endDate="`${event.endDate}`"></card>
+          :endDate="`${event.endDate}`"
+          :params="params"></card>
     </div>
     <footer-icon></footer-icon>
     </div>
@@ -73,7 +74,9 @@ export default {
           endDateForInput : undefined,
           all : true,
           summer : false,
-          winter : false
+          winter : false,
+          params : "All",
+          selectedGroup : undefined
         }
      },
     async asyncData({ $axios }) {
@@ -130,11 +133,13 @@ export default {
           this.all = false;
           this.summer = true;
           this.winter = false;
+          this.params = "Summer";
         }
         if(typeEventId==2){
           this.all = false;
           this.summer = false;
           this.winter = true;
+          this.params = "Winter";
         }
         },
       async findEventByDate(startDate, endDate){
@@ -145,6 +150,9 @@ export default {
         this.all = false;
         this.summer = false;
         this.winter = false;
+        let prettyStartDate = this.startDateForInput.replaceAll('-','/');
+        let prettyEndDate = this.endDateForInput.replaceAll('-','/');
+        this.params =  prettyStartDate + " - " + prettyEndDate;
       },
       async findAll(){
         const { data } = await this.$axios.get('/api/events');
@@ -154,6 +162,7 @@ export default {
         this.all = true;
         this.summer = false;
         this.winter = false;
+        this.params = "All";
       },
       startDateHandler({target}) {
         this.startDate = new Date(target.value)
@@ -189,7 +198,32 @@ export default {
         this.all = true;
         this.summer = false;
         this.winter = false;
+        this.params = "All";
+      }
+    },
+    created() {
+   this.selectedGroup = this.$route.query.group;
+    if(this.selectedGroup === "Summer"){
+      this.findEvent(1);
+    }
+    else if(this.selectedGroup === "Winter"){
+      this.findEvent(2);
+    }
+    else if(this.selectedGroup === "All"){
+      this.findAll();
+    }
+    else{
+      if(this.selectedGroup !== undefined){
+        let startDate = this.selectedGroup.split('-')[0];
+        let endDate = this.selectedGroup.split('-')[1];
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.startDateForInput = startDate;
+        this.endDateForInput = endDate;
+        this.findEventByDate(startDate, endDate);
       }
     }
+    
+},
 }
 </script>

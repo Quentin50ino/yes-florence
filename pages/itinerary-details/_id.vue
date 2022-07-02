@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav-bar></nav-bar>
-        <breadcrumbs page1="Itineraries" :page2="itinerary.title" pageBack="/itinerary" style="margin-top : 15px"></breadcrumbs>
+        <breadcrumbs :page1="`${previousLink} Itineraries`" :page2="itinerary.title" pageBack="/itinerary" :params="previousLink" style="margin-top : 15px"></breadcrumbs>
                 <div class="d-flex justify-content-around grey-card" style="flex-wrap: wrap;">
             <div>
                 <h1>{{itinerary.title}}</h1>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
         </div>
-        <h3 class="d-flex justify-content-center title">POINTS OF INTEREST LIST</h3>
+        <h3 class="d-flex justify-content-center title">POINTS OF INTEREST INVOLVED</h3>
         <info-box></info-box>
         <div class="d-flex justify-content-center title">
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
@@ -50,7 +50,7 @@
           </card>
           </div>
         </div>
-        <h3 class="d-flex justify-content-center title" id="city-map">CITY MAP</h3>
+        <h3 style="margin-top: 80px" class="d-flex justify-content-center title" id="city-map">CITY MAP</h3>
         <div class="d-flex justify-content-center title">
             <iframe :src="`${this.activeCardIndex!==undefined?pointOfInterests[this.activeCardIndex].iFrame:this.defaultIFrame}`" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -99,10 +99,11 @@ export default {
             pointOfInterests : undefined,
             itinerary : undefined,
             activeCardIndex : undefined,
+            previousLink : undefined,
             defaultIFrame : "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d9621.253864197715!2d11.247794228986873!3d43.76987745991937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spunti%20di%20interesse%20florence!5e0!3m2!1sit!2sit!4v1654531536668!5m2!1sit!2sit"
         }
     },
-    async asyncData({ route, $axios }) {
+    async asyncData({ route, $axios}) {
         const { id } = route.params
         const { data } = await $axios.get('/api/itineraries/' + id)
         const pointOfInterests = await $axios.get('/api/itineraries/pointOfInterestsInvolved/' + id)
@@ -111,6 +112,12 @@ export default {
         pointOfInterests : pointOfInterests.data,
     }
   },
+      created() {
+        if(this.$route.query.group !== undefined)
+            this.previousLink = this.$route.query.group;
+        else
+            this.previousLink = "All"
+},
     methods : {
       clickedCard(e){
           this.activeCardIndex = e;

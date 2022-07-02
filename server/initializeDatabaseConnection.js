@@ -1,9 +1,10 @@
 const { Sequelize, DataTypes } = require("sequelize")
 
-//Development
+//Development (this code was used in development in order to connect to our local postgres database)
 //const database = new Sequelize("postgres://postgres:pippo@localhost:5432/hyp_project")
 
 //Production (use this code when deploying to production in Heroku)
+//this code is used to connect the application to the postgres database stored on heroku
 const pg = require('pg')
 pg.defaults.ssl = true
 const database = new Sequelize(process.env.DATABASE_URL, {
@@ -12,7 +13,8 @@ const database = new Sequelize(process.env.DATABASE_URL, {
 })
 
 
-// Function that will initialize the connection to the database
+//Function that will initialize the connection to the database and will create all the
+//structures of the tables and their connections.
 export default async function initializeDatabaseConnection() {
     await database.authenticate()
     const PointOfInterest = database.define("point_of_interest", {
@@ -65,21 +67,24 @@ export default async function initializeDatabaseConnection() {
     const TypeEvent = database.define("type_event", {
         type_name : DataTypes.STRING
     })
-    const ItineraryPointOfInterest = database.define("itinerary_point_of_interest", {})
-    const EventPointOfInterest = database.define("event_point_of_interest", {})
-    /*Itinerary.hasMany(PointOfInterest)
-    PointOfInterest.belongsTo(Itinerary)*/
-    Itinerary.belongsToMany(PointOfInterest, { through: ItineraryPointOfInterest });
-    PointOfInterest.belongsToMany(Itinerary, { through: ItineraryPointOfInterest });
-    /*Event.belongsTo(PointOfInterest)
-    TypePointOfInterest.hasMany(PointOfInterest)*/
-    Event.belongsToMany(PointOfInterest, { through: EventPointOfInterest });
-    PointOfInterest.belongsToMany(Event, { through: EventPointOfInterest });
+    const ItineraryPointOfInterest = database.define("itinerary_point_of_interest", {}) //definition of table that links itineraries and points of interest
+    const EventPointOfInterest = database.define("event_point_of_interest", {}) //definition of table that links events and points of interest
+    //Many to Many relationship between Itinerary and PointOfInterest
+    Itinerary.belongsToMany(PointOfInterest, { through: ItineraryPointOfInterest }); 
+    PointOfInterest.belongsToMany(Itinerary, { through: ItineraryPointOfInterest }); 
+    //Many to Many relationship between Event and PointOfInterest
+    Event.belongsToMany(PointOfInterest, { through: EventPointOfInterest }); 
+    PointOfInterest.belongsToMany(Event, { through: EventPointOfInterest }); 
+    //One to Many relationship between TypePointOfInterest and PointOfInterest
+    TypePointOfInterest.hasMany(PointOfInterest)
     PointOfInterest.belongsTo(TypePointOfInterest)
+    //One to Many relationship between TypeServicet and Service
     TypeService.hasMany(Service)
     Service.belongsTo(TypeService)
+    //One to Many relationship between TypeItinerary and Itinerary
     TypeItinerary.hasMany(Itinerary)
     Itinerary.belongsTo(TypeItinerary)
+    //One to Many relationship between TypeEvent and Event
     TypeEvent.hasMany(Event)
     Event.belongsTo(TypeEvent)
     await database.sync({ force: true })

@@ -17,7 +17,7 @@
               </div>
 
           </div>
-              <nuxt-link :to="`/${typeOfPage}-details/${id}`" class="d-flex justify-content-end" style="padding: 15px">
+              <nuxt-link :to="{path : `/${typeOfPage}-details/${id}`, query : {group : params}}" class="d-flex justify-content-end" style="padding: 15px">
                 <a @click="goToDetails()"><img width="50px" :src="arrow" @mouseover="arrow=`https://img.icons8.com/ios-filled/50/000000/circled-right-2.png`" @mouseleave="arrow=`https://img.icons8.com/ios/100/undefined/circled-right-2.png`"/></a>
               </nuxt-link>
       </div>
@@ -72,6 +72,10 @@ export default {
       required: false,
     },
     index: {
+      type : String,
+      required : false
+    },
+    params : {
       type : String,
       required : false
     }

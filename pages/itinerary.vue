@@ -23,7 +23,8 @@
           :typeOfPage="`itinerary`"
           :title="`${itinerary.title}`"
           :image="`${itinerary.image}`"
-          :description="`${itinerary.description}`">
+          :description="`${itinerary.description}`"
+          :params="`${params}`">
           </card>
     </div>
     <footer-icon></footer-icon>
@@ -55,7 +56,9 @@ export default {
           all : true,
           halfDay : false,
           allDay : false,
-          family : false
+          family : false,
+          params : "All",
+          selectedGroup : undefined
         }
      },
     async asyncData({ $axios }) {
@@ -76,18 +79,21 @@ export default {
           this.halfDay = true;
           this.allDay = false;
           this.family = false;
+          this.params = "Half Day";
         }
         if(typeItineraryId==2){
           this.all = false;
           this.halfDay = false;
           this.allDay = true;
           this.family = false;
+          this.params = "All Day";
         }
         if(typeItineraryId==3){
           this.all = false;
           this.halfDay = false;
           this.allDay = false;
           this.family = true;
+          this.params = "Family";
         }
       },
       async findAll(){
@@ -98,7 +104,23 @@ export default {
         this.halfDay = false;
         this.allDay = false;
         this.family = false;
+        this.params = "All";
       }
-  }
+  },
+  created() {
+   this.selectedGroup = this.$route.query.group;
+    if(this.selectedGroup === "Half Day"){
+      this.findItinerary(1);
+    }
+    if(this.selectedGroup === "All Day"){
+      this.findItinerary(2);
+    }
+    if(this.selectedGroup === "Family"){
+      this.findItinerary(3);
+    }
+    if(this.selectedGroup === "All"){
+      this.findAll();
+    }
+},
 }
 </script>

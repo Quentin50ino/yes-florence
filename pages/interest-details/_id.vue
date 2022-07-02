@@ -1,7 +1,7 @@
 <template>
     <div>
         <nav-bar></nav-bar>
-        <breadcrumbs page1="Points of Interest" :page2="pointOfInterest.title" pageBack="/interest" style="margin-top : 15px"></breadcrumbs>
+        <breadcrumbs :page1="`${previousLink} Points of Interest`" :page2="pointOfInterest.title" pageBack="/interest" :params="previousLink" style="margin-top : 15px"></breadcrumbs>
         <div class="d-flex justify-content-around grey-card" style="flex-wrap: wrap;">
             <div>
                 <h1>{{pointOfInterest.title}}</h1>
@@ -28,7 +28,7 @@
         </div>
         <div class="d-flex justify-content-center title">
             <div>
-            <h3 class="d-flex justify-content-center title">LIST OF ITINERARIES</h3>
+            <h3 class="d-flex justify-content-center title">INVOLVED IN THESE ITINERARIES</h3>
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
             <card v-for="(itinerary, itineraryIndex) of itineraries" 
           :key="`itinerary-index-${itineraryIndex}`"
@@ -43,7 +43,7 @@
         </div>
         <div class="d-flex justify-content-center" v-if="events.length!==0">
             <div>
-            <h3 class="d-flex justify-content-center title">LIST OF EVENTS</h3>
+            <h3 class="d-flex justify-content-center title">HOSTS THESE EVENTS</h3>
             <div class="d-flex justify-content-center title" style="flex-wrap: wrap;">
         <card 
             v-for="(event, eventIndex) of events" 
@@ -114,6 +114,7 @@ export default {
             itineraries : undefined,
             events : undefined,
             activeCardIndex : undefined,
+            previousLink : undefined,
             defaultIFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92181.08820607656!2d11.170927917511499!3d43.77993676468868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56a680d2d6ad%3A0x93d57917efc72a03!2sFirenze%20FI!5e0!3m2!1sit!2sit!4v1654259593216!5m2!1sit!2sit"
         }
     },
@@ -144,6 +145,12 @@ export default {
         itineraries : itineraries.data,
         events : events.data
     }
-  }
+  },
+      created() {
+        if(this.$route.query.group !== undefined)
+            this.previousLink = this.$route.query.group;
+        else
+            this.previousLink = "All"
+},
 }
 </script>

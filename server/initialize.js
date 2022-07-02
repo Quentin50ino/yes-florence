@@ -1,3 +1,4 @@
+//In this function is initialized the database with all the data are needed in the application.
 export default async function initialize (models) {
     const typeItineraryList = [
         {
@@ -18,40 +19,40 @@ export default async function initialize (models) {
             title : "Renaissance in Florence",
             image : "https://www.tuscanypeople.com/wp-content/uploads/2021/06/duomo_firenze_alba.jpg",
             description : "Itinerary in the center of Florence.",
-            information : "This itinerary starts from Basilica di Santa Maria Novella, followed by a longer stop in Battistero di San Giovanni, Cattedrale di Santa Maria del Fiore where it will be possible to admire and take pictures at the famous Campanile di Giotto. Last stop will take place at Basilica di Santa Croce di Firenze where the itinerary ends.",
+            information : "This itinerary starts from Basilica di Santa Maria Novella, followed by a longer stop in Battistero di San Giovanni, Cattedrale di Santa Maria del Fiore where it is possible to admire and take pictures at the famous Campanile di Giotto. Last stop takes place at Basilica di Santa Croce di Firenze where the itinerary ends. A guided tour for this itinerary is available every Monday and Friday at 3 pm.",
             duration : 2,
             typeItineraryId : typeItinerary0.id,
-            ticket : "Full price € 15.40",
+            ticket : "Full price € 15.40. The ticket can be bought from the guide at the starting point of the itinerary, 15 minutes before the start of the journey.",
             itineraryImage : "https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/Renaissance%20in%20Florence.jpg"
         },
         {
             title : "Outdoor Florence",
             image : "https://mywowo.net/media/images/cache/firenze_giardino_dei_boboli_01_prima_parte_jpg_1200_630_cover_85.jpg",
             description : "Outdoor itinerary",
-            information : "This itinerary is for everyone who aims to visit the most beautiful outdoor locations of Florence. The itinerary starts at the beautiful Giardino dell’Orticoltura, followed by a stop at the Piazza Santissima Annunziata. Other stops will be at Piazzale Michelangelo, Rose Garden, Giardino del Bobolink and eventually Bobble Garden will close the itinerary.",
+            information : "This itinerary is for everyone who aims to visit the most beautiful outdoor locations of Florence. The itinerary starts at the beautiful Giardino dell’Orticoltura, followed by a stop at the Piazza Santissima Annunziata. Other stops are at Piazzale Michelangelo, Rose Garden, Giardino del Bobolink and eventually Bobble Garden will close the itinerary. A guided tour for this itinerary is available every Monday and Wednesday at 9 am.",
             duration : 8,
             typeItineraryId : typeItinerary2.id,
-            ticket : "Full price € 24.90.",
+            ticket : "Full price € 24.90. The ticket can be bought from the guide at the starting point of the itinerary, 15 minutes before the start of the journey.",
             itineraryImage : "https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/Outdoor%20Florence.jpg"
         },
         {
             title : "All around Medici",
             image : "https://www.imuseidifirenze.it/wp-content/uploads/2019/02/palazzo-pitti-firenze-1024x577.jpg",
             description : "Itinerary through all the old residences of the Medici family",
-            information : "This itinerary guides tourists interested in deepen their knowledge about Medici family. The visit starts at Palazzo Medici Riccardi, followed by Palazzo Stroizzi and Torre di Arnolfo, later stop will be at the famous Galleria degli Uffizi, ending with a tour at the Galleria d’Arte Moderna where the itinerary will end.",
+            information : "This itinerary guides tourists interested in deepen their knowledge about Medici family. The visit starts at Palazzo Medici Riccardi, followed by Palazzo Stroizzi and Torre di Arnolfo, later stop is at the famous Galleria degli Uffizi, ending with a tour at the Galleria d’Arte Moderna where the itinerary will end. A guided tour for this itinerary is available every Thursday and Friday at 9 am.",
             duration : 8,
             typeItineraryId : typeItinerary1.id,
-            ticket : "Full price € 25.30.",
+            ticket : "Full price € 25.30. The ticket can be bought from the guide at the starting point of the itinerary, 15 minutes before the start of the journey.",
             itineraryImage : "https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/All%20around%20Medici.jpg"
         },
         {
             title : "Bridges of Florence",
             image : "https://www.alishaaneja.com/assets/images/ponte.jpg",
             description : "Itinerary around all the most beautiful bridges in the city of Florence.",
-            information : "This itinerary will present the most famous bridges of Florence constructed to traverse Arno river. First bridge will be Ponte alla Carraia, followed by Ponte Santa Trinità and Ponte Vecchio. The last two steps of the tour will be Corridoio Vasariano and Ponte alle Grazie where the itinerary ends. ",
+            information : "This itinerary presents the most famous bridges of Florence constructed to traverse Arno river. First bridge is Ponte alla Carraia, followed by Ponte Santa Trinità and Ponte Vecchio. The last two steps of the tour are Corridoio Vasariano and Ponte alle Grazie where the itinerary ends. A guided tour for this itinerary is available every Tuesday and Friday at 10 am.",
             duration : 6,
             typeItineraryId : typeItinerary2.id,
-            ticket : "Full price € 12.50.",
+            ticket : "Full price € 12.50. The ticket can be bought from the guide at the starting point of the itinerary, 15 minutes before the start of the journey.",
             itineraryImage : "https://raw.githubusercontent.com/Quentin50ino/itineraries_image/main/Bridges%20of%20Florence.jpg"
         }
     ]

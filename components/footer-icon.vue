@@ -2,8 +2,8 @@
     <div style="margin-top : 50px">
        <footer>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 footer-column">
+    <div class="d-flex justify-content-around">
+      <div class="footer-column">
         <ul class="nav flex-column">
           <li class="nav-item">
             <span class="footer-title">QUICK LINKS</span>
@@ -22,13 +22,13 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-6 footer-column">
+      <div class="footer-column">
         <ul class="nav flex-column">
           <li class="nav-item">
             <span class="footer-title">Contact & Support</span>
           </li>
           <li class="nav-item">
-            <span class="nav-link"><i class="fas fa-phone"></i>+47 45 80 80 80</span>
+            <span class="nav-link"><i class="fas fa-phone"></i>+39 45 80 80 80</span>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-comments"></i>Live chat</a>

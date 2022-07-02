@@ -24,7 +24,8 @@
           :key="`interest-index-${interestIndex}`"
           :title="`${interest.title}`"
           :image="`${interest.image}`"
-          :description="`${interest.description}`"></card>
+          :description="`${interest.description}`"
+          :params="params"></card>
     </div>
     <footer-icon></footer-icon>
     </div>
@@ -53,7 +54,9 @@ export default {
           typesPointOfInterest : [],
           allPoi : true,
           hisoricalPoi : false,
-          naturalPoi : false
+          naturalPoi : false,
+          params : "All",
+          selectedGroup : undefined
         }
      },
     async asyncData({ $axios }) {
@@ -73,11 +76,13 @@ export default {
           this.hisoricalPoi = true;
           this.allPoi = false;
           this.naturalPoi = false;
+          this.params = "Historical";
         }
         if(typePointOfInterestId==2){
           this.hisoricalPoi = false;
           this.allPoi = false;
           this.naturalPoi = true;
+          this.params = "Natural";
         }
       },
       async findAll(){
@@ -87,7 +92,20 @@ export default {
         this.allPoi = true;
         this.hisoricalPoi = false;
         this.naturalPoi = false;
+        this.params = "All";
       }
+    },
+      created() {
+   this.selectedGroup = this.$route.query.group;
+    if(this.selectedGroup === "Historical"){
+      this.findInterests(1);
     }
+    if(this.selectedGroup === "Natural"){
+      this.findInterests(2);
+    }
+    if(this.selectedGroup === "All"){
+      this.findAll();
+    }
+},
 }
 </script>
