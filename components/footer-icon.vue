@@ -2,7 +2,7 @@
     <div style="margin-top : 50px">
        <footer>
   <div class="container">
-    <div class="d-flex justify-content-around">
+    <div class="first-container">
       <div class="footer-column">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -86,6 +86,12 @@
 </template>
 
 <style scoped>
+@media screen and (min-width: 800px) {
+.first-container{
+  display: flex;
+  justify-content: space-around;
+}
+}
 a {
   color: #6c757d;
 }
@@ -114,16 +120,12 @@ footer {
 
 
 .footer-column {
+    text-align: center;
     padding-top: 2rem;
     @media (min-width: 768px) {
       padding-top: 0rem;
     }
   }
-
-.footer-column {
-  text-align: center;
-  /*border: red solid 1px;*/
-}
 
 .footer-column .nav-item .nav-link {
       padding: 0.1rem 0;
@@ -143,7 +145,7 @@ footer {
 .footer-column ul {
     display: inline-block;
     @media (min-width: 768px) {
-      text-align: left;
+      /*text-align: left;*/
     }
     /*border: yellow solid 1px;*/
   }
