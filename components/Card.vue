@@ -1,6 +1,6 @@
 <template>
         <div class="card zoom" style="width: 18rem; margin : 15px 20px;">
-          <img :src="`${image}`" class="card-img-top" alt="image" height="200px"  @click="clickedCard()" style="cursor : pointer">
+          <img :src="`${image}`" class="card-img-top" alt="image" height="200px"  @click="clickedCard()">
           <div class="card-body">
             <div>
             <h5 class="card-title">{{title}}</h5>
@@ -17,8 +17,8 @@
               </div>
 
           </div>
-              <nuxt-link :to="{path : `/${typeOfPage}-details/${id}`, query : {group : params}}" class="d-flex justify-content-end" style="padding: 15px">
-                <a @click="goToDetails()"><img width="50px" :src="arrow" @mouseover="arrow=`https://img.icons8.com/ios-filled/50/000000/circled-right-2.png`" @mouseleave="arrow=`https://img.icons8.com/ios/100/undefined/circled-right-2.png`"/></a>
+              <nuxt-link :to="{path : `/${typeOfPage}-details/${id}`, query : {group : params}}" class="d-flex justify-content-end" style="padding: 15px; cursor : default;">
+                <a @click="goToDetails()" style="cursor : pointer"><img width="50px" :src="arrow" @mouseover="arrow=`https://img.icons8.com/ios-filled/50/000000/circled-right-2.png`" @mouseleave="arrow=`https://img.icons8.com/ios/100/undefined/circled-right-2.png`"/></a>
               </nuxt-link>
       </div>
 </template>
