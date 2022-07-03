@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center title">
+        <div class="d-flex justify-content-center title" v-if="itineraries.length!==0">
             <div>
             <h3 class="d-flex justify-content-center title">INVOLVED IN THESE ITINERARIES</h3>
             <div class="d-flex justify-content-center" style="flex-wrap: wrap;">

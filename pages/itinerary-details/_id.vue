@@ -16,11 +16,11 @@
                     <p style="padding : 0 40px">{{itinerary.information}}</p>
                 </div>
                 <!--<div class="vl"></div>-->
-                <div class="d-flex flex-column align-items-center" style="margin-top : 15px">
+                <div class="d-flex flex-column align-items-center" style="margin-top : 15px; padding : 0px 40px">
                     <h5>TICKET INFORMATION</h5>
                     <p>{{itinerary.ticket}}</p>
                 </div>
-                <div class="d-flex flex-column align-items-center" style="margin-top : 15px">
+                <div class="d-flex flex-column align-items-center" style="margin-top : 15px; padding : 0px 40px">
                     <h5>DURATION</h5>
                     <p>{{itinerary.duration}} hours</p>
                 </div>
