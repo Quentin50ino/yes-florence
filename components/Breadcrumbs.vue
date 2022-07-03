@@ -13,18 +13,22 @@
 export default {
     name : 'Breadcrumbs',
     props : {
+      //name of the first page link of the breadcrumbs (passed from parent)
       page1: {
         type : String,
         required : true
       },
+      //name of the second page link of the breadcrumbs (passed from parent)
       page2: {
         type : String,
         required : false
       },
+      //path of the page that the active link has to reach (passed from parent)
       pageBack: {
         type : String,
         required : true
       },
+      //params that the active link has to pass to the back page during the routing (passed from parent)
       params : {
         type : String,
         required : false

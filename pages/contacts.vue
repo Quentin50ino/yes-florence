@@ -9,7 +9,7 @@
             <p>Let's keep in touch!</p>
             <div style="margin-top: 30px">
                 <h6 class="d-flex justify-content-center">Telephone Number: </h6>
-                <span class="d-flex justify-content-center"> +47 45 80 80 80</span>
+                <span class="d-flex justify-content-center"> +39 45 80 80 80</span>
             </div>
             <div style="margin-top: 30px">
                 <h6 class="d-flex justify-content-center">Mail: </h6>

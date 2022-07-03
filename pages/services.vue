@@ -7,7 +7,7 @@
       </div>
       <div>
       <div class="d-flex justify-content-center" style="flex-wrap : wrap">
-        <card v-for="(service, serviceIndex) of serviceList" 
+        <card v-for="(service, serviceIndex) of serviceTypeList" 
           :key="`service-index-${serviceIndex}`"
           :id="`${service.id}`"
           :typeOfPage="`service`"
@@ -36,14 +36,15 @@ export default {
     },
     data() {
         return {
-
+          serviceTypeList : undefined //variable in which will be stored the list of all the types of service (retrieved from databse)
         }
      },
+    //In the asyncData function we retrieved the data we need in this page from the database calling our APIs;
+    //in this case we valorize the serviceTypeList variable.
     async asyncData({ $axios }) {
     const { data } = await $axios.get('/api/servicesType')
-    console.log(data)
     return {
-      serviceList: data,
+      serviceTypeList: data,
     }
   }
 }

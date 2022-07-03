@@ -33,18 +33,23 @@
 export default {
     name : 'Carousel',
     props : {
+        //image of the object to display passed from the parent
         image : {
             type : String,
             required : true
         },
+        //index of the object to display passed from the parent (it's used for the class binding of the carousel
+        //and so in order to discriminate the first element and make it with the active class)
         index : {
             type : Number,
             required : true
         },
+        //title of the object to display passed from the parent
         title : {
             type : String,
             required : true
         },
+        //description of the object to display passed from the parent
         description : {
             type : String,
             required : true

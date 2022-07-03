@@ -131,7 +131,7 @@ export default async function initialize (models) {
             image : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/ac/a7/04/donatello-il-rinascimento.jpg?w=1200&h=-1&s=1",
             description : "One of the most important palace in Florence.",
             information : "The grandest palace in Florence is the Strozzi Palace, begun in 1489 for one of the city’s largest and wealthiest families (which, however, had been eclipsed politically by the Medici). Its enormous scale deliberately surpassed that of the Medici Palace. Noteworthy within the Strozzi Palace is a spacious courtyard, which by its use of arches and a loggia achieves a feeling of openness and simplicity.",
-            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.3711805052644!2d11.24781941534575!3d43.76515327911766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a515441db99f1%3A0x5cd0cce4e6f1502a!2sPalazzo%20Pitti!5e0!3m2!1sit!2sit!4v1654636377588!5m2!1sit!2sit",
+            iFrame : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.076395648032!2d11.249572515345937!3d43.77127297911741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56aa73c1b501%3A0x38349b89124ab11!2sPalazzo%20Strozzi!5e0!3m2!1sit!2sit!4v1656848656090!5m2!1sit!2sit",
             typePointOfInterestId : typePointOfInterest0.id,
             ticket : "Full price € 8.00. For information about reduced tickets, please check on the website.",
             address : "Piazza di Santa Croce, 16, 50122 Firenze FI, Italia",
@@ -748,7 +748,7 @@ export default async function initialize (models) {
             information : "The hospital of Santa Maria Nuova is a hospital in Florence, located in the square of the same name, in the historic center. Founded in 1288 by Folco Portinari, father of the famous Beatrice loved by Dante, it is the oldest hospital in the city among those still fully active, and one of the oldest in Europe.",
             iFrame: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6561.5775762984!2d11.254668719645649!3d43.77398799421558!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x69074f9350caf598!2sOspedale%20Santa%20Maria%20Nuova!5e0!3m2!1sit!2sit!4v1656665250502!5m2!1sit!2sit",
             typeServiceId : typeService4.id,
-            address: "PIAZZA DI SANTA MARIA NUOVA, 1, 50122 Firenze FI",
+            address: "Piazza di Santa Maria Nuova, 1, 50122 Firenze FI",
             open: "24/7"
         }
     ]

@@ -96,15 +96,18 @@ export default {
   components: { Carousel, Card, CardNoButton, InfoBox, NavBar },
     data() {
         return {
-            pointOfInterests : undefined,
-            itinerary : undefined,
-            activeCardIndex : undefined,
-            previousLink : undefined,
+            pointOfInterests : undefined, //variable in which will be stored the list of all the points of interest that are involved in the selected itinerary (retrieved from databse)
+            itinerary : undefined, //variable in which will be stored the data of the specific selected itinerary (retrieved from databse) 
+            activeCardIndex : undefined, //represent the id of the selected card (the one highlighted with a blue border)
+            previousLink : undefined, //variable in which is stored the active group, that has been sended to the router when the user has clicked on the details page
+            //the default iFrame present before the user selects a specific card
             defaultIFrame : "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d9621.253864197715!2d11.247794228986873!3d43.76987745991937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spunti%20di%20interesse%20florence!5e0!3m2!1sit!2sit!4v1654531536668!5m2!1sit!2sit"
         }
     },
+    //In the asyncData function we retrieved the data we need in this page from the database calling our APIs;
+    //in this case we valorize the two variables itinerary and pointOfInterests.
     async asyncData({ route, $axios}) {
-        const { id } = route.params
+        const { id } = route.params //this takes dinamically the id of the specific selected itinerary, from the params of the router
         const { data } = await $axios.get('/api/itineraries/' + id)
         const pointOfInterests = await $axios.get('/api/itineraries/pointOfInterestsInvolved/' + id)
     return {
@@ -112,16 +115,27 @@ export default {
         pointOfInterests : pointOfInterests.data,
     }
   },
-      created() {
+    //The created hook allows you to add code which is run if the Vue instance is created. Also it will only run 
+    //once after the data, methods and computed properties have been set up.
+    created() {
+        //This is the case in which the user arrive to this details page from the itinerary page. When he/she clicked on the
+        //arrow button of the card (to see the details of a specific itinerary) the value of the group property of the query object is setted in the router: 
+        //this value is nothing but the itinerary group that he/she has selected in the previous page (so the itinerary one)
         if(this.$route.query.group !== undefined)
             this.previousLink = this.$route.query.group;
+        //This is the case in which the user arrive to this details page not from the itinerary page. In this case we decide
+        //simply to set as a default in the breadcrumbs the "All Itinerary" link. For this reason we set in this case
+        //the this.previousLink to "All"
         else
             this.previousLink = "All"
 },
     methods : {
+      //Method called when the card child component emit the clickedCard event (so simply when the card is clicked).
       clickedCard(e){
-          this.activeCardIndex = e;
-          window.location.href = '#city-map'
+        //we set this.activeCardIndex to the index emitted from the child compoent, in order to bind the class of the card
+        //(as you can see at row 40) and make the clicked card evident in the page (with blue border)
+          this.activeCardIndex = e; 
+          window.location.href = '#city-map' //redirect to the city-map element
       }
   }
 } 

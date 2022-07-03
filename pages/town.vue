@@ -8,10 +8,6 @@
         <div style="flex-wrap : wrap;">
             <div class="d-flex justify-content-center">
             <h4>Discover Florence</h4>
-            <!--<p> 
-            The city is noted for its culture, Renaissance art and architecture and monuments.
-            Due to Florence's artistic heritage,
-            Forbes has ranked it as the most beautiful city in the world of 2010.</p>-->
             </div>
             <div class="d-flex justify-content-center interest-card-container">
             <card-no-button title="City of Florence"
@@ -42,9 +38,6 @@
 </template>
 
 <style scoped>
-h1{
-    
-}
 .main-img{
     height: 25em;
     width: 100%;
@@ -67,17 +60,5 @@ h1{
 import CardNoButton from '../components/CardNoButton.vue'
 export default {
   components: { CardNoButton },
-    data() {
-        return {
-            pointOfInterestList : []
-        }
-    },
-    async asyncData({ $axios }) {
-        const { data } = await $axios.get('/api/pointOfInterests')
-        console.log(data)
-        return {
-            pointOfInterestList: data,
-        }
-    },
 }
 </script>
