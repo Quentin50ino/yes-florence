@@ -128,19 +128,19 @@
   <hr>
 </div>
       <div class="d-flex justify-content-center img-container-2" style="margin-top : 40px; flex-wrap : wrap;">
-        <nuxt-link to="/interest-details/2"><img class="img-zoom" :src="`${pointOfInterests[1].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
-        <nuxt-link to="/itinerary-details/1"><img class="img-zoom" :src="`${itineraries[0].image}`" width="400px" height="200px" style="border-radius : 10px"/></nuxt-link>
-        <nuxt-link to="/event-details/2"><img class="img-zoom" :src="`${events[1].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/interest-details/2" style="overflow : hidden; margin : 0px 5px;"><img class="img-zoom" :src="`${pointOfInterests[1].image}`" width="400px" height="200px" style=""/></nuxt-link>
+        <nuxt-link to="/itinerary-details/1" style="overflow : hidden;"><img class="img-zoom" :src="`${itineraries[0].image}`" width="400px" height="200px"/></nuxt-link>
+        <nuxt-link to="/event-details/2" style="overflow : hidden; margin : 0px 5px;"><img class="img-zoom" :src="`${events[1].image}`" width="400px" height="200px" style=""/></nuxt-link>
       </div>
       <div class="d-flex justify-content-center img-container-2" style="margin-top : 40px; flex-wrap : wrap;">
-        <nuxt-link to="/interest-details/3"><img class="img-zoom" :src="`${pointOfInterests[2].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
-        <nuxt-link to="/itinerary-details/2"><img class="img-zoom" :src="`${itineraries[1].image}`" width="400px" height="200px" style="border-radius : 10px"/></nuxt-link>
-        <nuxt-link to="/event-details/3"><img class="img-zoom" :src="`${events[2].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/interest-details/3" style="overflow : hidden; margin : 0px 5px;"><img class="img-zoom" :src="`${pointOfInterests[2].image}`" width="400px" height="200px" style=""/></nuxt-link>
+        <nuxt-link to="/itinerary-details/2" style="overflow : hidden;"><img class="img-zoom" :src="`${itineraries[1].image}`" width="400px" height="200px"/></nuxt-link>
+        <nuxt-link to="/event-details/3" style="overflow : hidden; margin : 0px 5px;"><img class="img-zoom" :src="`${events[2].image}`" width="400px" height="200px" style=""/></nuxt-link>
       </div>
       <div class="d-flex justify-content-center img-container-2" style="margin-top : 40px; flex-wrap : wrap;">
-        <nuxt-link to="/interest-details/5"><img class="img-zoom" :src="`${pointOfInterests[4].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
-        <nuxt-link to="/itinerary-details/3"><img class="img-zoom" :src="`${itineraries[2].image}`" width="400px" height="200px" style="border-radius : 10px"/></nuxt-link>
-        <nuxt-link to="/event-details/4"><img class="img-zoom" :src="`${events[3].image}`" width="400px" height="200px" style="margin : 0px 5px; border-radius : 10px"/></nuxt-link>
+        <nuxt-link to="/interest-details/5" style="overflow : hidden; margin : 0px 5px;"><img class="img-zoom" :src="`${pointOfInterests[4].image}`" width="400px" height="200px" style=""/></nuxt-link>
+        <nuxt-link to="/itinerary-details/3" style="overflow : hidden;"><img class="img-zoom" :src="`${itineraries[2].image}`" width="400px" height="200px"/></nuxt-link>
+        <nuxt-link to="/event-details/4" style="overflow : hidden; margin : 0px 5px;"><img class="img-zoom" :src="`${events[3].image}`" width="400px" height="200px" style=""/></nuxt-link>
       </div>
       <div class="d-flex justify-content-center">
         <hr>
@@ -185,7 +185,7 @@ hr{
 }
 
 .img-zoom:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .main-img{
