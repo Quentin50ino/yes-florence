@@ -7,7 +7,8 @@ const { Sequelize, DataTypes } = require("sequelize")
 //this code is used to connect the application to the postgres database stored on heroku
 const pg = require('pg')
 pg.defaults.ssl = true
-const database = new Sequelize(process.env.DATABASE_URL, {
+const connectionURI = "postgres://ertbcagt:FJkEZt0FOve1xH4HtOeNhC59X_DyXixA@silly.db.elephantsql.com/ertbcagt"
+const database = new Sequelize(connectionURI, {
     ssl: true,
     dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
 })
