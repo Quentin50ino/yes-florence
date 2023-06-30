@@ -68,14 +68,12 @@ export default {
   ],
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    //baseURL: 'http://localhost:3000' //development env
+    //baseURL: 'http://localhost:8000' //development env
     baseURL : 'https://yes-florence-server.onrender.com/' //production env
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-
-  routes: { '/': { prerender: true }, '/*': { cors: true } }
 
 }
