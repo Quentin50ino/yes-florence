@@ -222,10 +222,10 @@ export default {
   //In the asyncData function we simply retrieve all the data we need in the page from the database
   //and then we store them in the variables pointOfInterests, itineraries, events and services.
   async asyncData({ $axios }) {
-    const pointOfInterests = await $axios.get('/api/pointOfInterests')
-    const itineraries = await $axios.get('/api/itineraries')
-    const events = await $axios.get('/api/events')
-    const services = await $axios.get('/api/services')
+    const pointOfInterests = await $axios.get('/pointOfInterests')
+    const itineraries = await $axios.get('/itineraries')
+    const events = await $axios.get('/events')
+    const services = await $axios.get('/services')
     return {
       pointOfInterests: pointOfInterests.data,
       itineraries : itineraries.data,

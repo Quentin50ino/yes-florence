@@ -1,12 +1,12 @@
 export default {
-  ssr : true,
+  ssr : false,
   // Global page headers: https://go.nuxtjs.dev/config-head
-  serverMiddleware: [
+  /*serverMiddleware: [
     {
       path: "/api",
       handler: "~/server/api.js"
     }
-  ],
+  ],*/
   head: {
     title: 'YesFlorence',
     htmlAttrs: {
@@ -64,15 +64,18 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
   ],
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     //baseURL: 'http://localhost:3000' //development env
-    baseURL : 'https://yes-florence.web.app' //production env
+    baseURL : 'https://yes-florence-server.onrender.com/' //production env
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  routes: { '/': { prerender: true }, '/*': { cors: true } }
+
 }
